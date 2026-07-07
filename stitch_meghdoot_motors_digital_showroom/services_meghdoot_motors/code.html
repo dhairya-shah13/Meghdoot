@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Our Services | Meghdoot Motors - Maruti Suzuki Authorized Service</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-container": "#0b2a6b",
+                    "surface": "#f7f9fb",
+                    "primary": "#001646",
+                    "surface-variant": "#e0e3e5",
+                    "surface-tint": "#445b9e",
+                    "primary-fixed": "#dbe1ff",
+                    "on-secondary-fixed": "#410003",
+                    "secondary-container": "#df2a2e",
+                    "on-primary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "on-primary-container": "#7c94db",
+                    "tertiary": "#181921",
+                    "surface-container-high": "#e6e8ea",
+                    "inverse-primary": "#b3c5ff",
+                    "secondary-fixed-dim": "#ffb3ac",
+                    "on-secondary-fixed-variant": "#930010",
+                    "on-tertiary-fixed": "#1a1b22",
+                    "tertiary-container": "#2d2e36",
+                    "surface-bright": "#f7f9fb",
+                    "inverse-on-surface": "#eff1f3",
+                    "surface-container-highest": "#e0e3e5",
+                    "on-secondary-container": "#fffbff",
+                    "on-tertiary": "#ffffff",
+                    "outline-variant": "#c5c6d2",
+                    "secondary-fixed": "#ffdad6",
+                    "on-background": "#191c1e",
+                    "on-error-container": "#93000a",
+                    "surface-container": "#eceef0",
+                    "on-surface": "#191c1e",
+                    "on-surface-variant": "#444650",
+                    "inverse-surface": "#2d3133",
+                    "secondary": "#bb0218",
+                    "error-container": "#ffdad6",
+                    "error": "#ba1a1a",
+                    "primary-fixed-dim": "#b3c5ff",
+                    "tertiary-fixed": "#e3e1ec",
+                    "tertiary-fixed-dim": "#c6c5cf",
+                    "on-tertiary-fixed-variant": "#46464e",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-fixed": "#00174a",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed-variant": "#2a4385",
+                    "on-tertiary-container": "#96959f",
+                    "outline": "#757681",
+                    "surface-container-low": "#f2f4f6",
+                    "background": "#f7f9fb",
+                    "surface-dim": "#d8dadc"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "stack-lg": "32px",
+                    "stack-sm": "8px",
+                    "margin-desktop": "64px",
+                    "container-max": "1280px",
+                    "section-gap": "80px",
+                    "gutter": "24px",
+                    "stack-md": "16px"
+            },
+            "fontFamily": {
+                    "headline-lg-mobile": ["Barlow Condensed"],
+                    "label-bold": ["Inter"],
+                    "body-md": ["Inter"],
+                    "display-lg": ["Barlow Condensed"],
+                    "headline-lg": ["Barlow Condensed"],
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Barlow Condensed"]
+            },
+            "fontSize": {
+                    "headline-lg-mobile": ["36px", {"lineHeight": "42px", "fontWeight": "700"}],
+                    "label-bold": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "display-lg": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .service-card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px -10px rgba(0, 22, 70, 0.3);
+        }
+        .glass-nav {
+            background: rgba(0, 22, 70, 0.85);
+            backdrop-filter: blur(20px);
+        }
+        .text-racing-red { color: #bb0218; }
+        .bg-racing-red { background-color: #bb0218; }
+        
+        /* Custom scrollbar for horizontal sections */
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 glass-nav shadow-md">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-on-primary tracking-tight">Meghdoot Motors</div>
+<nav class="hidden md:flex gap-8">
+<a class="font-label-bold text-label-bold text-on-primary hover:text-secondary-fixed transition-colors" href="#">Home</a>
+<a class="font-label-bold text-label-bold text-on-primary hover:text-secondary-fixed transition-colors" href="#">About Us</a>
+<a class="font-label-bold text-label-bold text-secondary-container border-b-2 border-secondary-container pb-1" href="#">Services</a>
+<a class="font-label-bold text-label-bold text-on-primary hover:text-secondary-fixed transition-colors" href="#">Annual Service Plan</a>
+<a class="font-label-bold text-label-bold text-on-primary hover:text-secondary-fixed transition-colors" href="#">Insurance &amp; Claims</a>
+<a class="font-label-bold text-label-bold text-on-primary hover:text-secondary-fixed transition-colors" href="#">Gallery</a>
+<a class="font-label-bold text-label-bold text-on-primary hover:text-secondary-fixed transition-colors" href="#">Contact</a>
+</nav>
+<button class="bg-racing-red text-on-primary px-6 py-2 font-label-bold text-label-bold uppercase tracking-wider scale-95 active:scale-90 transition-transform shadow-lg border-b-[3px] border-black/20">
+                Book a Service
+            </button>
+</div>
+</header>
+<!-- Hero Banner -->
+<section class="relative h-[40vh] md:h-[60vh] flex items-center justify-center overflow-hidden pt-16">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center" data-alt="A cinematic, high-speed photograph of a professional Maruti Suzuki workshop with multiple car lifts and bright overhead LED lighting. The floor is pristine metallic silver epoxy, and technicians in navy uniforms are meticulously inspecting a vibrant red Suzuki Swift. The mood is clinical, efficient, and technologically advanced, with a slight motion blur suggesting speed and precision in automotive engineering." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCCypsd4wORh433sm-oXqR7G2o5UxdLgO9Cm3fQwvHHkzYmiFnO-2T350UaIEJ0pdfdSN-ZWUEPD_L_5VJtOLNJYNfNLsPAM6Q56fFZ8JcUkHmw3p2FNNnmESQGyNyGh1M8dPOeUkCUPmGH-pZF4YSKrv6b9myEVVFq8g9X5TdzEm_mhQtlee5e5GA9q1O86tHmARfCglyR9ERCH0uSGB20tL-rua4NdGs9WSIca3T6aMtWURwq3V47dA')"></div>
+<div class="absolute inset-0 bg-primary/60 backdrop-blur-[2px]"></div>
+</div>
+<div class="relative z-10 text-center text-on-primary px-margin-mobile">
+<h1 class="font-headline-lg text-headline-lg-mobile md:text-display-lg uppercase tracking-tight mb-4">Our Services</h1>
+<p class="font-body-lg text-body-lg max-w-2xl mx-auto opacity-90">Precision engineering meets world-class hospitality. Trust Meghdoot Motors for every mile of your journey.</p>
+</div>
+</section>
+<!-- Filtered Service Grid -->
+<section class="py-section-gap bg-surface">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<!-- Tabs -->
+<div class="flex flex-wrap justify-center gap-4 mb-stack-lg" id="service-tabs">
+<button class="service-tab-btn active font-label-bold text-label-bold px-8 py-3 bg-primary text-on-primary border-2 border-primary transition-all" onclick="filterServices('all')">ALL SERVICES</button>
+<button class="service-tab-btn font-label-bold text-label-bold px-8 py-3 bg-transparent text-primary border-2 border-primary hover:bg-primary/5 transition-all" onclick="filterServices('maintenance')">MAINTENANCE</button>
+<button class="service-tab-btn font-label-bold text-label-bold px-8 py-3 bg-transparent text-primary border-2 border-primary hover:bg-primary/5 transition-all" onclick="filterServices('repair')">REPAIR &amp; BODY</button>
+<button class="service-tab-btn font-label-bold text-label-bold px-8 py-3 bg-transparent text-primary border-2 border-primary hover:bg-primary/5 transition-all" onclick="filterServices('insurance')">INSURANCE</button>
+</div>
+<!-- Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter" id="services-grid">
+<!-- Periodic Maintenance -->
+<div class="service-card group bg-white p-8 border border-outline-variant service-card-hover transition-all duration-300" data-category="maintenance">
+<span class="material-symbols-outlined text-4xl text-primary-container mb-stack-md block" data-icon="history">history</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-2 uppercase">Periodic Maint</h3>
+<p class="text-on-surface-variant font-body-md mb-6">Full systematic check-up and fluid replacement every 5,000km to ensure peak performance.</p>
+<button class="flex items-center gap-2 font-label-bold text-label-bold text-racing-red hover:translate-x-2 transition-transform uppercase">
+                        Book This Service <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<!-- Accidental Repair -->
+<div class="service-card group bg-white p-8 border border-outline-variant service-card-hover transition-all duration-300" data-category="repair">
+<span class="material-symbols-outlined text-4xl text-primary-container mb-stack-md block" data-icon="car_crash">car_crash</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-2 uppercase">Accidental Repair</h3>
+<p class="text-on-surface-variant font-body-md mb-6">Precision body restoration using Maruti Suzuki genuine chassis alignment technology.</p>
+<button class="flex items-center gap-2 font-label-bold text-label-bold text-racing-red hover:translate-x-2 transition-transform uppercase">
+                        Book This Service <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<!-- Denting/Painting -->
+<div class="service-card group bg-white p-8 border border-outline-variant service-card-hover transition-all duration-300" data-category="repair">
+<span class="material-symbols-outlined text-4xl text-primary-container mb-stack-md block" data-icon="imagesearch_roller">imagesearch_roller</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-2 uppercase">Denting/Painting</h3>
+<p class="text-on-surface-variant font-body-md mb-6">Advanced dust-free paint booth services with computerized color matching for a showroom finish.</p>
+<button class="flex items-center gap-2 font-label-bold text-label-bold text-racing-red hover:translate-x-2 transition-transform uppercase">
+                        Book This Service <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<!-- Wheel Alignment -->
+<div class="service-card group bg-white p-8 border border-outline-variant service-card-hover transition-all duration-300" data-category="maintenance">
+<span class="material-symbols-outlined text-4xl text-primary-container mb-stack-md block" data-icon="tire_repair">tire_repair</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-2 uppercase">Wheel Alignment</h3>
+<p class="text-on-surface-variant font-body-md mb-6">3D Laser alignment and balancing to increase tire life and improve fuel efficiency.</p>
+<button class="flex items-center gap-2 font-label-bold text-label-bold text-racing-red hover:translate-x-2 transition-transform uppercase">
+                        Book This Service <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<!-- Brake Service -->
+<div class="service-card group bg-white p-8 border border-outline-variant service-card-hover transition-all duration-300" data-category="maintenance">
+<span class="material-symbols-outlined text-4xl text-primary-container mb-stack-md block" data-icon="eject">eject</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-2 uppercase">Brake Service</h3>
+<p class="text-on-surface-variant font-body-md mb-6">Thorough inspection of pads, liners, and disc resurfacing for maximum safety.</p>
+<button class="flex items-center gap-2 font-label-bold text-label-bold text-racing-red hover:translate-x-2 transition-transform uppercase">
+                        Book This Service <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<!-- Engine Repair -->
+<div class="service-card group bg-white p-8 border border-outline-variant service-card-hover transition-all duration-300" data-category="repair">
+<span class="material-symbols-outlined text-4xl text-primary-container mb-stack-md block" data-icon="settings_input_component">settings_input_component</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-2 uppercase">Engine Repair</h3>
+<p class="text-on-surface-variant font-body-md mb-6">Diagnostic and overhaul services by Maruti-certified master technicians.</p>
+<button class="flex items-center gap-2 font-label-bold text-label-bold text-racing-red hover:translate-x-2 transition-transform uppercase">
+                        Book This Service <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<!-- Health Check -->
+<div class="service-card group bg-white p-8 border border-outline-variant service-card-hover transition-all duration-300" data-category="maintenance">
+<span class="material-symbols-outlined text-4xl text-primary-container mb-stack-md block" data-icon="health_and_safety">health_and_safety</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-2 uppercase">Health Check</h3>
+<p class="text-on-surface-variant font-body-md mb-6">Comprehensive 60-point computerized diagnostic scan for all electronic modules.</p>
+<button class="flex items-center gap-2 font-label-bold text-label-bold text-racing-red hover:translate-x-2 transition-transform uppercase">
+                        Book This Service <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<!-- Break-down/Pick-up -->
+<div class="service-card group bg-white p-8 border border-outline-variant service-card-hover transition-all duration-300" data-category="repair">
+<span class="material-symbols-outlined text-4xl text-primary-container mb-stack-md block" data-icon="local_shipping">local_shipping</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-2 uppercase">Break-down Assist</h3>
+<p class="text-on-surface-variant font-body-md mb-6">24/7 Roadside assistance and complimentary pick-up/drop-off for scheduled service.</p>
+<button class="flex items-center gap-2 font-label-bold text-label-bold text-racing-red hover:translate-x-2 transition-transform uppercase">
+                        Book This Service <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<!-- Insurance Assistance -->
+<div class="service-card group bg-white p-8 border border-outline-variant service-card-hover transition-all duration-300" data-category="insurance">
+<span class="material-symbols-outlined text-4xl text-primary-container mb-stack-md block" data-icon="verified_user">verified_user</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-2 uppercase">Insurance Assistance</h3>
+<p class="text-on-surface-variant font-body-md mb-6">Cashless claims processing and expert renewals with all leading insurance partners.</p>
+<button class="flex items-center gap-2 font-label-bold text-label-bold text-racing-red hover:translate-x-2 transition-transform uppercase">
+                        Book This Service <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- How It Works - Process Strip -->
+<section class="py-section-gap bg-primary text-on-primary overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center mb-stack-lg">
+<h2 class="font-headline-lg text-headline-lg uppercase tracking-tight">The Meghdoot Advantage</h2>
+<p class="font-body-lg text-on-primary-container">Five steps to a perfect drive. Transparent, Fast, Reliable.</p>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mt-stack-lg relative">
+<div class="flex flex-col md:flex-row items-center justify-between gap-gutter relative z-10">
+<!-- Step 1 -->
+<div class="flex flex-col items-center text-center group w-full md:w-1/5">
+<div class="w-16 h-16 rounded-full bg-secondary-container flex items-center justify-center mb-4 border-4 border-primary shadow-xl group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-on-primary" data-icon="calendar_month">calendar_month</span>
+</div>
+<h4 class="font-label-bold text-label-bold uppercase text-on-primary-container">Step 01</h4>
+<p class="font-headline-md text-headline-md text-white">Book</p>
+<p class="text-xs opacity-60 mt-2">App, Web or Call</p>
+</div>
+<div class="hidden md:block h-[2px] w-full bg-primary-container/30 -mx-12 mt-[-60px]"></div>
+<!-- Step 2 -->
+<div class="flex flex-col items-center text-center group w-full md:w-1/5">
+<div class="w-16 h-16 rounded-full bg-secondary-container flex items-center justify-center mb-4 border-4 border-primary shadow-xl group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-on-primary" data-icon="hail">hail</span>
+</div>
+<h4 class="font-label-bold text-label-bold uppercase text-on-primary-container">Step 02</h4>
+<p class="font-headline-md text-headline-md text-white">Pick-up</p>
+<p class="text-xs opacity-60 mt-2">Safe Doorstep Collection</p>
+</div>
+<div class="hidden md:block h-[2px] w-full bg-primary-container/30 -mx-12 mt-[-60px]"></div>
+<!-- Step 3 -->
+<div class="flex flex-col items-center text-center group w-full md:w-1/5">
+<div class="w-16 h-16 rounded-full bg-secondary-container flex items-center justify-center mb-4 border-4 border-primary shadow-xl group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-on-primary" data-icon="handyman">handyman</span>
+</div>
+<h4 class="font-label-bold text-label-bold uppercase text-on-primary-container">Step 03</h4>
+<p class="font-headline-md text-headline-md text-white">Service</p>
+<p class="text-xs opacity-60 mt-2">Expert Workshop Care</p>
+</div>
+<div class="hidden md:block h-[2px] w-full bg-primary-container/30 -mx-12 mt-[-60px]"></div>
+<!-- Step 4 -->
+<div class="flex flex-col items-center text-center group w-full md:w-1/5">
+<div class="w-16 h-16 rounded-full bg-secondary-container flex items-center justify-center mb-4 border-4 border-primary shadow-xl group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-on-primary" data-icon="fact_check">fact_check</span>
+</div>
+<h4 class="font-label-bold text-label-bold uppercase text-on-primary-container">Step 04</h4>
+<p class="font-headline-md text-headline-md text-white">Quality Check</p>
+<p class="text-xs opacity-60 mt-2">Supervised Final Inspection</p>
+</div>
+<div class="hidden md:block h-[2px] w-full bg-primary-container/30 -mx-12 mt-[-60px]"></div>
+<!-- Step 5 -->
+<div class="flex flex-col items-center text-center group w-full md:w-1/5">
+<div class="w-16 h-16 rounded-full bg-secondary-container flex items-center justify-center mb-4 border-4 border-primary shadow-xl group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-on-primary" data-icon="key">key</span>
+</div>
+<h4 class="font-label-bold text-label-bold uppercase text-on-primary-container">Step 05</h4>
+<p class="font-headline-md text-headline-md text-white">Delivery</p>
+<p class="text-xs opacity-60 mt-2">Washed &amp; Sanitized</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Closing CTA: Free Vehicle Check-up -->
+<section class="relative py-section-gap overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-fixed bg-center" data-alt="A macro, artistic close-up of a high-tech engine component with metallic silver and navy accents, illuminated by dramatic red rim lighting. The shallow depth of field emphasizes the precision engineering and clean maintenance style of a premium automotive workshop. The atmosphere is bold, powerful, and modern." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBzup1dnk3qvHEcRM450z_p4_5pC4AZUFUsOEucW07mFMTbrGQlg9fgZYzAGDE8ULcFWUeiuiVk4Cs-4LE7RerY2UcNTK3U_Gk4NnEXALHSKSoU7oqiuyQCZwhvhIczu582bAjcJmT8hIQKfmFKqnlGPy32mXP_EaTB5awlasPxIJZ02TMfZQBMVmEPilCXq5Rx8DyW_1zdiMzes-Jp8-jylKkmZA4zCv10QMXL8TNz3MSDx9kF_8jVjQ')"></div>
+<div class="absolute inset-0 bg-primary/80"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">
+<div class="inline-block bg-racing-red text-on-primary px-4 py-1 font-label-bold text-label-bold mb-stack-md">LIMITED TIME OFFER</div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-white uppercase mb-stack-md">Get a Free 20-Point Health Check</h2>
+<p class="font-body-lg text-on-primary-container max-w-2xl mx-auto mb-stack-lg">Ensure your vehicle is in top condition before your next long drive. Our experts will inspect your car's vital components at zero cost.</p>
+<div class="flex flex-col md:flex-row justify-center items-center gap-gutter">
+<button class="w-full md:w-auto bg-racing-red text-on-primary px-10 py-4 font-label-bold text-label-bold uppercase tracking-widest hover:brightness-110 transition-all shadow-2xl">
+                    Claim Free Check-up
+                </button>
+<div class="flex items-center gap-3 text-white">
+<span class="material-symbols-outlined text-on-primary-container" data-icon="phone_in_talk">phone_in_talk</span>
+<div class="text-left">
+<p class="text-xs opacity-60 uppercase font-label-bold">Emergency Hotline</p>
+<p class="font-headline-md leading-tight">1800-419-5001</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-tertiary text-on-primary py-stack-lg border-t border-primary-container">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter mb-stack-lg">
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-md text-headline-md font-bold text-on-primary mb-stack-md">Meghdoot Motors</div>
+<p class="font-body-md text-surface-variant opacity-70">Experience the gold standard of Maruti Suzuki service. We believe in precision, transparency, and customer delight.</p>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold uppercase text-on-primary mb-stack-md">Quick Links</h4>
+<ul class="space-y-2">
+<li><a class="text-surface-variant hover:text-on-primary transition-transform hover:translate-x-1 block" href="#">Home</a></li>
+<li><a class="text-surface-variant hover:text-on-primary transition-transform hover:translate-x-1 block" href="#">About Us</a></li>
+<li><a class="text-secondary-container font-bold transition-transform hover:translate-x-1 block" href="#">Services</a></li>
+<li><a class="text-surface-variant hover:text-on-primary transition-transform hover:translate-x-1 block" href="#">Insurance</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold uppercase text-on-primary mb-stack-md">Support</h4>
+<ul class="space-y-2">
+<li><a class="text-surface-variant hover:text-on-primary transition-transform hover:translate-x-1 block" href="#">Book Appointment</a></li>
+<li><a class="text-surface-variant hover:text-on-primary transition-transform hover:translate-x-1 block" href="#">Service Calculator</a></li>
+<li><a class="text-surface-variant hover:text-on-primary transition-transform hover:translate-x-1 block" href="#">Privacy Policy</a></li>
+<li><a class="text-surface-variant hover:text-on-primary transition-transform hover:translate-x-1 block" href="#">Terms &amp; Conditions</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold uppercase text-on-primary mb-stack-md">Connect With Us</h4>
+<div class="flex gap-4 mb-stack-md">
+<a class="w-10 h-10 rounded-full border border-primary-container flex items-center justify-center hover:bg-secondary-container transition-colors" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="public">public</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-primary-container flex items-center justify-center hover:bg-secondary-container transition-colors" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="alternate_email">alternate_email</span>
+</a>
+</div>
+<p class="text-xs text-on-primary-container">Authorized Service Station No: 124456</p>
+</div>
+</div>
+<div class="pt-stack-lg border-t border-primary-container text-center">
+<p class="font-body-md text-surface-variant opacity-60">© 2024 Meghdoot Motors - Maruti Suzuki Authorized Service Station. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<script>
+        function filterServices(category) {
+            const cards = document.querySelectorAll('.service-card');
+            const btns = document.querySelectorAll('.service-tab-btn');
+            
+            btns.forEach(btn => {
+                btn.classList.remove('bg-primary', 'text-on-primary');
+                btn.classList.add('bg-transparent', 'text-primary');
+            });
+            
+            event.currentTarget.classList.remove('bg-transparent', 'text-primary');
+            event.currentTarget.classList.add('bg-primary', 'text-on-primary');
+
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'block';
+                    setTimeout(() => { card.style.opacity = '1'; card.style.transform = 'scale(1)'; }, 10);
+                } else {
+                    card.style.opacity = '0';
+                    card.style.transform = 'scale(0.95)';
+                    setTimeout(() => { card.style.display = 'none'; }, 300);
+                }
+            });
+        }
+
+        // Initialize animations on scroll
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = { threshold: 0.1 };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-in');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.service-card').forEach(el => observer.observe(el));
+        });
+    </script>
+</body></html>

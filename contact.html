@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Meghdoot Motors - Maruti Suzuki Authorized Service Station</title>
+  <meta name="description" content="Contact Meghdoot Motors, Maruti Suzuki Authorized Service Station in Ahmedabad. Call Niraj Chokshi or Rakesh Gajjar, or visit our workshop near YMCA Club.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .contact-hero {
+      position: relative;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .contact-hero .hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+    .contact-hero .hero-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .google-map-container {
+      width: 100%;
+      height: 500px;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      border: 1px solid var(--color-outline-variant);
+    }
+    .google-map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      filter: grayscale(100%);
+      transition: filter var(--transition-slow);
+    }
+    .google-map-container:hover iframe {
+      filter: grayscale(0%);
+    }
+    .contact-info-card {
+      background-color: var(--color-primary);
+      padding: var(--spacing-stack-lg);
+      color: var(--color-on-primary);
+      border-radius: var(--radius-default);
+    }
+    @media (min-width: 769px) {
+      .contact-info-card {
+        padding: 48px;
+      }
+    }
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: var(--spacing-stack-lg);
+    }
+    .form-success.visible {
+      display: block;
+    }
+    .form-success .success-icon {
+      font-size: 4rem;
+      color: #22c55e;
+      margin-bottom: var(--spacing-stack-md);
+    }
+    .hover-lift {
+      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+    }
+    .hover-lift:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 30px -10px rgba(0, 22, 70, 0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="site-logo">
+        <img src="assets/images/logo.png" alt="Meghdoot Logo" />
+        <div class="brand-text">
+          <span class="brand-meghdoot">MEGHDOOT</span>
+          <span class="brand-motors">MOTORS</span>
+        </div>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="annual-service-plan.html">Annual Service Plan</a>
+        <a href="insurance-claims.html">Insurance &amp; Claims</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <img src="assets/images/mass-logo.png" alt="Maruti Suzuki Authorized Service" class="mass-logo" />
+      </div>
+      <button class="hamburger" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav-overlay"></div>
+  <nav class="mobile-nav" aria-label="Mobile navigation">
+    <a href="about.html">About Us</a>
+    <a href="services.html">Services</a>
+    <a href="annual-service-plan.html">Annual Service Plan</a>
+    <a href="insurance-claims.html">Insurance &amp; Claims</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+
+  <main>
+
+    <!-- ========== HERO ========== -->
+    <section class="contact-hero" style="padding-top:var(--nav-height);">
+      <div class="hero-bg">
+        <div class="hero-overlay"></div>
+        <img src="assets/images/placeholder.svg" alt="Meghdoot Motors service center in Ahmedabad with glass architecture and metallic accents" style="width:100%;height:100%;object-fit:cover;">
+      </div>
+      <div class="container" style="position:relative;z-index:10;width:100%;">
+        <div class="fade-up">
+          <h1 class="font-display-lg text-on-primary" style="text-transform:uppercase;margin-bottom:var(--spacing-stack-md);">Get in Touch</h1>
+          <p class="font-body-lg" style="max-width:560px;opacity:0.8;">
+            Your vehicle deserves the precision of experts. Reach out to the Authorized Maruti Suzuki Service Station for unparalleled care.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT AREA ========== -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="grid grid-2" style="gap:var(--spacing-section-gap);">
+          <!-- Map -->
+          <div class="fade-up">
+            <div class="flex items-center" style="gap:var(--spacing-stack-sm);margin-bottom:var(--spacing-stack-md);">
+              <span style="width:32px;height:2px;background-color:var(--color-secondary);display:inline-block;"></span>
+              <span class="font-label-bold text-primary" style="text-transform:uppercase;letter-spacing:0.1em;">Location</span>
+            </div>
+            <h2 class="font-headline-lg text-primary" style="margin-bottom:var(--spacing-stack-md);">Find Us in Ahmedabad</h2>
+            <div class="google-map-container">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3669.674112145458!2d72.5305406!3d23.0983377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e833e1c5e0c5d%3A0x8b5c5f5e5e5e5e5e!2sYMCA%20Club!5e0!3m2!1sen!2sin!4v1680000000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Meghdoot Motors location near YMCA Club, Ahmedabad"></iframe>
+            </div>
+          </div>
+          <!-- Form -->
+          <div class="fade-up" style="background-color:#ffffff;padding:var(--spacing-stack-lg);box-shadow:var(--shadow-glow);border:1px solid var(--color-outline-variant);border-radius:var(--radius-default);transition-delay:100ms;" id="contactFormContainer">
+            <div style="margin-bottom:var(--spacing-stack-lg);">
+              <h2 class="font-headline-lg text-primary" style="margin-bottom:var(--spacing-stack-sm);">Service Inquiry</h2>
+              <p class="text-on-surface-variant">Fill out the form below and our service advisors will contact you shortly.</p>
+            </div>
+            <form id="contactForm">
+              <div class="form-group" style="display:grid;grid-template-columns:1fr 1fr;gap:var(--spacing-stack-md);">
+                <div>
+                  <label class="form-label" for="fullName">Full Name</label>
+                  <input type="text" id="fullName" name="fullName" class="form-input" placeholder="John Doe" required>
+                  <div class="form-error"></div>
+                </div>
+                <div>
+                  <label class="form-label" for="phone">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" class="form-input" placeholder="+91 98765 43210" required>
+                  <div class="form-error"></div>
+                </div>
+              </div>
+              <div class="form-group" style="display:grid;grid-template-columns:1fr 1fr;gap:var(--spacing-stack-md);">
+                <div>
+                  <label class="form-label" for="carModel">Car Model</label>
+                  <select id="carModel" name="carModel" class="form-select">
+                    <option>Select Model</option>
+                    <option>Swift</option>
+                    <option>Baleno</option>
+                    <option>Brezza</option>
+                    <option>Ertiga</option>
+                    <option>Dzire</option>
+                    <option>Other</option>
+                  </select>
+                  <div class="form-error"></div>
+                </div>
+                <div>
+                  <label class="form-label" for="serviceType">Service Type</label>
+                  <select id="serviceType" name="serviceType" class="form-select">
+                    <option>Routine Maintenance</option>
+                    <option>Insurance Claim</option>
+                    <option>Body Work &amp; Paint</option>
+                    <option>Electrical Repair</option>
+                    <option>Express Service</option>
+                  </select>
+                  <div class="form-error"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="message">Your Message</label>
+                <textarea id="message" name="message" class="form-textarea" placeholder="Describe your service requirements..." rows="4"></textarea>
+                <div class="form-error"></div>
+              </div>
+              <button type="submit" class="btn btn-primary btn-lg" style="width:100%;display:flex;align-items:center;justify-content:center;gap:var(--spacing-stack-sm);">
+                Send Inquiry
+                <span class="material-symbols-outlined" style="font-size:16px;">arrow_forward</span>
+              </button>
+            </form>
+            <div class="form-success">
+              <div class="success-icon material-symbols-outlined">check_circle</div>
+              <h3 class="font-headline-md text-primary" style="margin-bottom:var(--spacing-stack-sm);">Thank You!</h3>
+              <p class="text-on-surface-variant">Your inquiry has been received. Our service advisors will contact you shortly.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FOUNDER CONTACTS ========== -->
+    <section class="section-padding bg-surface-container-low">
+      <div class="container">
+        <div class="fade-up" style="display:flex;flex-direction:column;md:flex-direction:row;justify-content:space-between;align-items:flex-end;gap:var(--spacing-stack-lg);margin-bottom:64px;">
+          <div>
+            <div class="flex items-center" style="gap:var(--spacing-stack-sm);margin-bottom:var(--spacing-stack-sm);">
+              <span style="width:32px;height:2px;background-color:var(--color-secondary);display:inline-block;"></span>
+              <span class="font-label-bold text-primary" style="text-transform:uppercase;letter-spacing:0.1em;">Leadership</span>
+            </div>
+            <h2 class="font-headline-lg text-primary">Direct Contact</h2>
+          </div>
+          <p class="text-on-surface-variant" style="max-width:400px;">Connect directly with our leadership team for corporate inquiries or specialized service needs.</p>
+        </div>
+        <div class="grid grid-3" style="gap:var(--spacing-gutter);">
+          <!-- Founder 1 -->
+          <div class="fade-up hover-lift" style="background-color:#ffffff;border:1px solid var(--color-outline-variant);padding:var(--spacing-stack-lg);border-radius:var(--radius-default);">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:var(--spacing-stack-md);">
+              <div style="width:48px;height:48px;background-color:var(--color-primary-container);border-radius:var(--radius-default);display:flex;align-items:center;justify-content:center;">
+                <span class="material-symbols-outlined text-on-primary-container">person</span>
+              </div>
+              <span class="font-label-bold" style="font-size:10px;color:var(--color-secondary);background-color:rgba(187,2,24,0.1);padding:4px 8px;border-radius:var(--radius-default);text-transform:uppercase;letter-spacing:0.05em;">Founder</span>
+            </div>
+            <h3 class="font-headline-md text-primary" style="margin-bottom:4px;">Niraj Chokshi</h3>
+            <p class="text-on-surface-variant" style="margin-bottom:var(--spacing-stack-md);">Strategic Operations &amp; Growth</p>
+            <a href="tel:+919825012345" class="flex items-center" style="gap:var(--spacing-stack-sm);color:var(--color-primary);font-family:var(--font-label);font-weight:600;">
+              <span class="material-symbols-outlined" style="font-size:20px;">call</span>
+              +91 98250 12345
+            </a>
+          </div>
+          <!-- Founder 2 -->
+          <div class="fade-up hover-lift" style="background-color:#ffffff;border:1px solid var(--color-outline-variant);padding:var(--spacing-stack-lg);border-radius:var(--radius-default);transition-delay:100ms;">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:var(--spacing-stack-md);">
+              <div style="width:48px;height:48px;background-color:var(--color-primary-container);border-radius:var(--radius-default);display:flex;align-items:center;justify-content:center;">
+                <span class="material-symbols-outlined text-on-primary-container">engineering</span>
+              </div>
+              <span class="font-label-bold" style="font-size:10px;color:var(--color-secondary);background-color:rgba(187,2,24,0.1);padding:4px 8px;border-radius:var(--radius-default);text-transform:uppercase;letter-spacing:0.05em;">Founder</span>
+            </div>
+            <h3 class="font-headline-md text-primary" style="margin-bottom:4px;">Rakesh Gajjar</h3>
+            <p class="text-on-surface-variant" style="margin-bottom:var(--spacing-stack-md);">Technical Excellence &amp; Service Quality</p>
+            <a href="tel:+919825067890" class="flex items-center" style="gap:var(--spacing-stack-sm);color:var(--color-primary);font-family:var(--font-label);font-weight:600;">
+              <span class="material-symbols-outlined" style="font-size:20px;">call</span>
+              +91 98250 67890
+            </a>
+          </div>
+          <!-- Business Info -->
+          <div class="fade-up contact-info-card" style="transition-delay:200ms;">
+            <h3 class="font-headline-md" style="margin-bottom:var(--spacing-stack-md);">Service Station Info</h3>
+            <div style="display:flex;flex-direction:column;gap:var(--spacing-stack-md);">
+              <div style="display:flex;gap:var(--spacing-stack-md);">
+                <span class="material-symbols-outlined text-secondary-fixed">schedule</span>
+                <div>
+                  <p class="font-label-bold" style="font-size:12px;text-transform:uppercase;color:var(--color-on-primary-container);margin-bottom:4px;">Business Hours</p>
+                  <p>Mon - Sat: 09:00 AM - 07:00 PM</p>
+                  <p>Sun: Closed</p>
+                </div>
+              </div>
+              <div style="display:flex;gap:var(--spacing-stack-md);">
+                <span class="material-symbols-outlined text-secondary-fixed">location_on</span>
+                <div>
+                  <p class="font-label-bold" style="font-size:12px;text-transform:uppercase;color:var(--color-on-primary-container);margin-bottom:4px;">Address</p>
+                  <p>Plot No. 124, Sarkhej - Gandhinagar Hwy,<br>Opp. YMCA Club, Ahmedabad,<br>Gujarat 380015</p>
+                </div>
+              </div>
+              <div style="display:flex;gap:var(--spacing-stack-md);">
+                <span class="material-symbols-outlined text-secondary-fixed">mail</span>
+                <div>
+                  <p class="font-label-bold" style="font-size:12px;text-transform:uppercase;color:var(--color-on-primary-container);margin-bottom:4px;">Email</p>
+                  <p>service@meghdootmotors.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">Meghdoot Motors</div>
+          <p>Maruti Suzuki Authorized Service Station since 2002. Delivering automotive excellence with precision and trust.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Share"><span class="material-symbols-outlined" style="font-size:16px;">share</span></a>
+            <a href="#" aria-label="Location"><span class="material-symbols-outlined" style="font-size:16px;">location_on</span></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h6>Quick Links</h6>
+          <ul>
+            <li></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="annual-service-plan.html">Annual Plan</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h6>Services</h6>
+          <ul>
+            <li><a href="services.html">Periodic Service</a></li>
+            <li><a href="services.html">Accidental Repair</a></li>
+            <li><a href="insurance-claims.html">Maruti Insurance</a></li>
+            <li><a href="services.html">Wheel Solutions</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h6>Visit Us</h6>
+          <p>Plot No. 124, Sarkhej - Gandhinagar Hwy,<br>Opp. YMCA Club, Ahmedabad,<br>Gujarat 380015</p>
+          <p style="margin-top:var(--spacing-stack-sm);">Mon - Sat: 9:00 AM - 7:00 PM<br>Sun: Closed</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Meghdoot Motors &mdash; Maruti Suzuki Authorized Service Station. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/form.js"></script>
+</body>
+</html>

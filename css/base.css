@@ -1,0 +1,374 @@
+/* ============================================================
+   BASE.CSS — Resets, Typography, Layout Primitives
+   Meghdoot Motors
+   ============================================================ */
+
+/* ---- Box Sizing Reset ---- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---- Document ---- */
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-body-md-size);
+  font-weight: var(--text-body-md-weight);
+  line-height: var(--text-body-md-height);
+  color: var(--color-on-background);
+  background-color: var(--color-background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ---- Images ---- */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ---- Links ---- */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ---- Lists ---- */
+ul, ol {
+  list-style: none;
+}
+
+/* ---- Buttons ---- */
+button {
+  cursor: pointer;
+  font-family: inherit;
+  border: none;
+  background: none;
+}
+
+/* ---- Inputs ---- */
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* ---- Selection ---- */
+::selection {
+  background-color: var(--color-secondary-container);
+  color: var(--color-on-primary);
+}
+
+/* ============================================================
+   TYPOGRAPHY UTILITY CLASSES
+   ============================================================ */
+
+.font-display-lg {
+  font-family: var(--font-display);
+  font-size: var(--text-display-lg-size);
+  font-weight: var(--text-display-lg-weight);
+  line-height: var(--text-display-lg-height);
+  letter-spacing: var(--text-display-lg-spacing);
+}
+
+.font-headline-lg {
+  font-family: var(--font-heading);
+  font-size: var(--text-headline-lg-size);
+  font-weight: var(--text-headline-lg-weight);
+  line-height: var(--text-headline-lg-height);
+  letter-spacing: var(--text-headline-lg-spacing);
+}
+
+.font-headline-md {
+  font-family: var(--font-heading);
+  font-size: var(--text-headline-md-size);
+  font-weight: var(--text-headline-md-weight);
+  line-height: var(--text-headline-md-height);
+}
+
+.font-body-lg {
+  font-family: var(--font-body);
+  font-size: var(--text-body-lg-size);
+  font-weight: var(--text-body-lg-weight);
+  line-height: var(--text-body-lg-height);
+}
+
+.font-body-md {
+  font-family: var(--font-body);
+  font-size: var(--text-body-md-size);
+  font-weight: var(--text-body-md-weight);
+  line-height: var(--text-body-md-height);
+}
+
+.font-label-bold {
+  font-family: var(--font-label);
+  font-size: var(--text-label-bold-size);
+  font-weight: var(--text-label-bold-weight);
+  line-height: var(--text-label-bold-height);
+  letter-spacing: var(--text-label-bold-spacing);
+}
+
+/* ---- Mobile Typography Overrides ---- */
+@media (max-width: 768px) {
+  .font-display-lg {
+    font-size: var(--text-headline-lg-mobile-size);
+    line-height: var(--text-headline-lg-mobile-height);
+    font-weight: var(--text-headline-lg-mobile-weight);
+    letter-spacing: -0.01em;
+  }
+
+  .font-headline-lg {
+    font-size: var(--text-headline-lg-mobile-size);
+    line-height: var(--text-headline-lg-mobile-height);
+  }
+
+  .font-headline-md {
+    font-size: 28px;
+    line-height: 34px;
+  }
+}
+
+/* ============================================================
+   LAYOUT PRIMITIVES
+   ============================================================ */
+
+.container {
+  max-width: var(--spacing-container-max);
+  margin: 0 auto;
+  padding-left: var(--spacing-margin-mobile);
+  padding-right: var(--spacing-margin-mobile);
+}
+
+@media (min-width: 769px) {
+  .container {
+    padding-left: var(--spacing-margin-desktop);
+    padding-right: var(--spacing-margin-desktop);
+  }
+}
+
+/* ---- Section Spacing ---- */
+.section-padding {
+  padding-top: var(--spacing-section-gap);
+  padding-bottom: var(--spacing-section-gap);
+}
+
+/* ---- Grid System ---- */
+.grid {
+  display: grid;
+  gap: var(--spacing-gutter);
+}
+
+.grid-2 {
+  grid-template-columns: 1fr;
+}
+
+.grid-3 {
+  grid-template-columns: 1fr;
+}
+
+.grid-4 {
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (min-width: 769px) {
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ---- Flex Helpers ---- */
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.gap-sm { gap: var(--spacing-stack-sm); }
+.gap-md { gap: var(--spacing-stack-md); }
+.gap-lg { gap: var(--spacing-stack-lg); }
+.gap-gutter { gap: var(--spacing-gutter); }
+
+/* ---- Text Utilities ---- */
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.tracking-widest {
+  letter-spacing: 0.1em;
+}
+
+/* ---- Display ---- */
+.hidden {
+  display: none !important;
+}
+
+@media (min-width: 769px) {
+  .md\\:hidden {
+    display: none !important;
+  }
+
+  .md\\:block {
+    display: block !important;
+  }
+
+  .md\\:flex {
+    display: flex !important;
+  }
+}
+
+/* ---- Sizing ---- */
+.w-full {
+  width: 100%;
+}
+
+.w-fit {
+  width: fit-content;
+}
+
+/* ---- Spacing Utilities ---- */
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ---- Colors ---- */
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-secondary {
+  color: var(--color-secondary);
+}
+
+.text-on-primary {
+  color: var(--color-on-primary);
+}
+
+.text-on-surface-variant {
+  color: var(--color-on-surface-variant);
+}
+
+.text-secondary-container {
+  color: var(--color-secondary-container);
+}
+
+.text-surface-variant {
+  color: var(--color-surface-variant);
+}
+
+.text-outline {
+  color: var(--color-outline);
+}
+
+.text-primary-container {
+  color: var(--color-primary-container);
+}
+
+.text-on-primary-container {
+  color: var(--color-on-primary-container);
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.bg-secondary {
+  background-color: var(--color-secondary);
+}
+
+.bg-surface {
+  background-color: var(--color-surface);
+}
+
+.bg-surface-container {
+  background-color: var(--color-surface-container);
+}
+
+.bg-surface-container-low {
+  background-color: var(--color-surface-container-low);
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+.bg-primary-container {
+  background-color: var(--color-primary-container);
+}
+
+.bg-secondary-container {
+  background-color: var(--color-secondary-container);
+}
+
+.bg-on-primary {
+  background-color: var(--color-on-primary);
+}
+
+/* ---- Divider ---- */
+.divider {
+  width: 80px;
+  height: 4px;
+  background-color: var(--color-secondary);
+  margin: var(--spacing-stack-md) auto;
+}
+
+.divider-left {
+  margin-left: 0;
+}
+
+.divider-secondary-container {
+  background-color: var(--color-secondary-container);
+}

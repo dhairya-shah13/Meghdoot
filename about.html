@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Meghdoot Motors - Maruti Suzuki Authorized Service Station</title>
+  <meta name="description" content="Learn about Meghdoot Motors' 23+ year legacy as a Maruti Suzuki Authorized Service Station. Meet founders Niraj Chokshi and Rakesh Gajjar.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="site-logo">
+        <img src="assets/images/logo.png" alt="Meghdoot Logo" />
+        <div class="brand-text">
+          <span class="brand-meghdoot">MEGHDOOT</span>
+          <span class="brand-motors">MOTORS</span>
+        </div>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="about.html" class="active">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="annual-service-plan.html">Annual Service Plan</a>
+        <a href="insurance-claims.html">Insurance &amp; Claims</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <img src="assets/images/mass-logo.png" alt="Maruti Suzuki Authorized Service" class="mass-logo" />
+      </div>
+      <button class="hamburger" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav-overlay"></div>
+  <nav class="mobile-nav" aria-label="Mobile navigation">
+    <a href="about.html" class="active">About Us</a>
+    <a href="services.html">Services</a>
+    <a href="annual-service-plan.html">Annual Service Plan</a>
+    <a href="insurance-claims.html">Insurance &amp; Claims</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main style="padding-top:var(--nav-height);">
+
+    <!-- ========== HERO ========== -->
+    <section class="about-hero">
+      <div style="position:absolute;inset:0;z-index:0;">
+        <div class="hero-overlay"></div>
+        <!-- Placeholder image - replace with workshop interior photography -->
+        <img src="assets/images/placeholder.svg" alt="Maruti Suzuki authorized service workshop with gleaming floors and modern diagnostic equipment" style="width:100%;height:100%;object-fit:cover;">
+      </div>
+      <div class="container" style="position:relative;z-index:1;width:100%;">
+        <div style="max-width:600px;">
+          <h1 class="font-display-lg text-on-primary" style="text-transform:uppercase;line-height:1.1;">
+            About<br><span class="text-secondary-container">Meghdoot Motors</span>
+          </h1>
+          <p class="font-body-lg text-on-primary-container" style="margin-top:var(--spacing-stack-md);max-width:500px;">
+            Dedicated to automotive perfection since 1999. Experience the precision of India's leading Maruti Suzuki authorized service specialists.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FOUNDERS & STORY ========== -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="grid grid-2" style="gap:var(--spacing-section-gap);align-items:center;">
+          <div style="max-width:600px;">
+            <span class="badge" style="margin-bottom:var(--spacing-stack-md);">Our Legacy</span>
+            <h2 class="font-headline-lg text-primary" style="margin-bottom:var(--spacing-stack-md);">Over Two Decades of Automotive Excellence</h2>
+            <div class="divider divider-left divider-secondary-container"></div>
+            <p class="font-body-lg text-on-surface-variant" style="margin-bottom:var(--spacing-stack-md);">
+              Founded in June 1999, Meghdoot Motors began with a singular vision: to redefine the service experience for vehicle owners through transparency and technical mastery. Our journey reached a pivotal milestone on February 22, 2002, when we were officially appointed as a Maruti Suzuki Authorized Service Station.
+            </p>
+            <p class="font-body-lg text-on-surface-variant">
+              Led by visionaries Niraj Chokshi and Rakesh Gajjar, we have grown from a local workshop into a state-of-the-art service hub, maintaining the highest standards of Maruti Suzuki's global service protocols.
+            </p>
+          </div>
+          <div class="about-story-image">
+            <div class="accent-box"></div>
+            <!-- Placeholder image - replace with founders portrait -->
+            <img src="assets/images/placeholder.svg" alt="Niraj Chokshi and Rakesh Gajjar, founders of Meghdoot Motors" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--radius-default);box-shadow:0 20px 40px -10px rgba(0,0,0,0.2);position:relative;z-index:1;border:1px solid var(--color-outline-variant);">
+            <div class="about-stat-float">
+              <p class="font-headline-lg" style="font-size:var(--text-headline-md-size);margin:0;line-height:1;">23+</p>
+              <p class="font-label-bold" style="text-transform:uppercase;letter-spacing:0.05em;">Years of Service</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== MISSION & VISION ========== -->
+    <section class="section-padding bg-surface-container">
+      <div class="container">
+        <div class="grid grid-2">
+          <div class="info-card fade-up">
+            <span class="card-icon-lg material-symbols-outlined" style="color:var(--color-secondary-container);">track_changes</span>
+            <h3 class="text-primary">Our Mission</h3>
+            <p>To provide unrivaled automotive care through advanced diagnostics, genuine parts, and an unwavering commitment to customer safety and satisfaction, ensuring every drive is a seamless experience.</p>
+          </div>
+          <div class="info-card primary-bg fade-up" style="transition-delay:150ms;">
+            <span class="card-icon-lg material-symbols-outlined" style="color:var(--color-secondary-container);">visibility</span>
+            <h3>Our Vision</h3>
+            <p style="color:var(--color-on-primary-container);">To be the most trusted and preferred service partner for Maruti Suzuki owners nationwide, setting the benchmark for technical integrity and service efficiency in the automotive industry.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== TIMELINE ========== -->
+    <section class="section-padding" style="overflow:hidden;">
+      <div class="container">
+        <div class="fade-up" style="text-align:center;margin-bottom:64px;">
+          <h2 class="font-headline-lg text-primary" style="text-transform:uppercase;">Our Growth Timeline</h2>
+          <div class="divider divider-secondary-container"></div>
+        </div>
+        <div class="timeline">
+          <div class="timeline-line"></div>
+
+          <div class="timeline-item">
+            <div class="timeline-content-left">
+              <h4>Founding</h4>
+              <p>Meghdoot Motors established its first service center in Ahmedabad.</p>
+            </div>
+            <div class="timeline-dot">99</div>
+            <div class="timeline-content-right">
+              <div style="display:block;margin-bottom:var(--spacing-stack-sm);">
+                <span class="timeline-year">June 1999</span>
+                <h4 class="md:hidden" style="display:none;margin-bottom:4px;">Founding</h4>
+                <p class="md:hidden" style="display:none;">Meghdoot Motors established.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item" style="flex-direction:row-reverse;">
+            <div style="display:none;" class="md:block timeline-content-left"></div>
+            <div class="timeline-dot secondary">02</div>
+            <div class="timeline-content-right" style="text-align:left;">
+              <div>
+                <span class="timeline-year">22 Feb 2002</span>
+                <h4>Authorized Partnership</h4>
+                <p>Official appointment as a Maruti Suzuki Authorized Service Station (MASS).</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-content-left">
+              <h4>Modernization</h4>
+              <p>Installation of advanced diagnostic systems and facility expansion.</p>
+            </div>
+            <div class="timeline-dot">24</div>
+            <div class="timeline-content-right">
+              <span class="timeline-year">Present Day</span>
+              <h4 class="md:hidden" style="display:none;margin-bottom:4px;">Growth</h4>
+              <p class="md:hidden" style="display:none;">Continued excellence.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FOUNDERS ========== -->
+    <section class="section-padding bg-primary">
+      <div class="container">
+        <div class="fade-up" style="text-align:center;margin-bottom:64px;">
+          <h2 class="font-headline-lg text-on-primary" style="text-transform:uppercase;">Meet the Founders</h2>
+          <div class="divider" style="background-color:var(--color-secondary-container);"></div>
+        </div>
+        <div class="grid grid-2" style="max-width:800px;margin:0 auto;">
+          <!-- Founder 1 -->
+          <div class="founder-card fade-up">
+            <div style="overflow:hidden;margin-bottom:var(--spacing-stack-md);">
+              <!-- Placeholder image - replace with Niraj Chokshi portrait -->
+              <img src="assets/images/placeholder.svg" alt="Niraj Chokshi - Co-Founder & Director of Meghdoot Motors" class="founder-image">
+            </div>
+            <h3 class="font-headline-md text-primary" style="margin-bottom:4px;">Niraj Chokshi</h3>
+            <p class="font-label-bold text-secondary" style="text-transform:uppercase;margin-bottom:var(--spacing-stack-md);">Co-Founder &amp; Director</p>
+            <div style="border-top:1px solid var(--color-outline-variant);padding-top:var(--spacing-stack-md);">
+              <div style="display:flex;align-items:center;gap:var(--spacing-stack-sm);margin-bottom:var(--spacing-stack-sm);">
+                <span class="material-symbols-outlined" style="font-size:16px;color:var(--color-primary);">mail</span>
+                <span class="font-body-md text-on-surface-variant">niraj@meghdootmotors.com</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:var(--spacing-stack-sm);">
+                <span class="material-symbols-outlined" style="font-size:16px;color:var(--color-primary);">call</span>
+                <span class="font-body-md text-on-surface-variant">+91 98XXX XXXXX</span>
+              </div>
+            </div>
+          </div>
+          <!-- Founder 2 -->
+          <div class="founder-card fade-up" style="transition-delay:100ms;">
+            <div style="overflow:hidden;margin-bottom:var(--spacing-stack-md);">
+              <!-- Placeholder image - replace with Rakesh Gajjar portrait -->
+              <img src="assets/images/placeholder.svg" alt="Rakesh Gajjar - Co-Founder & Technical Head of Meghdoot Motors" class="founder-image">
+            </div>
+            <h3 class="font-headline-md text-primary" style="margin-bottom:4px;">Rakesh Gajjar</h3>
+            <p class="font-label-bold text-secondary" style="text-transform:uppercase;margin-bottom:var(--spacing-stack-md);">Co-Founder &amp; Technical Head</p>
+            <div style="border-top:1px solid var(--color-outline-variant);padding-top:var(--spacing-stack-md);">
+              <div style="display:flex;align-items:center;gap:var(--spacing-stack-sm);margin-bottom:var(--spacing-stack-sm);">
+                <span class="material-symbols-outlined" style="font-size:16px;color:var(--color-primary);">mail</span>
+                <span class="font-body-md text-on-surface-variant">rakesh@meghdootmotors.com</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:var(--spacing-stack-sm);">
+                <span class="material-symbols-outlined" style="font-size:16px;color:var(--color-primary);">call</span>
+                <span class="font-body-md text-on-surface-variant">+91 98XXX XXXXX</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">Meghdoot Motors</div>
+          <p>Maruti Suzuki Authorized Service Station providing premium car care since 1999.</p>
+        </div>
+        <div class="footer-column">
+          <h6>Quick Links</h6>
+          <ul>
+            <li></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h6>Services</h6>
+          <ul>
+            <li><a href="annual-service-plan.html">Annual Service Plan</a></li>
+            <li><a href="insurance-claims.html">Insurance &amp; Claims</a></li>
+            <li><a href="services.html">Body Shop</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h6>Workshop</h6>
+          <p>Opp. YMCA Club, Sarkhej - Gandhinagar Hwy,<br>Ahmedabad, Gujarat 380015</p>
+          <div class="contact-item" style="margin-top:var(--spacing-stack-md);">
+            <span class="material-symbols-outlined" style="color:var(--color-secondary-container);font-size:18px;">phone_in_talk</span>
+            <span class="font-label-bold">+91 79 XXXX XXXX</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Meghdoot Motors &mdash; Maruti Suzuki Authorized Service Station. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>

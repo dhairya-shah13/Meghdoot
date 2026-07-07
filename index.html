@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meghdoot Motors | Maruti Suzuki Authorized Service Station</title>
+  <meta name="description" content="Maruti Suzuki Authorized Service Station since 2002. 23+ years of trusted car care in Ahmedabad. Book your service today.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="site-logo">
+        <img src="assets/images/logo.png" alt="Meghdoot Logo" />
+        <div class="brand-text">
+          <span class="brand-meghdoot">MEGHDOOT</span>
+          <span class="brand-motors">MOTORS</span>
+        </div>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="annual-service-plan.html">Annual Service Plan</a>
+        <a href="insurance-claims.html">Insurance &amp; Claims</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <img src="assets/images/mass-logo.png" alt="Maruti Suzuki Authorized Service" class="mass-logo" />
+      </div>
+      <button class="hamburger" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav-overlay"></div>
+  <nav class="mobile-nav" aria-label="Mobile navigation">
+    <a href="about.html">About Us</a>
+    <a href="services.html">Services</a>
+    <a href="annual-service-plan.html">Annual Service Plan</a>
+    <a href="insurance-claims.html">Insurance &amp; Claims</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main>
+    <!-- ========== HERO ========== -->
+    <section class="home-hero" style="padding-top:var(--nav-height);">
+      <div class="hero-bg">
+        <div class="hero-overlay"></div>
+        <!-- Placeholder image - replace with actual workshop hero photography -->
+        <img src="assets/images/placeholder.svg" alt="Maruti Suzuki authorized service station workshop with professional technicians and modern diagnostic equipment" style="width:100%;height:100%;object-fit:cover;">
+      </div>
+      <div class="container" style="position:relative;z-index:10;width:100%;">
+        <div class="home-hero-content" style="max-width:600px;">
+          <div class="fade-up">
+            <h1 class="font-display-lg text-on-primary" style="margin-bottom:var(--spacing-stack-md);">23 Years of<br>Trusted Car Care</h1>
+            <p class="font-body-lg text-on-primary" style="opacity:0.9;margin-bottom:var(--spacing-stack-lg);max-width:520px;">
+              As an Authorized Maruti Suzuki Service Station since 2002, we combine decades of expertise with cutting-edge technology to keep your vehicle performing at its peak.
+            </p>
+            <div class="flex flex-wrap" style="gap:var(--spacing-stack-md);">
+              <a href="contact.html" class="btn btn-primary btn-lg">Book Your Service</a>
+              <a href="services.html" class="btn btn-ghost btn-lg">Explore Services</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== STATS STRIP ========== -->
+    <section class="stats-strip">
+      <div class="container">
+        <div class="grid grid-4" style="text-align:center;">
+          <div class="fade-up stat-card">
+            <div class="stat-number text-secondary-container stat-number" data-count="23" data-suffix="+" style="font-family:var(--font-display);font-size:var(--text-headline-lg-size);font-weight:700;">23+</div>
+            <div class="stat-label text-on-primary">Years Experience</div>
+          </div>
+          <div class="fade-up stat-card" style="transition-delay:100ms;">
+            <div class="font-headline-md text-on-primary" style="font-size:var(--text-headline-md-size);">Authorized</div>
+            <div class="stat-label text-on-primary" style="opacity:0.6;font-size:12px;">Since 2002</div>
+          </div>
+          <div class="fade-up stat-card" style="transition-delay:200ms;">
+            <div class="stat-number text-secondary-container stat-number" data-count="10000" data-suffix="+" style="font-family:var(--font-display);font-size:var(--text-headline-lg-size);font-weight:700;">10k+</div>
+            <div class="stat-label text-on-primary">Cars Serviced</div>
+          </div>
+          <div class="fade-up stat-card" style="transition-delay:300ms;">
+            <div class="font-headline-md text-on-primary" style="font-size:var(--text-headline-md-size);">Same-Day</div>
+            <div class="stat-label text-on-primary" style="opacity:0.6;font-size:12px;">Service Availability</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ABOUT SECTION ========== -->
+    <section class="section-padding bg-surface" style="overflow:hidden;">
+      <div class="container">
+        <div class="grid grid-2" style="gap:64px;align-items:center;">
+          <div class="about-story-image fade-up">
+            <div class="accent-box"></div>
+            <!-- Placeholder image - replace with founder/owner portrait -->
+            <img src="assets/images/placeholder.svg" alt="Owner or head technician of Meghdoot Motors standing confidently in the service station" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--radius-default);box-shadow:0 20px 40px -10px rgba(0,0,0,0.2);position:relative;z-index:1;">
+            <div class="accent-border"></div>
+          </div>
+          <div class="fade-up" style="transition-delay:200ms;">
+            <span class="text-secondary font-label-bold" style="display:block;margin-bottom:var(--spacing-stack-md);">Established 2002</span>
+            <h2 class="font-headline-lg text-primary" style="margin-bottom:var(--spacing-stack-md);">A Legacy of Excellence in Automotive Care</h2>
+            <p class="font-body-md text-on-surface-variant" style="margin-bottom:var(--spacing-stack-md);line-height:1.7;">
+              Meghdoot Motors began with a simple vision: to provide unparalleled service quality for Maruti Suzuki owners. Over the last two decades, we've grown from a small workshop to a premier authorized service destination, built on the pillars of transparency, genuine parts, and expert craftsmanship.
+            </p>
+            <a href="about.html" class="font-label-bold text-primary" style="display:inline-flex;align-items:center;gap:var(--spacing-stack-sm);text-decoration:none;">
+              Read Our Full Story
+              <span class="material-symbols-outlined" style="font-size:16px;transition:transform 0.2s;">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SERVICES SECTION ========== -->
+    <section class="section-padding" style="background-color:#ffffff;">
+      <div class="container">
+        <div class="fade-up" style="text-align:center;margin-bottom:64px;">
+          <h2 class="font-headline-lg text-primary" style="margin-bottom:var(--spacing-stack-md);">Our Premium Services</h2>
+          <div class="divider"></div>
+        </div>
+        <div class="grid grid-3" style="gap:var(--spacing-gutter);">
+          <!-- Service Card 1 -->
+          <div class="service-card fade-up">
+            <span class="card-icon material-symbols-outlined">home_repair_service</span>
+            <h3>Periodic Maintenance</h3>
+            <p>Comprehensive 60-point checks to keep your Maruti running like new.</p>
+            <a href="services.html" class="card-link">Details <span class="material-symbols-outlined" style="font-size:14px;">chevron_right</span></a>
+          </div>
+          <!-- Service Card 2 -->
+          <div class="service-card fade-up" style="transition-delay:100ms;">
+            <span class="card-icon material-symbols-outlined">car_repair</span>
+            <h3>Body &amp; Paint</h3>
+            <p>Expert denting and high-quality painting with factory-grade color matching.</p>
+            <a href="services.html" class="card-link">Details <span class="material-symbols-outlined" style="font-size:14px;">chevron_right</span></a>
+          </div>
+          <!-- Service Card 3 -->
+          <div class="service-card fade-up" style="transition-delay:200ms;">
+            <span class="card-icon material-symbols-outlined">settings_suggest</span>
+            <h3>Wheel Alignment</h3>
+            <p>Precision computerized alignment and balancing for a smoother, safer ride.</p>
+            <a href="services.html" class="card-link">Details <span class="material-symbols-outlined" style="font-size:14px;">chevron_right</span></a>
+          </div>
+          <!-- Service Card 4 -->
+          <div class="service-card fade-up" style="transition-delay:300ms;">
+            <span class="card-icon material-symbols-outlined">ac_unit</span>
+            <h3>AC Service</h3>
+            <p>Stay cool with our thorough HVAC cleaning and refrigerant top-up services.</p>
+            <a href="services.html" class="card-link">Details <span class="material-symbols-outlined" style="font-size:14px;">chevron_right</span></a>
+          </div>
+          <!-- Service Card 5 -->
+          <div class="service-card fade-up" style="transition-delay:400ms;">
+            <span class="card-icon material-symbols-outlined">verified_user</span>
+            <h3>Insurance Claims</h3>
+            <p>Hassle-free cashless insurance claim processing with all major providers.</p>
+            <a href="insurance-claims.html" class="card-link">Details <span class="material-symbols-outlined" style="font-size:14px;">chevron_right</span></a>
+          </div>
+          <!-- Service Card 6 -->
+          <div class="service-card fade-up" style="transition-delay:500ms;">
+            <span class="card-icon material-symbols-outlined">electric_car</span>
+            <h3>Electrical Diagnostics</h3>
+            <p>Advanced electronic testing and battery health assessments for all models.</p>
+            <a href="services.html" class="card-link">Details <span class="material-symbols-outlined" style="font-size:14px;">chevron_right</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== WHY CHOOSE US ========== -->
+    <section class="section-padding bg-primary text-on-primary">
+      <div class="container">
+        <div class="grid grid-4" style="text-align:center;">
+          <div class="fade-up">
+            <div style="width:64px;height:64px;background:rgba(255,255,255,0.1);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto var(--spacing-stack-md);">
+              <span class="material-symbols-outlined" style="font-size:28px;">verified</span>
+            </div>
+            <h4 class="font-headline-md" style="font-size:24px;margin-bottom:var(--spacing-stack-sm);">Maruti Authorized</h4>
+            <p style="opacity:0.7;font-size:14px;">100% Genuine Parts &amp; Company Trained Technicians</p>
+          </div>
+          <div class="fade-up" style="transition-delay:100ms;">
+            <div style="width:64px;height:64px;background:rgba(255,255,255,0.1);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto var(--spacing-stack-md);">
+              <span class="material-symbols-outlined" style="font-size:28px;">schedule</span>
+            </div>
+            <h4 class="font-headline-md" style="font-size:24px;margin-bottom:var(--spacing-stack-sm);">Same-Day Service</h4>
+            <p style="opacity:0.7;font-size:14px;">Express maintenance to get you back on the road faster</p>
+          </div>
+          <div class="fade-up" style="transition-delay:200ms;">
+            <div style="width:64px;height:64px;background:rgba(255,255,255,0.1);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto var(--spacing-stack-md);">
+              <span class="material-symbols-outlined" style="font-size:28px;">groups</span>
+            </div>
+            <h4 class="font-headline-md" style="font-size:24px;margin-bottom:var(--spacing-stack-sm);">Friendly Team</h4>
+            <p style="opacity:0.7;font-size:14px;">Personalized attention and transparent communication</p>
+          </div>
+          <div class="fade-up" style="transition-delay:300ms;">
+            <div style="width:64px;height:64px;background:rgba(255,255,255,0.1);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto var(--spacing-stack-md);">
+              <span class="material-symbols-outlined" style="font-size:28px;">distance</span>
+            </div>
+            <h4 class="font-headline-md" style="font-size:24px;margin-bottom:var(--spacing-stack-sm);">Pick-up &amp; Drop</h4>
+            <p style="opacity:0.7;font-size:14px;">Convenient doorstep car pick-up and drop facility</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ANNUAL SERVICE PLAN TEASER ========== -->
+    <section class="section-padding bg-surface">
+      <div class="container">
+        <div class="fade-up" style="background-color:#ffffff;border-radius:var(--radius-xl);overflow:hidden;box-shadow:0 20px 40px -12px rgba(0,22,70,0.15);display:flex;flex-direction:column;">
+          <div style="display:flex;flex-direction:column;">
+            <div class="md:block" style="display:none;flex-direction:column;padding:var(--spacing-margin-desktop);">
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;">
+            <div style="padding:var(--spacing-stack-lg);">
+              <span class="badge badge-secondary" style="margin-bottom:var(--spacing-stack-md);">Member Exclusive</span>
+              <h2 class="font-headline-lg text-primary" style="margin-bottom:var(--spacing-stack-md);">Meghdoot Annual Service Plan</h2>
+              <ul style="list-style:none;margin-bottom:var(--spacing-stack-lg);">
+                <li style="display:flex;align-items:center;gap:var(--spacing-stack-sm);margin-bottom:var(--spacing-stack-md);">
+                  <span class="material-symbols-outlined text-secondary">check_circle</span>
+                  <span class="text-on-surface-variant font-body-md">Two Comprehensive Periodic Services</span>
+                </li>
+                <li style="display:flex;align-items:center;gap:var(--spacing-stack-sm);margin-bottom:var(--spacing-stack-md);">
+                  <span class="material-symbols-outlined text-secondary">check_circle</span>
+                  <span class="text-on-surface-variant font-body-md">Complimentary Wheel Alignment &amp; Balancing</span>
+                </li>
+                <li style="display:flex;align-items:center;gap:var(--spacing-stack-sm);margin-bottom:var(--spacing-stack-md);">
+                  <span class="material-symbols-outlined text-secondary">check_circle</span>
+                  <span class="text-on-surface-variant font-body-md">20% Discount on Labor Charges</span>
+                </li>
+                <li style="display:flex;align-items:center;gap:var(--spacing-stack-sm);margin-bottom:var(--spacing-stack-md);">
+                  <span class="material-symbols-outlined text-secondary">check_circle</span>
+                  <span class="text-on-surface-variant font-body-md">Priority Booking &amp; Concierge Support</span>
+                </li>
+              </ul>
+              <a href="annual-service-plan.html" class="btn btn-navy btn-lg">Explore Plan Benefits</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== TESTIMONIALS ========== -->
+    <section class="section-padding" style="background-color:#ffffff;overflow:hidden;">
+      <div class="container">
+        <div class="fade-up" style="text-align:center;margin-bottom:64px;">
+          <h2 class="font-headline-lg text-primary" style="margin-bottom:var(--spacing-stack-md);">What Our Clients Say</h2>
+          <div class="divider"></div>
+        </div>
+        <div class="testimonial-carousel">
+          <div class="testimonial-track" id="testimonialTrack">
+            <div class="testimonial-slide">
+              <div class="testimonial-card">
+                <span class="quote-icon material-symbols-outlined">format_quote</span>
+                <blockquote>"I've been bringing my Swift to Meghdoot Motors for 10 years. They are honest, fast, and the service quality is much better than other authorized stations I've tried. Highly recommended!"</blockquote>
+                <cite>
+                  <h5>Rahul Sharma</h5>
+                  <p>Maruti Swift Owner</p>
+                </cite>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-dots">
+            <button class="dot active" aria-label="Slide 1"></button>
+            <button class="dot" aria-label="Slide 2"></button>
+            <button class="dot" aria-label="Slide 3"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CTA BANNER ========== -->
+    <section class="section-padding bg-secondary-container text-on-primary">
+      <div class="container" style="text-align:center;">
+        <div class="fade-up">
+          <h2 class="font-headline-lg" style="margin-bottom:var(--spacing-stack-md);">Book Your Car's Next Service Today</h2>
+          <p class="font-body-lg" style="margin-bottom:var(--spacing-stack-lg);max-width:600px;margin-left:auto;margin-right:auto;opacity:0.9;">
+            Join 1000s of happy Maruti Suzuki owners who trust Meghdoot Motors for their vehicle's longevity and performance.
+          </p>
+          <div class="flex flex-wrap" style="gap:var(--spacing-stack-md);justify-content:center;">
+            <a href="contact.html" class="btn btn-navy btn-lg" style="display:inline-flex;align-items:center;gap:var(--spacing-stack-sm);">
+              <span class="material-symbols-outlined" style="font-size:20px;">event</span>
+              Schedule Appointment
+            </a>
+            <a href="tel:+919825012345" class="btn btn-ghost btn-lg" style="display:inline-flex;align-items:center;gap:var(--spacing-stack-sm);">
+              <span class="material-symbols-outlined" style="font-size:20px;">call</span>
+              Call Us Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">Meghdoot Motors</div>
+          <p>Maruti Suzuki Authorized Service Station since 2002. Delivering automotive excellence with precision and trust.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Share"><span class="material-symbols-outlined" style="font-size:16px;">share</span></a>
+            <a href="#" aria-label="Location"><span class="material-symbols-outlined" style="font-size:16px;">location_on</span></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h6>Quick Links</h6>
+          <ul>
+            <li></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="annual-service-plan.html">Annual Plan</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h6>Services</h6>
+          <ul>
+            <li><a href="services.html">Periodic Service</a></li>
+            <li><a href="services.html">Accidental Repair</a></li>
+            <li><a href="insurance-claims.html">Maruti Insurance</a></li>
+            <li><a href="services.html">Wheel Solutions</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h6>Visit Us</h6>
+          <p>Plot No. 124, Sarkhej - Gandhinagar Hwy,<br>Opp. YMCA Club, Ahmedabad,<br>Gujarat 380015</p>
+          <p style="margin-top:var(--spacing-stack-sm);">Mon - Sat: 9:00 AM - 7:00 PM<br>Sun: Closed</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Meghdoot Motors &mdash; Maruti Suzuki Authorized Service Station. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/form.js"></script>
+</body>
+</html>

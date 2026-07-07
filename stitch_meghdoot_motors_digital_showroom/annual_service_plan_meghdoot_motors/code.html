@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Annual Service Plan | Meghdoot Motors</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-container": "#0b2a6b",
+                    "surface": "#f7f9fb",
+                    "primary": "#001646",
+                    "surface-variant": "#e0e3e5",
+                    "surface-tint": "#445b9e",
+                    "primary-fixed": "#dbe1ff",
+                    "on-secondary-fixed": "#410003",
+                    "secondary-container": "#df2a2e",
+                    "on-primary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "on-primary-container": "#7c94db",
+                    "tertiary": "#181921",
+                    "surface-container-high": "#e6e8ea",
+                    "inverse-primary": "#b3c5ff",
+                    "secondary-fixed-dim": "#ffb3ac",
+                    "on-secondary-fixed-variant": "#930010",
+                    "on-tertiary-fixed": "#1a1b22",
+                    "tertiary-container": "#2d2e36",
+                    "surface-bright": "#f7f9fb",
+                    "inverse-on-surface": "#eff1f3",
+                    "surface-container-highest": "#e0e3e5",
+                    "on-secondary-container": "#fffbff",
+                    "on-tertiary": "#ffffff",
+                    "outline-variant": "#c5c6d2",
+                    "secondary-fixed": "#ffdad6",
+                    "on-background": "#191c1e",
+                    "on-error-container": "#93000a",
+                    "surface-container": "#eceef0",
+                    "on-surface": "#191c1e",
+                    "on-surface-variant": "#444650",
+                    "inverse-surface": "#2d3133",
+                    "secondary": "#bb0218",
+                    "error-container": "#ffdad6",
+                    "error": "#ba1a1a",
+                    "primary-fixed-dim": "#b3c5ff",
+                    "tertiary-fixed": "#e3e1ec",
+                    "tertiary-fixed-dim": "#c6c5cf",
+                    "on-tertiary-fixed-variant": "#46464e",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-fixed": "#00174a",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed-variant": "#2a4385",
+                    "on-tertiary-container": "#96959f",
+                    "outline": "#757681",
+                    "surface-container-low": "#f2f4f6",
+                    "background": "#f7f9fb",
+                    "surface-dim": "#d8dadc"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "stack-lg": "32px",
+                    "stack-sm": "8px",
+                    "margin-desktop": "64px",
+                    "container-max": "1280px",
+                    "section-gap": "80px",
+                    "gutter": "24px",
+                    "stack-md": "16px"
+            },
+            "fontFamily": {
+                    "headline-lg-mobile": ["Barlow Condensed"],
+                    "label-bold": ["Inter"],
+                    "body-md": ["Inter"],
+                    "display-lg": ["Barlow Condensed"],
+                    "headline-lg": ["Barlow Condensed"],
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Barlow Condensed"]
+            },
+            "fontSize": {
+                    "headline-lg-mobile": ["36px", {"lineHeight": "42px", "fontWeight": "700"}],
+                    "label-bold": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "display-lg": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { background-color: #f7f9fb; color: #191c1e; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .premium-card-shadow {
+            box-shadow: 0 10px 50px -12px rgba(0, 22, 70, 0.2);
+        }
+        .metal-gradient {
+            background: linear-gradient(135deg, #e0e3e5 0%, #c5c6d2 50%, #e0e3e5 100%);
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-primary/85 backdrop-blur-md shadow-md">
+<div class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-on-primary tracking-tight">Meghdoot Motors</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label-bold text-label-bold text-on-primary hover:text-secondary-fixed transition-colors" href="#">Home</a>
+<a class="font-label-bold text-label-bold text-on-primary hover:text-secondary-fixed transition-colors" href="#">About Us</a>
+<a class="font-label-bold text-label-bold text-on-primary hover:text-secondary-fixed transition-colors" href="#">Services</a>
+<a class="font-label-bold text-label-bold text-secondary-container border-b-2 border-secondary-container pb-1" href="#">Annual Service Plan</a>
+<a class="font-label-bold text-label-bold text-on-primary hover:text-secondary-fixed transition-colors" href="#">Insurance &amp; Claims</a>
+<a class="font-label-bold text-label-bold text-on-primary hover:text-secondary-fixed transition-colors" href="#">Gallery</a>
+<a class="font-label-bold text-label-bold text-on-primary hover:text-secondary-fixed transition-colors" href="#">Contact</a>
+</div>
+<button class="bg-secondary-container text-on-primary px-6 py-2 font-label-bold text-label-bold rounded-lg scale-95 active:scale-90 transition-transform shadow-lg hover:shadow-secondary-container/20">
+                Book a Service
+            </button>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative py-section-gap overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
+<div class="z-10">
+<span class="inline-block px-3 py-1 bg-primary text-on-primary text-label-bold font-label-bold uppercase tracking-widest mb-4">Elite Membership</span>
+<h1 class="font-display-lg text-display-lg text-primary mb-6 leading-tight">Annual Service Plan</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-10">
+                        Experience precision automotive care with our comprehensive annual maintenance program. Engineered for peace of mind, designed for the long road.
+                    </p>
+<div class="flex flex-wrap gap-stack-md">
+<button class="bg-secondary text-on-primary px-8 py-4 font-label-bold text-label-bold rounded-lg transition-all hover:brightness-110 shadow-lg flex items-center gap-2">
+                            Enroll Now <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="border-2 border-primary text-primary px-8 py-4 font-label-bold text-label-bold rounded-lg transition-all hover:bg-primary/5">
+                            Talk to Us
+                        </button>
+</div>
+</div>
+<!-- Membership Card Motif -->
+<div class="relative flex justify-center items-center py-10 lg:py-0">
+<div class="w-full max-w-[480px] h-[300px] rounded-2xl p-8 text-white relative overflow-hidden premium-card-shadow transform hover:rotate-2 transition-transform duration-500 bg-[#1a1b22]">
+<div class="absolute inset-0 opacity-10" data-alt="A macro photography shot of carbon fiber texture, showcasing tight diagonal weaves with a glossy, reflective finish. The lighting is cold and metallic, emphasizing the technical and high-performance automotive aesthetic of the service brand." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB8LA6UgPAtenuii7AjzUT7bRi0owR7lqsVy9zhKPyNzllOmuGHIs7PXzcY-voBUOKmfRVBAEJhgoeUml6C_habS-e7sOzyiQ0kl3KyujuLN05K7c5QAO5TKeFYCtKlXl_lW_yGbS2jDYUnvnsYqHX0rZbtA8qbPBIkj1U2fHBkbk-beh7PKnrQVQzmNMIOYS2SYMi_iD8qMU7jPyjgsN7DmfpxldFLum0X3R-T9VQblfbAV1cm2Te-AA')"></div>
+<div class="relative z-10 h-full flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<div>
+<div class="font-headline-md text-headline-md leading-none mb-1">MEGHDOOT</div>
+<div class="text-[10px] tracking-[0.3em] uppercase opacity-60">Elite Motors Membership</div>
+</div>
+<span class="material-symbols-outlined text-4xl text-secondary-fixed">contactless</span>
+</div>
+<div class="mt-auto">
+<div class="font-mono text-xl tracking-widest mb-4">4021 • 8820 • 9912 • 0034</div>
+<div class="flex justify-between items-end">
+<div>
+<div class="text-[8px] uppercase opacity-40">Member Since</div>
+<div class="text-sm">2024</div>
+</div>
+<div class="font-headline-md text-headline-md">PLATINUM</div>
+</div>
+</div>
+</div>
+<div class="absolute -bottom-20 -right-20 w-64 h-64 bg-primary-container rounded-full blur-[80px] opacity-40"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Plan Section -->
+<section class="bg-surface-container py-section-gap relative">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Complete Peace of Mind</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">One plan. Infinite reliability. Our Annual Service Plan covers every essential aspect of your Maruti Suzuki's maintenance needs.</p>
+</div>
+<div class="flex justify-center">
+<!-- Premium Plan Card -->
+<div class="w-full max-w-4xl bg-white border border-outline-variant rounded-xl overflow-hidden shadow-2xl relative group transform hover:-translate-y-2 transition-all duration-300">
+<div class="absolute top-0 left-0 w-full h-2 bg-secondary"></div>
+<div class="flex flex-col md:flex-row">
+<!-- Left Side: Visual/Header -->
+<div class="md:w-1/3 metal-gradient p-10 flex flex-col justify-between items-center text-center">
+<div>
+<span class="bg-primary text-on-primary text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-tighter mb-4 inline-block">Most Popular</span>
+<h3 class="font-headline-md text-headline-md text-primary mt-2 uppercase tracking-tight">Executive Plan</h3>
+<div class="w-16 h-1 bg-secondary mx-auto mt-4"></div>
+</div>
+<div class="py-8">
+<span class="text-sm text-on-surface-variant uppercase font-bold block mb-1">Starting At</span>
+<span class="text-5xl font-headline-lg text-primary">₹5,499</span>
+<span class="text-sm text-on-surface-variant block mt-1">/ Year + GST</span>
+</div>
+<button class="w-full bg-primary text-on-primary py-3 rounded-lg font-label-bold text-label-bold hover:bg-primary-container transition-colors">Select Plan</button>
+</div>
+<!-- Right Side: Features -->
+<div class="md:w-2/3 p-10 grid grid-cols-1 sm:grid-cols-2 gap-6 bg-white">
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">build</span>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-primary">4 Free Services</h4>
+<p class="text-xs text-on-surface-variant mt-1">Zero labour charges for periodic maintenance.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">local_car_wash</span>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-primary">1 Premium Wash</h4>
+<p class="text-xs text-on-surface-variant mt-1">Full body foam wash and internal cleaning.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">shuffle</span>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-primary">Pick-up &amp; Drop</h4>
+<p class="text-xs text-on-surface-variant mt-1">Doorstep convenience within city limits.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">minor_crash</span>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-primary">Breakdown Support</h4>
+<p class="text-xs text-on-surface-variant mt-1">On-road technical assistance available.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">auto_fix_high</span>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-primary">Machine Polish</h4>
+<p class="text-xs text-on-surface-variant mt-1">Restore your car's showroom brilliance.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">health_and_safety</span>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold text-primary">60-Point Health Check</h4>
+<p class="text-xs text-on-surface-variant mt-1">Comprehensive computerized diagnostics.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 sm:col-span-2 pt-4 border-t border-outline-variant">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-white" style="font-variation-settings: 'FILL' 1;">support_agent</span>
+</div>
+<div class="flex justify-between w-full items-center">
+<div>
+<h4 class="font-label-bold text-label-bold text-primary uppercase">24/7 Priority Helpline</h4>
+<p class="text-xs text-on-surface-variant mt-1">Skip the queue with our dedicated concierge desk.</p>
+</div>
+<span class="text-primary font-bold hidden sm:block">1800-MEGHDOOT</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Comparison Section -->
+<section class="py-section-gap">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Why Choose the Annual Plan?</h2>
+<p class="text-body-lg text-on-surface-variant mb-8">
+                            A regular maintenance schedule at Meghdoot Motors doesn't just keep your warranty intact—it significantly enhances resale value and ensures long-term engine health. See how the numbers stack up.
+                        </p>
+<div class="flex items-center gap-6 p-6 bg-primary-container rounded-xl text-white">
+<div class="text-5xl font-headline-lg">40%</div>
+<div>
+<div class="font-bold text-lg leading-tight">Average Annual Savings</div>
+<div class="text-sm opacity-70">Compared to individual service billing and breakdown costs.</div>
+</div>
+</div>
+</div>
+<div class="bg-white p-8 rounded-2xl shadow-xl border border-outline-variant">
+<div class="grid grid-cols-2 gap-4 mb-8">
+<div class="text-center pb-4 border-b-2 border-secondary">
+<span class="font-label-bold text-label-bold text-secondary uppercase tracking-widest">With Plan</span>
+</div>
+<div class="text-center pb-4 border-b-2 border-surface-variant">
+<span class="font-label-bold text-label-bold text-on-surface-variant uppercase tracking-widest">Without Plan</span>
+</div>
+</div>
+<div class="space-y-6">
+<div class="grid grid-cols-2 gap-4 items-center">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-green-600">check_circle</span>
+<span class="text-sm font-semibold">Priority Booking</span>
+</div>
+<div class="flex items-center gap-3 opacity-50">
+<span class="material-symbols-outlined text-red-400">cancel</span>
+<span class="text-sm">Standard Waiting</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4 items-center">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-green-600">check_circle</span>
+<span class="text-sm font-semibold">Zero Labour Charges</span>
+</div>
+<div class="flex items-center gap-3 opacity-50">
+<span class="material-symbols-outlined text-red-400">cancel</span>
+<span class="text-sm">Paid Per Visit</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4 items-center">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-green-600">check_circle</span>
+<span class="text-sm font-semibold">Free Pick &amp; Drop</span>
+</div>
+<div class="flex items-center gap-3 opacity-50">
+<span class="material-symbols-outlined text-red-400">cancel</span>
+<span class="text-sm">Paid Service</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4 items-center">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-green-600">check_circle</span>
+<span class="text-sm font-semibold">Genuine Spares Disc.</span>
+</div>
+<div class="flex items-center gap-3 opacity-50">
+<span class="material-symbols-outlined text-red-400">cancel</span>
+<span class="text-sm">Standard Rates</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4 items-center">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-green-600">check_circle</span>
+<span class="text-sm font-semibold">Roadside Assistance</span>
+</div>
+<div class="flex items-center gap-3 opacity-50">
+<span class="material-symbols-outlined text-red-400">cancel</span>
+<span class="text-sm">Third Party Cost</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Counter Section -->
+<section class="bg-primary py-16 text-on-primary">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-2 md:grid-cols-4 gap-gutter text-center">
+<div>
+<div class="font-display-lg text-4xl lg:text-5xl mb-2">12k+</div>
+<div class="font-label-bold text-xs uppercase tracking-widest text-on-primary-container">Active Members</div>
+</div>
+<div>
+<div class="font-display-lg text-4xl lg:text-5xl mb-2">50k+</div>
+<div class="font-label-bold text-xs uppercase tracking-widest text-on-primary-container">Cars Serviced</div>
+</div>
+<div>
+<div class="font-display-lg text-4xl lg:text-5xl mb-2">98%</div>
+<div class="font-label-bold text-xs uppercase tracking-widest text-on-primary-container">Satisfaction</div>
+</div>
+<div>
+<div class="font-display-lg text-4xl lg:text-5xl mb-2">24/7</div>
+<div class="font-label-bold text-xs uppercase tracking-widest text-on-primary-container">Rapid Response</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-section-gap relative">
+<div class="absolute inset-0 z-0 opacity-5" data-alt="A detailed blueprint of a high-performance car engine on a clean white technical background, with fine lines and annotations in a professional schematic style." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBQC0fqSrnF05c2lV4Ia_18n2iTKlM16y11_mjiTTo9Ot0U9nS0rdyG3Sp3IGfea4v25Dyv5FBCiCXL8peX5XN4wDrQDZuTvDtoD1ldzt6XPVfV_jFNhSU4wvdm0lsWrOpZ3QfLdjPLYf98RPU1egcT7fpJl_tkcKuMWninEJJ5jfwMwmfFbuQzc8V4rE3nHRvA71RBFR7Q5BCcctAY2qbMKMy_T7RF7lz4FNLVQGU5YOiQMrRH-T1B7Q')"></div>
+<div class="max-w-3xl mx-auto px-margin-mobile text-center relative z-10">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Secure Your Drive Today</h2>
+<p class="text-on-surface-variant mb-10">Join thousands of smart owners who trust Meghdoot Motors for their annual maintenance needs. Quick digital enrollment takes less than 2 minutes.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-secondary text-on-primary px-10 py-5 rounded-lg font-label-bold text-lg shadow-xl hover:scale-105 transition-transform">Enroll Now</button>
+<button class="bg-primary text-on-primary px-10 py-5 rounded-lg font-label-bold text-lg shadow-xl hover:scale-105 transition-transform">Talk to Expert</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-tertiary text-on-primary py-stack-lg border-t border-white/10">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-md text-headline-md font-bold text-on-primary mb-6">Meghdoot Motors</div>
+<p class="text-surface-variant text-sm pr-4">Authorized Maruti Suzuki Service Station. Excellence in automotive care since 1998.</p>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold mb-6 uppercase tracking-widest text-secondary-container">Quick Links</h4>
+<ul class="space-y-3">
+<li><a class="text-surface-variant hover:text-on-primary transition-all hover:translate-x-1 inline-block" href="#">Home</a></li>
+<li><a class="text-surface-variant hover:text-on-primary transition-all hover:translate-x-1 inline-block" href="#">About Us</a></li>
+<li><a class="text-surface-variant hover:text-on-primary transition-all hover:translate-x-1 inline-block" href="#">Services</a></li>
+<li><a class="text-secondary-container font-bold" href="#">Annual Service Plan</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold mb-6 uppercase tracking-widest text-secondary-container">Support</h4>
+<ul class="space-y-3">
+<li><a class="text-surface-variant hover:text-on-primary transition-all hover:translate-x-1 inline-block" href="#">Insurance &amp; Claims</a></li>
+<li><a class="text-surface-variant hover:text-on-primary transition-all hover:translate-x-1 inline-block" href="#">Gallery</a></li>
+<li><a class="text-surface-variant hover:text-on-primary transition-all hover:translate-x-1 inline-block" href="#">Privacy Policy</a></li>
+<li><a class="text-surface-variant hover:text-on-primary transition-all hover:translate-x-1 inline-block" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-bold text-label-bold mb-6 uppercase tracking-widest text-secondary-container">Contact Info</h4>
+<p class="text-surface-variant text-sm mb-4">Plot 24-B, Industrial Area Phase II, Bengaluru, Karnataka</p>
+<div class="flex items-center gap-2 text-on-primary font-bold mb-2">
+<span class="material-symbols-outlined text-sm">phone</span> +91 80 4556 7890
+                </div>
+<div class="flex items-center gap-2 text-on-primary font-bold">
+<span class="material-symbols-outlined text-sm">mail</span> service@meghdootmotors.com
+                </div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-surface-variant/50">
+<div>© 2024 Meghdoot Motors - Maruti Suzuki Authorized Service Station. All rights reserved.</div>
+<div class="flex gap-6">
+<a class="hover:text-on-primary" href="#">Facebook</a>
+<a class="hover:text-on-primary" href="#">Twitter</a>
+<a class="hover:text-on-primary" href="#">Instagram</a>
+<a class="hover:text-on-primary" href="#">LinkedIn</a>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interaction for plan card lift
+        const card = document.querySelector('.group');
+        if(card) {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-12px) scale(1.02)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0) scale(1)';
+            });
+        }
+        
+        // Simple scroll observer for stats
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('translate-y-10');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-700', 'translate-y-10', 'opacity-0');
+            observer.observe(section);
+        });
+    </script>
+</body></html>

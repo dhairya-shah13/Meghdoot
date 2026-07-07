@@ -1,0 +1,349 @@
+/* ============================================================
+   PAGES.CSS — Page-specific overrides
+   Meghdoot Motors
+   ============================================================ */
+
+/* ============================================================
+   HOME PAGE
+   ============================================================ */
+
+/* Hero fullscreen */
+.home-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.home-hero .hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.home-hero .hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.home-hero .hero-content {
+  position: relative;
+  z-index: 10;
+  max-width: 600px;
+}
+
+/* Stats strip */
+.stats-strip {
+  background-color: var(--color-primary);
+  padding: var(--spacing-stack-lg) 0;
+  position: relative;
+  z-index: 30;
+}
+
+/* ============================================================
+   ABOUT PAGE
+   ============================================================ */
+
+.about-hero {
+  position: relative;
+  height: 60vh;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.about-story-image {
+  position: relative;
+}
+
+.about-story-image .accent-box {
+  position: absolute;
+  top: -16px;
+  left: -16px;
+  width: 96px;
+  height: 96px;
+  background-color: rgba(223, 42, 46, 0.08);
+  z-index: 0;
+}
+
+.about-story-image .accent-border {
+  position: absolute;
+  bottom: -32px;
+  right: -32px;
+  width: 128px;
+  height: 128px;
+  border: 8px solid var(--color-surface-variant);
+  z-index: 0;
+}
+
+.about-stat-float {
+  position: absolute;
+  bottom: -32px;
+  left: -32px;
+  background-color: var(--color-secondary-container);
+  color: var(--color-on-primary);
+  padding: var(--spacing-stack-lg);
+  display: none;
+}
+
+@media (min-width: 769px) {
+  .about-stat-float {
+    display: block;
+  }
+}
+
+.founder-card {
+  background-color: var(--color-surface);
+  padding: var(--spacing-stack-lg);
+  transition: all var(--transition-slow);
+}
+
+.founder-card:hover .founder-image {
+  filter: grayscale(0%);
+}
+
+.founder-image {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: filter var(--transition-slow);
+}
+
+/* ============================================================
+   SERVICES PAGE
+   ============================================================ */
+
+.services-hero {
+  position: relative;
+  height: 40vh;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding-top: var(--nav-height);
+}
+
+@media (min-width: 769px) {
+  .services-hero {
+    height: 60vh;
+  }
+}
+
+.services-hero .hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.services-hero .hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Process connector line (desktop only) */
+@media (min-width: 769px) {
+  .process-connector {
+    position: absolute;
+    top: 40px;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.15);
+    z-index: 0;
+  }
+}
+
+/* ============================================================
+   ANNUAL SERVICE PLAN PAGE
+   ============================================================ */
+
+.plan-hero {
+  padding-top: var(--spacing-section-gap);
+  overflow: hidden;
+}
+
+.plan-stats {
+  background-color: var(--color-primary);
+  padding: var(--spacing-stack-lg) 0;
+}
+
+/* ============================================================
+   INSURANCE & CLAIMS PAGE
+   ============================================================ */
+
+.insurance-hero {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding-top: var(--nav-height);
+}
+
+.claim-stepper .step-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  background-color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--spacing-stack-md);
+  font-size: 1.5rem;
+  transition: all var(--transition-slow);
+}
+
+.claim-stepper .step-group:hover .step-icon {
+  transform: scale(1.1);
+  background-color: var(--color-secondary-container);
+  border-color: var(--color-secondary-container);
+}
+
+/* Claim form sidebar */
+.claim-form-sidebar {
+  background-color: var(--color-primary);
+  padding: var(--spacing-stack-lg);
+  color: var(--color-on-primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (min-width: 769px) {
+  .claim-form-sidebar {
+    padding: 48px;
+  }
+}
+
+/* ============================================================
+   GALLERY PAGE
+   ============================================================ */
+
+.gallery-hero {
+  position: relative;
+  height: 60vh;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.gallery-hero .hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.gallery-hero .hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ============================================================
+   CONTACT PAGE
+   ============================================================ */
+
+.contact-hero {
+  position: relative;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.contact-hero .hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.contact-hero .hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.google-map-container {
+  width: 100%;
+  height: 500px;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--color-outline-variant);
+}
+
+.google-map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  filter: grayscale(100%);
+  transition: filter var(--transition-slow);
+}
+
+.google-map-container:hover iframe {
+  filter: grayscale(0%);
+}
+
+/* Contact info card */
+.contact-info-card {
+  background-color: var(--color-primary);
+  padding: var(--spacing-stack-lg);
+  color: var(--color-on-primary);
+  border-radius: var(--radius-default);
+}
+
+@media (min-width: 769px) {
+  .contact-info-card {
+    padding: 48px;
+  }
+}
+
+/* Form success state */
+.form-success {
+  display: none;
+  text-align: center;
+  padding: var(--spacing-stack-lg);
+}
+
+.form-success.visible {
+  display: block;
+}
+
+.form-success .success-icon {
+  font-size: 4rem;
+  color: #22c55e;
+  margin-bottom: var(--spacing-stack-md);
+}
+
+/* ============================================================
+   ANIMATION KEYFRAMES
+   ============================================================ */
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+  display: inline-block;
+}

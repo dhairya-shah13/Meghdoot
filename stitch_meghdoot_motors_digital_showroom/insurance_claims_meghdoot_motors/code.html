@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Insurance &amp; Claims | Meghdoot Motors</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-container": "#0b2a6b",
+                    "surface": "#f7f9fb",
+                    "primary": "#001646",
+                    "surface-variant": "#e0e3e5",
+                    "surface-tint": "#445b9e",
+                    "primary-fixed": "#dbe1ff",
+                    "on-secondary-fixed": "#410003",
+                    "secondary-container": "#df2a2e",
+                    "on-primary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "on-primary-container": "#7c94db",
+                    "tertiary": "#181921",
+                    "surface-container-high": "#e6e8ea",
+                    "inverse-primary": "#b3c5ff",
+                    "secondary-fixed-dim": "#ffb3ac",
+                    "on-secondary-fixed-variant": "#930010",
+                    "on-tertiary-fixed": "#1a1b22",
+                    "tertiary-container": "#2d2e36",
+                    "surface-bright": "#f7f9fb",
+                    "inverse-on-surface": "#eff1f3",
+                    "surface-container-highest": "#e0e3e5",
+                    "on-secondary-container": "#fffbff",
+                    "on-tertiary": "#ffffff",
+                    "outline-variant": "#c5c6d2",
+                    "secondary-fixed": "#ffdad6",
+                    "on-background": "#191c1e",
+                    "on-error-container": "#93000a",
+                    "surface-container": "#eceef0",
+                    "on-surface": "#191c1e",
+                    "on-surface-variant": "#444650",
+                    "inverse-surface": "#2d3133",
+                    "secondary": "#bb0218",
+                    "error-container": "#ffdad6",
+                    "error": "#ba1a1a",
+                    "primary-fixed-dim": "#b3c5ff",
+                    "tertiary-fixed": "#e3e1ec",
+                    "tertiary-fixed-dim": "#c6c5cf",
+                    "on-tertiary-fixed-variant": "#46464e",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-fixed": "#00174a",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed-variant": "#2a4385",
+                    "on-tertiary-container": "#96959f",
+                    "outline": "#757681",
+                    "surface-container-low": "#f2f4f6",
+                    "background": "#f7f9fb",
+                    "surface-dim": "#d8dadc"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "stack-lg": "32px",
+                    "stack-sm": "8px",
+                    "margin-desktop": "64px",
+                    "container-max": "1280px",
+                    "section-gap": "80px",
+                    "gutter": "24px",
+                    "stack-md": "16px"
+            },
+            "fontFamily": {
+                    "headline-lg-mobile": ["Barlow Condensed"],
+                    "label-bold": ["Inter"],
+                    "body-md": ["Inter"],
+                    "display-lg": ["Barlow Condensed"],
+                    "headline-lg": ["Barlow Condensed"],
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Barlow Condensed"]
+            },
+            "fontSize": {
+                    "headline-lg-mobile": ["36px", {"lineHeight": "42px", "fontWeight": "700"}],
+                    "label-bold": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "display-lg": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .shadow-glow:hover {
+            box-shadow: 0 10px 40px -10px rgba(0, 22, 70, 0.3);
+            transform: translateY(-4px);
+        }
+        .active-step {
+            border-color: #df2a2e;
+            background-color: #df2a2e;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-secondary-fixed-dim">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-primary/85 backdrop-blur-md shadow-md">
+<div class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-on-primary tracking-tight">
+                Meghdoot Motors
+            </div>
+<div class="hidden md:flex space-x-8 items-center">
+<a class="font-label-bold text-label-bold text-on-primary hover:text-secondary-fixed transition-colors" href="#">Home</a>
+<a class="font-label-bold text-label-bold text-on-primary hover:text-secondary-fixed transition-colors" href="#">About Us</a>
+<a class="font-label-bold text-label-bold text-on-primary hover:text-secondary-fixed transition-colors" href="#">Services</a>
+<a class="font-label-bold text-label-bold text-on-primary hover:text-secondary-fixed transition-colors" href="#">Annual Service Plan</a>
+<a class="font-label-bold text-label-bold text-secondary-container border-b-2 border-secondary-container pb-1" href="#">Insurance &amp; Claims</a>
+<a class="font-label-bold text-label-bold text-on-primary hover:text-secondary-fixed transition-colors" href="#">Gallery</a>
+<a class="font-label-bold text-label-bold text-on-primary hover:text-secondary-fixed transition-colors" href="#">Contact</a>
+<button class="bg-secondary-container text-on-secondary-container px-6 py-2 font-label-bold text-label-bold rounded-lg scale-95 active:scale-90 transition-transform shadow-lg shadow-black/20">
+                    Book a Service
+                </button>
+</div>
+<button class="md:hidden text-on-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative h-[716px] flex items-center justify-center overflow-hidden pt-20">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center scale-105" data-alt="A premium close-up shot of a modern car's polished silver exterior reflecting the sky. The image is captured with professional automotive lighting in a high-tech facility, featuring deep navy shadows and bright metallic highlights. The atmosphere is professional and secure, emphasizing safety and high-end automotive care." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD7luxGuXcXfV7jKcRkW20dP8xgqzV2JXf0rdGeXv3fnMCVY2qD2o9bNpkuKGu1k8ZQFOKYvN3pOaP8plvZ9as3tu-bxg3lbCp3iyPBlqAvS2Y9Am6LRO7RoM0pfrCMSurgGZ2dmJh_k0rnmG93vPpvZ2M7cWQqf18CvNE73bgSFLz4zVhmomuulmR-TT5Hrxcwcj_sADUWhw5bHYY1X1r0HiUc1GDeK53uwENWvXu_pnn5nUKH4DaUWg')"></div>
+<div class="absolute inset-0 bg-primary/60 backdrop-blur-[2px]"></div>
+</div>
+<div class="relative z-10 text-center px-margin-mobile md:px-margin-desktop max-w-4xl">
+<div class="mb-6 inline-flex items-center justify-center w-20 h-20 bg-secondary rounded-full shadow-2xl">
+<span class="material-symbols-outlined text-white text-5xl" style="font-variation-settings: 'FILL' 1;">shield</span>
+</div>
+<h1 class="font-display-lg text-display-lg md:text-display-lg text-white mb-4 uppercase">
+                Insurance &amp; Claims <span class="text-secondary-container">Assistance</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-primary/80 mb-10 max-w-2xl mx-auto">
+                Navigate the complexities of insurance claims with ease. Meghdoot Motors provides seamless, cashless support to get you back on the road faster.
+            </p>
+<div class="flex flex-col md:flex-row gap-4 justify-center">
+<a class="bg-secondary text-white font-label-bold text-label-bold px-10 py-4 rounded transition-all hover:brightness-110 active:scale-95 shadow-[0_4px_0_0_#930010]" href="#claim-form">
+                    GET CLAIM ASSISTANCE
+                </a>
+<a class="border border-white/30 text-white font-label-bold text-label-bold px-10 py-4 rounded hover:bg-white/10 transition-all" href="#process">
+                    HOW IT WORKS
+                </a>
+</div>
+</div>
+</section>
+<!-- Partners & Benefits -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface">
+<div class="max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6 uppercase">Cashless Tie-ups &amp; <br/><span class="text-secondary">Direct Support</span></h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
+                        We have partnered with India's leading insurance providers to offer a stress-free repair experience. Our dedicated insurance desk handles all the paperwork, so you don't have to.
+                    </p>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<h4 class="font-label-bold text-label-bold text-primary text-lg">Direct Billing / Cashless Repairs</h4>
+<p class="text-on-surface-variant">No out-of-pocket expenses for covered repairs at our authorized center.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<h4 class="font-label-bold text-label-bold text-primary text-lg">Hassle-Free Documentation</h4>
+<p class="text-on-surface-variant">Our experts assist in filing digital claims and gathering necessary evidence.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<h4 class="font-label-bold text-label-bold text-primary text-lg">Genuine Spares Guarantee</h4>
+<p class="text-on-surface-variant">All repairs use 100% Maruti Suzuki Genuine Parts, ensuring your warranty stays intact.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-white p-8 rounded border border-outline-variant shadow-sm shadow-glow flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">handshake</span>
+<h3 class="font-headline-md text-headline-md">25+</h3>
+<p class="font-label-bold text-label-bold text-on-surface-variant">Partner Insurers</p>
+</div>
+<div class="bg-white p-8 rounded border border-outline-variant shadow-sm shadow-glow flex flex-col items-center text-center mt-8">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">timer</span>
+<h3 class="font-headline-md text-headline-md">24h</h3>
+<p class="font-label-bold text-label-bold text-on-surface-variant">Approval Turnaround</p>
+</div>
+<div class="bg-white p-8 rounded border border-outline-variant shadow-sm shadow-glow flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">verified</span>
+<h3 class="font-headline-md text-headline-md">10k+</h3>
+<p class="font-label-bold text-label-bold text-on-surface-variant">Claims Settled</p>
+</div>
+<div class="bg-white p-8 rounded border border-outline-variant shadow-sm shadow-glow flex flex-col items-center text-center mt-8">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">engineering</span>
+<h3 class="font-headline-md text-headline-md">100%</h3>
+<p class="font-label-bold text-label-bold text-on-surface-variant">Certified Quality</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Claim Process Stepper -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-primary text-on-primary overflow-hidden" id="process">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg mb-4 uppercase">How <span class="text-secondary-container">Claims Work</span></h2>
+<p class="text-surface-variant max-w-2xl mx-auto">A transparent, step-by-step process designed for efficiency.</p>
+</div>
+<div class="relative">
+<!-- Progress Line -->
+<div class="absolute top-1/2 left-0 w-full h-1 bg-surface-variant/20 -translate-y-1/2 hidden lg:block"></div>
+<div class="grid grid-cols-1 lg:grid-cols-5 gap-gutter relative z-10">
+<!-- Step 1 -->
+<div class="group flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-full border-4 border-surface-variant bg-primary flex items-center justify-center mb-6 transition-all duration-500 group-hover:scale-110 group-hover:bg-secondary-container group-hover:border-secondary-container">
+<span class="material-symbols-outlined text-2xl">report_problem</span>
+</div>
+<h4 class="font-label-bold text-label-bold mb-2">Report Damage</h4>
+<p class="text-sm text-surface-variant/70">Call our helpline or visit the station immediately after an incident.</p>
+</div>
+<!-- Step 2 -->
+<div class="group flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-full border-4 border-surface-variant bg-primary flex items-center justify-center mb-6 transition-all duration-500 group-hover:scale-110 group-hover:bg-secondary-container group-hover:border-secondary-container">
+<span class="material-symbols-outlined text-2xl">assignment</span>
+</div>
+<h4 class="font-label-bold text-label-bold mb-2">Assessment</h4>
+<p class="text-sm text-surface-variant/70">Independent surveyors evaluate the vehicle damage and estimate costs.</p>
+</div>
+<!-- Step 3 -->
+<div class="group flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-full border-4 border-surface-variant bg-primary flex items-center justify-center mb-6 transition-all duration-500 group-hover:scale-110 group-hover:bg-secondary-container group-hover:border-secondary-container">
+<span class="material-symbols-outlined text-2xl">task_alt</span>
+</div>
+<h4 class="font-label-bold text-label-bold mb-2">Approval</h4>
+<p class="text-sm text-surface-variant/70">Quick insurance clearance through our direct digital link.</p>
+</div>
+<!-- Step 4 -->
+<div class="group flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-full border-4 border-surface-variant bg-primary flex items-center justify-center mb-6 transition-all duration-500 group-hover:scale-110 group-hover:bg-secondary-container group-hover:border-secondary-container">
+<span class="material-symbols-outlined text-2xl">build</span>
+</div>
+<h4 class="font-label-bold text-label-bold mb-2">Repair</h4>
+<p class="text-sm text-surface-variant/70">Expert technicians restore your vehicle to factory standards.</p>
+</div>
+<!-- Step 5 -->
+<div class="group flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-full border-4 border-surface-variant bg-primary flex items-center justify-center mb-6 transition-all duration-500 group-hover:scale-110 group-hover:bg-secondary-container group-hover:border-secondary-container">
+<span class="material-symbols-outlined text-2xl">local_shipping</span>
+</div>
+<h4 class="font-label-bold text-label-bold mb-2">Delivery</h4>
+<p class="text-sm text-surface-variant/70">Vehicle delivered to your doorstep, clean and certified.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Partner Logos -->
+<section class="py-16 px-margin-mobile md:px-margin-desktop bg-white border-b border-outline-variant">
+<div class="max-w-container-max mx-auto">
+<h5 class="text-center font-label-bold text-label-bold text-outline uppercase tracking-widest mb-10">Our Authorized Insurance Partners</h5>
+<div class="flex flex-wrap justify-center items-center gap-12 opacity-50 grayscale hover:grayscale-0 transition-all">
+<!-- Logic: Placeholders for Insurance Logos -->
+<div class="w-32 h-12 bg-surface-variant flex items-center justify-center font-bold text-primary/50 text-xs text-center p-2 rounded">ICICI LOMBARD</div>
+<div class="w-32 h-12 bg-surface-variant flex items-center justify-center font-bold text-primary/50 text-xs text-center p-2 rounded">HDFC ERGO</div>
+<div class="w-32 h-12 bg-surface-variant flex items-center justify-center font-bold text-primary/50 text-xs text-center p-2 rounded">NEW INDIA</div>
+<div class="w-32 h-12 bg-surface-variant flex items-center justify-center font-bold text-primary/50 text-xs text-center p-2 rounded">TATA AIG</div>
+<div class="w-32 h-12 bg-surface-variant flex items-center justify-center font-bold text-primary/50 text-xs text-center p-2 rounded">BAJAJ ALLIANZ</div>
+<div class="w-32 h-12 bg-surface-variant flex items-center justify-center font-bold text-primary/50 text-xs text-center p-2 rounded">ROYAL SUNDARAM</div>
+</div>
+</div>
+</section>
+<!-- Claim CTA Section -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop" id="claim-form">
+<div class="max-w-4xl mx-auto bg-white rounded-xl shadow-2xl overflow-hidden border border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-5">
+<div class="md:col-span-2 bg-primary p-12 text-on-primary flex flex-col justify-center">
+<h3 class="font-headline-md text-headline-md mb-4">Fast-Track Your Claim</h3>
+<p class="text-on-primary-container mb-8">Enter your details and our dedicated insurance desk will call you back in under 30 minutes.</p>
+<div class="flex items-center gap-4 mb-4">
+<span class="material-symbols-outlined">phone_in_talk</span>
+<span class="font-label-bold">+91 1800-MEGHDOOT</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined">mail</span>
+<span class="font-label-bold">claims@meghdoot.com</span>
+</div>
+</div>
+<div class="md:col-span-3 p-12">
+<form class="space-y-6">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block text-xs font-bold text-outline uppercase mb-1">Full Name</label>
+<input class="w-full bg-surface-container-low border-b-2 border-outline-variant focus:border-primary outline-none py-2 px-0 transition-all" placeholder="John Doe" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-bold text-outline uppercase mb-1">Phone Number</label>
+<input class="w-full bg-surface-container-low border-b-2 border-outline-variant focus:border-primary outline-none py-2 px-0 transition-all" placeholder="+91 98765 43210" type="tel"/>
+</div>
+</div>
+<div>
+<label class="block text-xs font-bold text-outline uppercase mb-1">Vehicle Registration Number</label>
+<input class="w-full bg-surface-container-low border-b-2 border-outline-variant focus:border-primary outline-none py-2 px-0 transition-all" placeholder="MH-12-XX-0000" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-bold text-outline uppercase mb-1">Insurance Provider</label>
+<select class="w-full bg-surface-container-low border-b-2 border-outline-variant focus:border-primary outline-none py-2 px-0 transition-all appearance-none">
+<option>Select Provider</option>
+<option>ICICI Lombard</option>
+<option>HDFC Ergo</option>
+<option>Tata AIG</option>
+<option>Other</option>
+</select>
+</div>
+<button class="w-full bg-secondary text-white font-label-bold text-label-bold py-4 rounded hover:bg-secondary-container transition-all active:scale-[0.98] shadow-lg" type="button">
+                            GET CLAIM ASSISTANCE
+                        </button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-primary text-on-primary">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-stack-lg max-w-container-max mx-auto">
+<div>
+<div class="font-headline-md text-headline-md font-bold text-on-primary mb-6">Meghdoot Motors</div>
+<p class="text-surface-variant font-body-md text-body-md">Your trusted partner for Maruti Suzuki service excellence since 1995. Precision, reliability, and care in every drive.</p>
+</div>
+<div>
+<h5 class="font-label-bold text-label-bold text-on-primary mb-6">Quick Links</h5>
+<ul class="space-y-3">
+<li><a class="text-surface-variant hover:text-on-primary transition-transform hover:translate-x-1 inline-block" href="#">Home</a></li>
+<li><a class="text-surface-variant hover:text-on-primary transition-transform hover:translate-x-1 inline-block" href="#">About Us</a></li>
+<li><a class="text-surface-variant hover:text-on-primary transition-transform hover:translate-x-1 inline-block" href="#">Services</a></li>
+<li><a class="text-surface-variant hover:text-on-primary transition-transform hover:translate-x-1 inline-block" href="#">Annual Service Plan</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-bold text-label-bold text-on-primary mb-6">Support</h5>
+<ul class="space-y-3">
+<li><a class="text-secondary-container font-bold transition-transform hover:translate-x-1 inline-block" href="#">Insurance &amp; Claims</a></li>
+<li><a class="text-surface-variant hover:text-on-primary transition-transform hover:translate-x-1 inline-block" href="#">Gallery</a></li>
+<li><a class="text-surface-variant hover:text-on-primary transition-transform hover:translate-x-1 inline-block" href="#">Contact</a></li>
+<li><a class="text-surface-variant hover:text-on-primary transition-transform hover:translate-x-1 inline-block" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-bold text-label-bold text-on-primary mb-6">Newsletter</h5>
+<p class="text-surface-variant text-sm mb-4">Stay updated with our latest offers and car care tips.</p>
+<div class="flex">
+<input class="bg-primary-container text-on-primary-container px-4 py-2 w-full outline-none border border-outline-variant/30 focus:border-secondary" placeholder="Email Address" type="email"/>
+<button class="bg-secondary text-white px-4 py-2"><span class="material-symbols-outlined">send</span></button>
+</div>
+</div>
+</div>
+<div class="border-t border-outline-variant/10 py-6 text-center text-sm text-surface-variant/50">
+            © 2024 Meghdoot Motors - Maruti Suzuki Authorized Service Station. All rights reserved.
+        </div>
+</footer>
+<script>
+        // Micro-interactions for stepper
+        const steps = document.querySelectorAll('.group');
+        steps.forEach((step, index) => {
+            step.addEventListener('mouseenter', () => {
+                // Potential for more advanced sequential animation
+            });
+        });
+
+        // Simple form handling
+        const btn = document.querySelector('form button');
+        btn.addEventListener('click', () => {
+            btn.innerHTML = '<span class="material-symbols-outlined animate-spin">sync</span> PROCESSING...';
+            setTimeout(() => {
+                btn.innerHTML = 'CLAIM REQUEST SENT!';
+                btn.classList.replace('bg-secondary', 'bg-green-600');
+            }, 1500);
+        });
+    </script>
+</body></html>

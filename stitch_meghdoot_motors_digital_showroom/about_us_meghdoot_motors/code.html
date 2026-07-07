@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Us | Meghdoot Motors - Maruti Suzuki Authorized Service Station</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-container": "#0b2a6b",
+                    "surface": "#f7f9fb",
+                    "primary": "#001646",
+                    "surface-variant": "#e0e3e5",
+                    "surface-tint": "#445b9e",
+                    "primary-fixed": "#dbe1ff",
+                    "on-secondary-fixed": "#410003",
+                    "secondary-container": "#df2a2e",
+                    "on-primary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "on-primary-container": "#7c94db",
+                    "tertiary": "#181921",
+                    "surface-container-high": "#e6e8ea",
+                    "inverse-primary": "#b3c5ff",
+                    "secondary-fixed-dim": "#ffb3ac",
+                    "on-secondary-fixed-variant": "#930010",
+                    "on-tertiary-fixed": "#1a1b22",
+                    "tertiary-container": "#2d2e36",
+                    "surface-bright": "#f7f9fb",
+                    "inverse-on-surface": "#eff1f3",
+                    "surface-container-highest": "#e0e3e5",
+                    "on-secondary-container": "#fffbff",
+                    "on-tertiary": "#ffffff",
+                    "outline-variant": "#c5c6d2",
+                    "secondary-fixed": "#ffdad6",
+                    "on-background": "#191c1e",
+                    "on-error-container": "#93000a",
+                    "surface-container": "#eceef0",
+                    "on-surface": "#191c1e",
+                    "on-surface-variant": "#444650",
+                    "inverse-surface": "#2d3133",
+                    "secondary": "#bb0218",
+                    "error-container": "#ffdad6",
+                    "error": "#ba1a1a",
+                    "primary-fixed-dim": "#b3c5ff",
+                    "tertiary-fixed": "#e3e1ec",
+                    "tertiary-fixed-dim": "#c6c5cf",
+                    "on-tertiary-fixed-variant": "#46464e",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-fixed": "#00174a",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed-variant": "#2a4385",
+                    "on-tertiary-container": "#96959f",
+                    "outline": "#757681",
+                    "surface-container-low": "#f2f4f6",
+                    "background": "#f7f9fb",
+                    "surface-dim": "#d8dadc"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "stack-lg": "32px",
+                    "stack-sm": "8px",
+                    "margin-desktop": "64px",
+                    "container-max": "1280px",
+                    "section-gap": "80px",
+                    "gutter": "24px",
+                    "stack-md": "16px"
+            },
+            "fontFamily": {
+                    "headline-lg-mobile": ["Barlow Condensed"],
+                    "label-bold": ["Inter"],
+                    "body-md": ["Inter"],
+                    "display-lg": ["Barlow Condensed"],
+                    "headline-lg": ["Barlow Condensed"],
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Barlow Condensed"]
+            },
+            "fontSize": {
+                    "headline-lg-mobile": ["36px", {"lineHeight": "42px", "fontWeight": "700"}],
+                    "label-bold": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "display-lg": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .hero-gradient {
+            background: linear-gradient(to right, rgba(0, 22, 70, 0.9) 0%, rgba(0, 22, 70, 0.4) 100%);
+        }
+        .timeline-line {
+            background: repeating-linear-gradient(to bottom, #bb0218 0%, #bb0218 50%, transparent 50%, transparent 100%);
+            background-size: 1px 12px;
+        }
+        .hover-lift {
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px -15px rgba(0, 22, 70, 0.15);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-secondary-container selection:text-on-primary">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-primary/85 backdrop-blur-md shadow-md">
+<nav class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-on-primary tracking-tight">Meghdoot Motors</div>
+<!-- Desktop Links -->
+<div class="hidden md:flex gap-gutter items-center">
+<a class="font-label-bold text-label-bold text-on-primary hover:text-secondary-fixed transition-colors" href="#">Home</a>
+<a class="font-label-bold text-label-bold text-secondary-container border-b-2 border-secondary-container pb-1" href="#">About Us</a>
+<a class="font-label-bold text-label-bold text-on-primary hover:text-secondary-fixed transition-colors" href="#">Services</a>
+<a class="font-label-bold text-label-bold text-on-primary hover:text-secondary-fixed transition-colors" href="#">Annual Service Plan</a>
+<a class="font-label-bold text-label-bold text-on-primary hover:text-secondary-fixed transition-colors" href="#">Insurance &amp; Claims</a>
+<a class="font-label-bold text-label-bold text-on-primary hover:text-secondary-fixed transition-colors" href="#">Gallery</a>
+<a class="font-label-bold text-label-bold text-on-primary hover:text-secondary-fixed transition-colors" href="#">Contact</a>
+</div>
+<button class="bg-secondary-container text-on-primary px-6 py-2 rounded-lg font-label-bold text-label-bold scale-95 active:scale-90 transition-transform hover:shadow-lg">
+                Book a Service
+            </button>
+</nav>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[60vh] min-h-[400px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center" data-alt="A high-end Maruti Suzuki authorized service workshop with gleaming floors and modern diagnostic equipment. The lighting is bright and professional, showcasing rows of vehicles being meticulously maintained by technicians in navy blue uniforms. The overall atmosphere is one of clinical precision and automotive excellence in a corporate navy and metallic silver setting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDVka8Me_DoMS8R--9cJ0ADnVjqwH5Kdup4jpuNULZu5EW0N0FBx_egZTTvIh3KevKeYlDjGmOP4H9luzmS5fhWmTyeHlvYxobaE_jFgnTn2gSvGpmP4quBavAbfZGVTi4ckVm07XT1ZMLQyjtejGpihSbGGFvM5pqdbF2okRNn0CQ90BIJ4QcbX8M8S1cudHp8YdsxwIDNJznI9uJsAOGajy6Cy2fJcFSNNMBXHMBw1tw5yYLFvOe3mg')"></div>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+<div class="max-w-2xl">
+<h1 class="font-display-lg text-display-lg md:text-display-lg text-on-primary leading-tight uppercase">About<br/><span class="text-secondary-container">Meghdoot Motors</span></h1>
+<p class="mt-stack-md font-body-lg text-body-lg text-on-primary-container max-w-lg">Dedicated to automotive perfection since 1999. Experience the precision of India's leading Maruti Suzuki authorized service specialists.</p>
+</div>
+</div>
+</section>
+<!-- Founders & Story Section -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-section-gap items-center">
+<div class="space-y-stack-md">
+<div class="inline-block bg-primary text-on-primary px-4 py-1 font-label-bold text-label-bold uppercase tracking-widest">Our Legacy</div>
+<h2 class="font-headline-lg text-headline-lg text-primary">Over Two Decades of Automotive Excellence</h2>
+<div class="w-16 h-1 bg-secondary-container mb-stack-md"></div>
+<p class="font-body-lg text-on-surface-variant">
+                        Founded in June 1999, Meghdoot Motors began with a singular vision: to redefine the service experience for vehicle owners through transparency and technical mastery. Our journey reached a pivotal milestone on February 22, 2002, when we were officially appointed as a Maruti Suzuki Authorized Service Station.
+                    </p>
+<p class="font-body-lg text-on-surface-variant">
+                        Led by visionaries Niraj Chokshi and Rakesh Gajjar, we have grown from a local workshop into a state-of-the-art service hub, maintaining the highest standards of Maruti Suzuki's global service protocols.
+                    </p>
+</div>
+<div class="relative">
+<div class="w-full aspect-[4/3] bg-cover bg-center rounded shadow-2xl border border-outline-variant" data-alt="Two professional Indian automotive business founders, Niraj Chokshi and Rakesh Gajjar, standing confidently in a modern, glass-walled office overlooking a high-tech car service bay. They are dressed in smart business casual attire. The image is shot with a shallow depth of field, emphasizing their leadership and the clean, high-contrast Navy and Silver corporate environment." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAmX_5k-H_NSJOFet4LePWJGcq2dIjF58ipceGBOoElX1bz7d_t6PBLUeimTrMRlh4G5kftULxixv2MPzE_nPjruFv_BqLAGo0Z04M5jHuvBLBWlSj-1nOBbgq1sR-elYJgrO3Fl_gABNWvA4O4nfxyl-6RxdzPVpTUnXFZZxW7P1QFHJRKJokyhLKsj2UqiK5pDwiC-9N0cx6ZySHHo15FxBOZ0uqQumdDUaWNrk05C7H1NWs5W8Vhnw')"></div>
+<div class="absolute -bottom-8 -left-8 bg-secondary-container text-on-primary p-8 hidden md:block">
+<p class="font-display-lg text-headline-lg m-0">23+</p>
+<p class="font-label-bold text-label-bold uppercase tracking-tighter">Years of Service</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Mission & Vision Bento -->
+<section class="py-section-gap bg-surface-container">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="bg-surface p-12 border border-outline-variant hover-lift">
+<span class="material-symbols-outlined text-secondary-container text-5xl mb-stack-md" data-icon="track_changes">track_changes</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-stack-sm">Our Mission</h3>
+<p class="font-body-lg text-on-surface-variant">To provide unrivaled automotive care through advanced diagnostics, genuine parts, and an unwavering commitment to customer safety and satisfaction, ensuring every drive is a seamless experience.</p>
+</div>
+<div class="bg-primary p-12 border border-primary-container hover-lift">
+<span class="material-symbols-outlined text-secondary-container text-5xl mb-stack-md" data-icon="visibility">visibility</span>
+<h3 class="font-headline-md text-headline-md text-on-primary mb-stack-sm">Our Vision</h3>
+<p class="font-body-lg text-on-primary-container">To be the most trusted and preferred service partner for Maruti Suzuki owners nationwide, setting the benchmark for technical integrity and service efficiency in the automotive industry.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Timeline Section -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto overflow-hidden">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary uppercase">Our Growth Timeline</h2>
+<div class="w-24 h-1 bg-secondary-container mx-auto mt-4"></div>
+</div>
+<div class="relative max-w-4xl mx-auto">
+<!-- Vertical Line -->
+<div class="absolute left-1/2 transform -translate-x-1/2 h-full w-px timeline-line"></div>
+<!-- Milestone 1 -->
+<div class="relative mb-24 flex items-center justify-between w-full">
+<div class="w-5/12 text-right pr-12 hidden md:block">
+<h4 class="font-headline-md text-headline-md text-primary">Founding</h4>
+<p class="text-on-surface-variant font-body-md">Meghdoot Motors established its first service center in Ahmedabad.</p>
+</div>
+<div class="z-20 w-12 h-12 bg-primary border-4 border-surface flex items-center justify-center rounded-full">
+<span class="text-on-primary font-bold">99</span>
+</div>
+<div class="w-5/12 pl-12">
+<div class="md:hidden">
+<h4 class="font-headline-md text-headline-md text-primary">Founding</h4>
+<p class="text-on-surface-variant font-body-md">Meghdoot Motors established.</p>
+</div>
+<span class="font-label-bold text-label-bold text-secondary uppercase">June 1999</span>
+</div>
+</div>
+<!-- Milestone 2 -->
+<div class="relative mb-24 flex items-center justify-between w-full flex-row-reverse">
+<div class="w-5/12 text-left pl-12 hidden md:block">
+<h4 class="font-headline-md text-headline-md text-primary">Authorized Partnership</h4>
+<p class="text-on-surface-variant font-body-md">Official appointment as a Maruti Suzuki Authorized Service Station (MASS).</p>
+</div>
+<div class="z-20 w-12 h-12 bg-secondary-container border-4 border-surface flex items-center justify-center rounded-full">
+<span class="text-on-primary font-bold">02</span>
+</div>
+<div class="w-5/12 pr-12 text-right">
+<div class="md:hidden">
+<h4 class="font-headline-md text-headline-md text-primary">Authorized</h4>
+</div>
+<span class="font-label-bold text-label-bold text-secondary uppercase">22 Feb 2002</span>
+</div>
+</div>
+<!-- Milestone 3 -->
+<div class="relative flex items-center justify-between w-full">
+<div class="w-5/12 text-right pr-12 hidden md:block">
+<h4 class="font-headline-md text-headline-md text-primary">Modernization</h4>
+<p class="text-on-surface-variant font-body-md">Installation of advanced diagnostic systems and facility expansion.</p>
+</div>
+<div class="z-20 w-12 h-12 bg-primary border-4 border-surface flex items-center justify-center rounded-full">
+<span class="text-on-primary font-bold">24</span>
+</div>
+<div class="w-5/12 pl-12">
+<div class="md:hidden">
+<h4 class="font-headline-md text-headline-md text-primary">Growth</h4>
+</div>
+<span class="font-label-bold text-label-bold text-secondary uppercase">Present Day</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Team Section -->
+<section class="py-section-gap bg-primary">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-on-primary uppercase">Meet the Founders</h2>
+<div class="w-24 h-1 bg-secondary-container mx-auto mt-4"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter max-w-4xl mx-auto">
+<!-- Founder 1 -->
+<div class="bg-surface p-8 group">
+<div class="relative overflow-hidden mb-stack-md">
+<div class="w-full aspect-square bg-cover bg-center grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Portrait of Niraj Chokshi, co-founder of Meghdoot Motors. He is a middle-aged Indian businessman with a professional and welcoming expression. He is wearing a crisp white shirt and navy blazer. The background is a blurred corporate office with subtle metallic silver accents and high-key lighting, maintaining a clean and modern look." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBArOK7tteUxsQiR58mDgYTdDGsqnh-TSAHZ6mcEKBpuU0dWSBC6lW0U-62QL0qonWCK8X2KLqzeuVQLTPvM8XakY67eIx3_cp9DfkY7IGfYqVZHJDPbA0kxHhdcUYI6LT3K-Ob2WvCWfVYYTyA8v2uwORBYEvQhz613ufEw8dCUNEhGLxvajBWuIwOvrc7GbqwLL-MBERmuemuHH2-yy6RTRRYuTNqmmtUMIVuXnnkBL7VOcD8qcpcKQ')"></div>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-1">Niraj Chokshi</h3>
+<p class="font-label-bold text-label-bold text-secondary uppercase mb-stack-md">Co-Founder &amp; Director</p>
+<div class="space-y-2 border-t border-outline-variant pt-stack-md">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="mail">mail</span>
+<span class="font-body-md">niraj@meghdootmotors.com</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="call">call</span>
+<span class="font-body-md">+91 98XXX XXXXX</span>
+</div>
+</div>
+</div>
+<!-- Founder 2 -->
+<div class="bg-surface p-8 group">
+<div class="relative overflow-hidden mb-stack-md">
+<div class="w-full aspect-square bg-cover bg-center grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Portrait of Rakesh Gajjar, co-founder of Meghdoot Motors. He is a middle-aged Indian professional with a focused and experienced demeanor, reflecting technical expertise. He is dressed in formal business attire. The setting is a bright, professional environment with a metallic and navy blue aesthetic that aligns with a high-end automotive service station." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBtm9IXt3Ht4gU-SKLtE56RIEA72Ct4jHcSGPhB36lGu8YbNHsga90wOgnujlCoWFCG-Cnak9f0br-IZwZ-OLlvoezrl2jRjuHwnQn2Jg55TX_MvDanWRvdOIxJokt2uDoLpCV0U8ZDLPm8mCTQyhuhezyAsfpjC5yK-JJWxQtiEIx9aCBTcrkSjngTbXY10c76ennG0LjSOdQb1zJDktcN6danaJMc6k0w-NxaCl9Uyrib8cQcgAr2GA')"></div>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-1">Rakesh Gajjar</h3>
+<p class="font-label-bold text-label-bold text-secondary uppercase mb-stack-md">Co-Founder &amp; Technical Head</p>
+<div class="space-y-2 border-t border-outline-variant pt-stack-md">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="mail">mail</span>
+<span class="font-body-md">rakesh@meghdootmotors.com</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="call">call</span>
+<span class="font-body-md">+91 98XXX XXXXX</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-tertiary">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-stack-lg max-w-container-max mx-auto text-on-primary">
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-md text-headline-md font-bold text-on-primary mb-stack-md">Meghdoot Motors</div>
+<p class="font-body-md text-surface-variant mb-stack-md">Maruti Suzuki Authorized Service Station providing premium car care since 1999.</p>
+</div>
+<div class="col-span-1">
+<div class="font-label-bold text-label-bold text-secondary-container uppercase mb-stack-md">Quick Links</div>
+<ul class="space-y-2">
+<li><a class="font-body-md text-surface-variant hover:text-on-primary hover:translate-x-1 transition-transform inline-block" href="#">Home</a></li>
+<li><a class="font-body-md text-surface-variant hover:text-on-primary hover:translate-x-1 transition-transform inline-block" href="#">About Us</a></li>
+<li><a class="font-body-md text-surface-variant hover:text-on-primary hover:translate-x-1 transition-transform inline-block" href="#">Services</a></li>
+<li><a class="font-body-md text-surface-variant hover:text-on-primary hover:translate-x-1 transition-transform inline-block" href="#">Gallery</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<div class="font-label-bold text-label-bold text-secondary-container uppercase mb-stack-md">Services</div>
+<ul class="space-y-2">
+<li><a class="font-body-md text-surface-variant hover:text-on-primary hover:translate-x-1 transition-transform inline-block" href="#">Annual Service Plan</a></li>
+<li><a class="font-body-md text-surface-variant hover:text-on-primary hover:translate-x-1 transition-transform inline-block" href="#">Insurance &amp; Claims</a></li>
+<li><a class="font-body-md text-surface-variant hover:text-on-primary hover:translate-x-1 transition-transform inline-block" href="#">Body Shop</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<div class="font-label-bold text-label-bold text-secondary-container uppercase mb-stack-md">Workshop</div>
+<p class="font-body-md text-surface-variant">Opp. XYZ Mall, Main Road,<br/>Ahmedabad, Gujarat 380001</p>
+<div class="mt-stack-md flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary-container" data-icon="phone_in_talk">phone_in_talk</span>
+<span class="font-label-bold text-label-bold">+91 79 XXXX XXXX</span>
+</div>
+</div>
+</div>
+<div class="border-t border-primary-container/30 px-margin-desktop py-6 max-w-container-max mx-auto text-center">
+<p class="font-body-md text-surface-variant text-sm">© 2024 Meghdoot Motors - Maruti Suzuki Authorized Service Station. All rights reserved.</p>
+</div>
+</footer>
+<!-- Simple Intersection Observer for Animations -->
+<script>
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+    </script>
+</body></html>
