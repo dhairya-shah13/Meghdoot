@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insurance Renewal | Meghdoot Motors - Maruti Suzuki Authorized Service Station</title>
+  <meta name="description" content="Renew your vehicle insurance at Meghdoot Motors. Compare 25+ insurers, seamless payment processing, zero-gap protection. Get expert renewal assistance today.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .renewal-hero {
+      position: relative;
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      padding-top: var(--nav-height);
+    }
+    .renewal-hero .hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+    .renewal-hero .hero-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .renewal-form-sidebar {
+      background-color: var(--color-primary);
+      padding: var(--spacing-stack-lg);
+      color: var(--color-on-primary);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    @media (min-width: 769px) {
+      .renewal-form-sidebar {
+        padding: 48px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="site-logo">
+        <img src="assets/images/logo.png" alt="Meghdoot Logo" />
+        <div class="brand-text">
+          <span class="brand-meghdoot">MEGHDOOT</span>
+          <span class="brand-motors">MOTORS</span>
+        </div>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="annual-service-plan.html">Annual Service Plan</a>
+        <a href="insurance-claim.html">Insurance</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <img src="assets/images/mass-logo.png" alt="Maruti Suzuki Authorized Service" class="mass-logo" />
+      </div>
+      <button class="hamburger" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav-overlay"></div>
+  <nav class="mobile-nav" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="services.html">Services</a>
+    <a href="annual-service-plan.html">Annual Service Plan</a>
+    <a href="insurance-claim.html">Insurance</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main>
+
+    <!-- ========== HERO ========== -->
+    <section class="renewal-hero" style="min-height:75vh;">
+      <div class="hero-bg">
+        <div class="hero-overlay"></div>
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVka8Me_DoMS8R--9cJ0ADnVjqwH5Kdup4jpuNULZu5EW0N0FBx_egZTTvIh3KevKeYlDjGmOP4H9luzmS5fhWmTyeHlvYxobaE_jFgnTn2gSvGpmP4quBavAbfZGVTi4ckVm07XT1ZMLQyjtejGpihSbGGFvM5pqdbF2okRNn0CQ90BIJ4QcbX8M8S1cudHp8YdsxwIDNJznI9uJsAOGajy6Cy2fJcFSNNMBXHMBw1tw5yYLFvOe3mg" alt="State-of-the-art Maruti Suzuki authorized service workshop" style="width:100%;height:100%;object-fit:cover;">
+      </div>
+      <div class="container" style="position:relative;z-index:10;width:100%;">
+        <a href="insurance-claim.html" style="display:inline-flex;align-items:center;gap:6px;color:rgba(255,255,255,0.6);text-decoration:none;margin-bottom:var(--spacing-stack-md);font-family:var(--font-label);font-size:13px;text-transform:uppercase;letter-spacing:0.05em;transition:color var(--transition-fast);">
+          <span class="material-symbols-outlined" style="font-size:16px;">arrow_back</span> Back to Insurance
+        </a>
+        <div class="fade-up" style="max-width:620px;">
+          <div style="width:72px;height:72px;background-color:var(--color-secondary);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:var(--spacing-stack-md);box-shadow:0 10px 30px rgba(0,0,0,0.3);">
+            <span class="material-symbols-outlined text-on-primary" style="font-size:36px;font-variation-settings:'FILL' 1;">autorenew</span>
+          </div>
+          <h1 class="font-display-lg text-on-primary" style="text-transform:uppercase;margin-bottom:var(--spacing-stack-md);text-shadow:0 2px 8px rgba(0,0,0,0.3);">
+            Insurance <span class="text-secondary-container">Renewal</span>
+          </h1>
+          <p class="font-body-lg text-on-surface-variant" style="background:linear-gradient(to right, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 50%, transparent 100%);padding:var(--spacing-stack-md) var(--spacing-stack-lg) var(--spacing-stack-md) var(--spacing-stack-sm);border-radius:var(--radius-default);border-left:4px solid var(--color-secondary);margin:0 0 var(--spacing-stack-lg) 0;max-width:560px;">
+            Never let your coverage lapse. We help you compare renewal options across 25+ insurers, process payments seamlessly, and ensure zero-gap protection for your vehicle.
+          </p>
+          <div class="flex flex-wrap" style="gap:var(--spacing-stack-md);">
+            <a href="#renewal-form" class="btn btn-secondary btn-lg" style="background-color:var(--color-secondary);color:var(--color-on-primary);border:none;box-shadow:0 4px 6px rgba(0,0,0,0.15);border-bottom:3px solid rgba(0,0,0,0.2);">Renew Now</a>
+            <a href="#benefits" class="btn btn-ghost btn-lg">Why Renew With Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== WHY RENEW WITH US ========== -->
+    <section class="section-padding bg-surface" id="benefits">
+      <div class="container">
+        <div class="grid grid-2" style="gap:64px;align-items:center;">
+          <div class="fade-up">
+            <span class="badge" style="margin-bottom:var(--spacing-stack-md);">Why Renew With Us</span>
+            <h2 class="font-headline-lg text-primary" style="text-transform:uppercase;margin-bottom:var(--spacing-stack-md);">Seamless <span class="text-secondary">Policy Renewal</span></h2>
+            <div class="divider divider-left divider-secondary-container"></div>
+            <p class="font-body-lg text-on-surface-variant" style="margin-bottom:var(--spacing-stack-lg);">
+              Keep your vehicle protected without any gaps in coverage. Our experts compare plans across 25+ insurers to find the best premium for your needs — all while you focus on what matters.
+            </p>
+            <div style="display:flex;flex-direction:column;gap:var(--spacing-stack-md);">
+              <div style="display:flex;align-items:flex-start;gap:var(--spacing-stack-md);">
+                <span class="material-symbols-outlined text-secondary" style="font-variation-settings:'FILL' 1;">check_circle</span>
+                <div>
+                  <h4 class="font-label-bold text-primary">Compare & Save</h4>
+                  <p class="text-on-surface-variant">Get the best renewal rates across all major insurance providers.</p>
+                </div>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:var(--spacing-stack-md);">
+                <span class="material-symbols-outlined text-secondary" style="font-variation-settings:'FILL' 1;">check_circle</span>
+                <div>
+                  <h4 class="font-label-bold text-primary">Zero-Gap Coverage</h4>
+                  <p class="text-on-surface-variant">We ensure your policy renews before expiry — never drive uninsured.</p>
+                </div>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:var(--spacing-stack-md);">
+                <span class="material-symbols-outlined text-secondary" style="font-variation-settings:'FILL' 1;">check_circle</span>
+                <div>
+                  <h4 class="font-label-bold text-primary">Digital Payment Processing</h4>
+                  <p class="text-on-surface-variant">Pay securely online or at our workshop — instant policy issuance.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="fade-up" style="display:grid;grid-template-columns:1fr 1fr;gap:var(--spacing-stack-md);transition-delay:100ms;">
+            <div style="background-color:#ffffff;padding:var(--spacing-stack-lg);border:1px solid var(--color-outline-variant);border-radius:var(--radius-default);box-shadow:var(--shadow-card);display:flex;flex-direction:column;align-items:center;text-align:center;">
+              <span class="material-symbols-outlined text-primary" style="font-size:36px;margin-bottom:var(--spacing-stack-md);">compare_arrows</span>
+              <h3 class="font-headline-md">25+</h3>
+              <p class="font-label-bold text-on-surface-variant">Compare Plans</p>
+            </div>
+            <div style="background-color:#ffffff;padding:var(--spacing-stack-lg);border:1px solid var(--color-outline-variant);border-radius:var(--radius-default);box-shadow:var(--shadow-card);display:flex;flex-direction:column;align-items:center;text-align:center;margin-top:var(--spacing-stack-lg);">
+              <span class="material-symbols-outlined text-primary" style="font-size:36px;margin-bottom:var(--spacing-stack-md);">payments</span>
+              <h3 class="font-headline-md">Instant</h3>
+              <p class="font-label-bold text-on-surface-variant">Payment & Issuance</p>
+            </div>
+            <div style="background-color:#ffffff;padding:var(--spacing-stack-lg);border:1px solid var(--color-outline-variant);border-radius:var(--radius-default);box-shadow:var(--shadow-card);display:flex;flex-direction:column;align-items:center;text-align:center;">
+              <span class="material-symbols-outlined text-primary" style="font-size:36px;margin-bottom:var(--spacing-stack-md);">shield</span>
+              <h3 class="font-headline-md">Zero</h3>
+              <p class="font-label-bold text-on-surface-variant">Coverage Gap</p>
+            </div>
+            <div style="background-color:#ffffff;padding:var(--spacing-stack-lg);border:1px solid var(--color-outline-variant);border-radius:var(--radius-default);box-shadow:var(--shadow-card);display:flex;flex-direction:column;align-items:center;text-align:center;margin-top:var(--spacing-stack-lg);">
+              <span class="material-symbols-outlined text-primary" style="font-size:36px;margin-bottom:var(--spacing-stack-md);">support_agent</span>
+              <h3 class="font-headline-md">Expert</h3>
+              <p class="font-label-bold text-on-surface-variant">Guidance</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== RENEWAL PROCESS ========== -->
+    <section class="section-padding bg-primary text-on-primary">
+      <div class="container">
+        <div class="fade-up" style="text-align:center;margin-bottom:64px;">
+          <h2 class="font-headline-lg" style="text-transform:uppercase;margin-bottom:var(--spacing-stack-md);">How <span class="text-secondary-container">Renewal Works</span></h2>
+          <p class="text-on-primary-container" style="max-width:560px;margin:0 auto;">Simple steps to keep your policy active.</p>
+        </div>
+        <div class="claim-stepper">
+          <div style="position:relative;">
+            <div class="process-connector"></div>
+            <div class="grid grid-4" style="grid-template-columns:repeat(4,1fr);gap:var(--spacing-gutter);position:relative;z-index:1;">
+              <div class="step-group fade-up" style="display:flex;flex-direction:column;align-items:center;text-align:center;">
+                <div class="step-icon"><span class="material-symbols-outlined text-on-primary" style="font-size:28px;">search</span></div>
+                <h4 class="font-label-bold" style="margin-bottom:var(--spacing-stack-sm);text-transform:uppercase;">Review</h4>
+                <p style="font-size:12px;opacity:0.6;">We check your current policy and expiry date.</p>
+              </div>
+              <div class="step-group fade-up" style="display:flex;flex-direction:column;align-items:center;text-align:center;transition-delay:100ms;">
+                <div class="step-icon"><span class="material-symbols-outlined text-on-primary" style="font-size:28px;">compare</span></div>
+                <h4 class="font-label-bold" style="margin-bottom:var(--spacing-stack-sm);text-transform:uppercase;">Compare</h4>
+                <p style="font-size:12px;opacity:0.6;">Find the best plan across 25+ partner insurers.</p>
+              </div>
+              <div class="step-group fade-up" style="display:flex;flex-direction:column;align-items:center;text-align:center;transition-delay:200ms;">
+                <div class="step-icon"><span class="material-symbols-outlined text-on-primary" style="font-size:28px;">payments</span></div>
+                <h4 class="font-label-bold" style="margin-bottom:var(--spacing-stack-sm);text-transform:uppercase;">Pay</h4>
+                <p style="font-size:12px;opacity:0.6;">Seamless digital payment at workshop or online.</p>
+              </div>
+              <div class="step-group fade-up" style="display:flex;flex-direction:column;align-items:center;text-align:center;transition-delay:300ms;">
+                <div class="step-icon"><span class="material-symbols-outlined text-on-primary" style="font-size:28px;">verified</span></div>
+                <h4 class="font-label-bold" style="margin-bottom:var(--spacing-stack-sm);text-transform:uppercase;">Issued</h4>
+                <p style="font-size:12px;opacity:0.6;">Instant policy issuance — zero gap in coverage.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PARTNER LOGOS ========== -->
+    <section class="section-padding bg-white" style="padding-top:var(--spacing-stack-lg);padding-bottom:var(--spacing-stack-lg);border-bottom:1px solid var(--color-outline-variant);">
+      <div class="container">
+        <h5 class="font-label-bold text-outline" style="text-align:center;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:var(--spacing-stack-lg);">Our Insurance Partners</h5>
+        <p style="text-align:center;font-size:12px;color:var(--color-outline);margin-bottom:var(--spacing-stack-lg);">...and more insurance providers</p>
+        <div class="partner-logos">
+          <div class="partner-logo">ICICI LOMBARD</div>
+          <div class="partner-logo">HDFC ERGO</div>
+          <div class="partner-logo">NEW INDIA</div>
+          <div class="partner-logo">TATA AIG</div>
+          <div class="partner-logo">BAJAJ ALLIANZ</div>
+          <div class="partner-logo">ROYAL SUNDARAM</div>
+          <div class="partner-logo">IFFCO TOKIO</div>
+          <div class="partner-logo">ZUNO GEN.</div>
+          <div class="partner-logo">INDUSIND<br>(Reliance Gen.)</div>
+          <div class="partner-logo">ZURICH KOTAK</div>
+          <div class="partner-logo">LIBERTY</div>
+          <div class="partner-logo">CHOLA MS</div>
+          <div class="partner-logo">BHARTI</div>
+          <div class="partner-logo">SHRIRAM</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== RENEWAL FORM ========== -->
+    <section class="section-padding" id="renewal-form">
+      <div class="container">
+        <div class="fade-up" style="text-align:center;margin-bottom:48px;">
+          <h2 class="font-headline-lg text-primary" style="text-transform:uppercase;margin-bottom:var(--spacing-stack-md);">Renew Your <span class="text-secondary">Policy</span></h2>
+          <p class="font-body-lg text-on-surface-variant" style="max-width:560px;margin:0 auto;">
+            Fill in your details and we'll find the best renewal plan for you.
+          </p>
+        </div>
+        <div style="max-width:800px;margin:0 auto;background-color:#ffffff;border-radius:var(--radius-xl);overflow:hidden;box-shadow:0 10px 40px -12px rgba(0,22,70,0.2);border:1px solid var(--color-outline-variant);">
+          <div class="grid grid-2" style="grid-template-columns:2fr 3fr;">
+            <div class="renewal-form-sidebar">
+              <h3 class="font-headline-md" style="margin-bottom:var(--spacing-stack-md);">Quick Renewal</h3>
+              <p class="text-on-primary-container" style="margin-bottom:var(--spacing-stack-lg);">Enter your details and our team will reach out with the best renewal options.</p>
+              <div style="display:flex;align-items:center;gap:var(--spacing-stack-md);margin-bottom:var(--spacing-stack-md);">
+                <span class="material-symbols-outlined">phone_in_talk</span>
+                <span class="font-label-bold">+91 99985 88227</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:var(--spacing-stack-md);">
+                <span class="material-symbols-outlined">mail</span>
+                <span class="font-label-bold">renewals@meghdoot.com</span>
+              </div>
+            </div>
+            <div style="padding:var(--spacing-stack-lg);">
+              <form class="claim-form" id="renewalForm">
+                <div class="form-group" style="display:grid;grid-template-columns:1fr 1fr;gap:var(--spacing-stack-md);">
+                  <div>
+                    <label class="form-label">Full Name *</label>
+                    <input type="text" class="form-input" placeholder="John Doe" required>
+                  </div>
+                  <div>
+                    <label class="form-label">Phone Number *</label>
+                    <input type="tel" class="form-input" placeholder="+91 98765 43210" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Vehicle Registration Number</label>
+                  <input type="text" class="form-input" placeholder="MH-12-XX-0000">
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Current Insurance Provider</label>
+                  <select class="form-select">
+                    <option>Select Provider</option>
+                    <option>ICICI Lombard</option>
+                    <option>HDFC Ergo</option>
+                    <option>Tata AIG</option>
+                    <option>New India Assurance</option>
+                    <option>Bajaj Allianz</option>
+                    <option>Royal Sundaram</option>
+                    <option>Iffco Tokio</option>
+                    <option>Zuno General Insurance</option>
+                    <option>IndusInd General Insurance</option>
+                    <option>Zurich Kotak General Insurance</option>
+                    <option>Liberty General Insurance</option>
+                    <option>Chola MS General Insurance</option>
+                    <option>Bharti General Insurance</option>
+                    <option>Shriram General Insurance</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Policy Expiry Date (if known)</label>
+                  <input type="date" class="form-input">
+                </div>
+                <button type="button" class="btn btn-primary btn-lg" style="width:100%;" onclick="submitRenewal(this)">Get Renewal Quote</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">          <div class="footer-brand">
+          <div class="logo">Meghdoot Motors</div>
+          <p style="font-size:12px;color:var(--color-surface-variant);margin-bottom:var(--spacing-stack-md);letter-spacing:0.03em;">Maruti Authorized Service</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Share"><span class="material-symbols-outlined" style="font-size:16px;">share</span></a>
+            <a href="#" aria-label="Location"><span class="material-symbols-outlined" style="font-size:16px;">location_on</span></a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h6>Quick Links</h6>
+          <ul>
+            <li></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="annual-service-plan.html">Annual Plan</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h6>Services</h6>
+          <ul>
+            <li><a href="services.html">Periodic Service</a></li>
+            <li><a href="services.html">Accidental Repair</a></li>
+            <li><a href="insurance-claim.html">Insurance</a></li>
+            <li><a href="services.html">Wheel Solutions</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h6>Visit Us</h6>
+          <p>Plot No. 124, Sarkhej - Gandhinagar Hwy,<br>Opp. YMCA Club, Ahmedabad,<br>Gujarat 380015</p>
+          <p style="margin-top:var(--spacing-stack-sm);">Mon - Sat: 9:00 AM - 7:00 PM<br>Sun: Closed</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Meghdoot Motors &mdash; Maruti Suzuki Authorized Service Station. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script>
+    function submitRenewal(btn) {
+      btn.innerHTML = '<span class="animate-spin" style="margin-right:8px;">⟳</span> Processing...';
+      btn.disabled = true;
+      setTimeout(function() {
+        btn.innerHTML = '✓ Quote Request Sent!';
+        btn.style.backgroundColor = '#22c55e';
+        setTimeout(function() {
+          btn.innerHTML = 'Get Renewal Quote';
+          btn.style.backgroundColor = '';
+          btn.disabled = false;
+        }, 3000);
+      }, 1500);
+    }
+  </script>
+</body>
+</html>

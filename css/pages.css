@@ -34,12 +34,28 @@
   max-width: 600px;
 }
 
+@media (max-width: 767px) {
+  .home-hero .hero-content {
+    max-width: 100%;
+  }
+}
+
 /* Stats strip */
 .stats-strip {
   background-color: var(--color-primary);
   padding: var(--spacing-stack-lg) 0;
   position: relative;
   z-index: 30;
+}
+
+@media (max-width: 767px) {
+  .stats-strip {
+    padding: var(--spacing-stack-md) 0;
+  }
+
+  .stats-strip .grid-4 {
+    gap: var(--spacing-stack-md);
+  }
 }
 
 /* ============================================================
@@ -53,6 +69,14 @@
   display: flex;
   align-items: center;
   overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  .about-hero {
+    height: auto;
+    min-height: 300px;
+    padding: calc(var(--nav-height) + var(--spacing-section-gap-mobile)) 0 var(--spacing-section-gap-mobile);
+  }
 }
 
 .about-story-image {
@@ -69,6 +93,15 @@
   z-index: 0;
 }
 
+@media (max-width: 479px) {
+  .about-story-image .accent-box {
+    width: 64px;
+    height: 64px;
+    top: -10px;
+    left: -10px;
+  }
+}
+
 .about-story-image .accent-border {
   position: absolute;
   bottom: -32px;
@@ -77,6 +110,12 @@
   height: 128px;
   border: 8px solid var(--color-surface-variant);
   z-index: 0;
+}
+
+@media (max-width: 479px) {
+  .about-story-image .accent-border {
+    display: none;
+  }
 }
 
 .about-stat-float {
@@ -101,8 +140,16 @@
   transition: all var(--transition-slow);
 }
 
-.founder-card:hover .founder-image {
-  filter: grayscale(0%);
+@media (max-width: 767px) {
+  .founder-card {
+    padding: var(--spacing-stack-md);
+  }
+}
+
+@media (hover: hover) {
+  .founder-card:hover .founder-image {
+    filter: grayscale(0%);
+  }
 }
 
 .founder-image {
@@ -131,6 +178,14 @@
 @media (min-width: 769px) {
   .services-hero {
     height: 60vh;
+  }
+}
+
+@media (max-width: 767px) {
+  .services-hero {
+    height: auto;
+    min-height: 250px;
+    padding: calc(var(--nav-height) + var(--spacing-section-gap-mobile)) 0 var(--spacing-stack-lg);
   }
 }
 
@@ -168,9 +223,21 @@
   overflow: hidden;
 }
 
+@media (max-width: 767px) {
+  .plan-hero {
+    padding-top: var(--spacing-section-gap-mobile);
+  }
+}
+
 .plan-stats {
   background-color: var(--color-primary);
   padding: var(--spacing-stack-lg) 0;
+}
+
+@media (max-width: 767px) {
+  .plan-stats {
+    padding: var(--spacing-stack-md) 0;
+  }
 }
 
 /* ============================================================
@@ -187,6 +254,13 @@
   padding-top: var(--nav-height);
 }
 
+@media (max-width: 767px) {
+  .insurance-hero {
+    min-height: auto;
+    padding: calc(var(--nav-height) + var(--spacing-section-gap-mobile)) 0 var(--spacing-section-gap-mobile);
+  }
+}
+
 .claim-stepper .step-icon {
   width: 64px;
   height: 64px;
@@ -201,10 +275,21 @@
   transition: all var(--transition-slow);
 }
 
-.claim-stepper .step-group:hover .step-icon {
-  transform: scale(1.1);
-  background-color: var(--color-secondary-container);
-  border-color: var(--color-secondary-container);
+@media (max-width: 640px) {
+  .claim-stepper .step-icon {
+    width: 52px;
+    height: 52px;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+  }
+}
+
+@media (hover: hover) {
+  .claim-stepper .step-group:hover .step-icon {
+    transform: scale(1.1);
+    background-color: var(--color-secondary-container);
+    border-color: var(--color-secondary-container);
+  }
 }
 
 /* Claim form sidebar */
@@ -223,6 +308,12 @@
   }
 }
 
+@media (max-width: 767px) {
+  .claim-form-sidebar {
+    padding: var(--spacing-stack-md);
+  }
+}
+
 /* ============================================================
    GALLERY PAGE
    ============================================================ */
@@ -234,6 +325,14 @@
   display: flex;
   align-items: center;
   overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  .gallery-hero {
+    height: auto;
+    min-height: 300px;
+    padding: calc(var(--nav-height) + var(--spacing-section-gap-mobile)) 0 var(--spacing-section-gap-mobile);
+  }
 }
 
 .gallery-hero .hero-bg {
@@ -260,6 +359,14 @@
   overflow: hidden;
 }
 
+@media (max-width: 767px) {
+  .contact-hero {
+    height: auto;
+    min-height: 300px;
+    padding: calc(var(--nav-height) + var(--spacing-section-gap-mobile)) 0 var(--spacing-section-gap-mobile);
+  }
+}
+
 .contact-hero .hero-bg {
   position: absolute;
   inset: 0;
@@ -280,6 +387,19 @@
   border: 1px solid var(--color-outline-variant);
 }
 
+@media (max-width: 767px) {
+  .google-map-container {
+    height: 320px;
+    border-radius: var(--radius-lg);
+  }
+}
+
+@media (max-width: 479px) {
+  .google-map-container {
+    height: 260px;
+  }
+}
+
 .google-map-container iframe {
   width: 100%;
   height: 100%;
@@ -288,8 +408,10 @@
   transition: filter var(--transition-slow);
 }
 
-.google-map-container:hover iframe {
-  filter: grayscale(0%);
+@media (hover: hover) {
+  .google-map-container:hover iframe {
+    filter: grayscale(0%);
+  }
 }
 
 /* Contact info card */
@@ -303,6 +425,12 @@
 @media (min-width: 769px) {
   .contact-info-card {
     padding: 48px;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-info-card {
+    padding: var(--spacing-stack-md);
   }
 }
 
@@ -322,6 +450,75 @@
   color: #22c55e;
   margin-bottom: var(--spacing-stack-md);
 }
+
+/* ============================================================
+   RESPONSIVE OVERRIDES FOR PAGE-SPECIFIC HERO CLASSES
+   (claim-hero, renewal-hero, new-insurance-hero)
+   ============================================================ */
+
+@media (max-width: 767px) {
+  .claim-hero,
+  .renewal-hero,
+  .new-insurance-hero {
+    min-height: auto !important;
+    padding: calc(var(--nav-height) + var(--spacing-section-gap-mobile)) 0 var(--spacing-section-gap-mobile);
+  }
+}
+
+/* ============================================================
+   RESPONSIVE: 5-column / 4-column process/claim grids → collapse
+   (Used in services.html process steps and claim-intimation.html stepper)
+   ============================================================ */
+
+@media (max-width: 767px) {
+  /* Services page process steps - override inline grid-template-columns */
+  .grid-5 {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Claim stepper inner grid collapse */
+  .claim-stepper .grid-5,
+  .claim-stepper .grid-4 {
+    grid-template-columns: 1fr !important;
+    gap: var(--spacing-section-gap-mobile) !important;
+  }
+
+  /* Process step cards inside dark section: ensure vertical layout */
+  .process-step {
+    flex-direction: row;
+    text-align: left;
+    align-items: flex-start;
+    gap: var(--spacing-stack-md);
+  }
+
+  .process-step .step-circle {
+    flex-shrink: 0;
+    margin-bottom: 0;
+  }
+
+  .process-step .step-label {
+    margin-bottom: 2px;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE: Collapse all inline 2-column grids to single column
+   (Form fields, stat cards, plan features, etc.)
+   ============================================================ */
+
+@media (max-width: 767px) {
+  /* Collapse any inline 2-column grid to single column */
+  [style*="grid-template-columns:1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Remove staggered top margin from stat cards (alternating shift) */
+  [style*="margin-top:var(--spacing-stack-lg)"] {
+    margin-top: 0 !important;
+  }
+}
+
+
 
 /* ============================================================
    ANIMATION KEYFRAMES

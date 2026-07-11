@@ -119,8 +119,51 @@ textarea {
   letter-spacing: var(--text-label-bold-spacing);
 }
 
-/* ---- Mobile Typography Overrides ---- */
-@media (max-width: 768px) {
+/* ---- Fluid Typography via clamp() ---- */
+@media (min-width: 480px) {
+  .font-display-lg {
+    font-size: clamp(2.25rem, 5vw, var(--text-display-lg-size));
+    line-height: clamp(2.5rem, 5.5vw, var(--text-display-lg-height));
+  }
+
+  .font-headline-lg {
+    font-size: clamp(2rem, 4vw, var(--text-headline-lg-size));
+    line-height: clamp(2.25rem, 4.5vw, var(--text-headline-lg-height));
+  }
+
+  .font-headline-md {
+    font-size: clamp(1.5rem, 2.5vw, var(--text-headline-md-size));
+    line-height: clamp(1.75rem, 3vw, var(--text-headline-md-height));
+  }
+}
+
+/* ---- Mobile Typography Overrides (XS: 0–479px) ---- */
+@media (max-width: 479px) {
+  .font-display-lg {
+    font-size: 2rem;
+    line-height: 2.25rem;
+    font-weight: var(--text-headline-lg-mobile-weight);
+    letter-spacing: -0.01em;
+  }
+
+  .font-headline-lg {
+    font-size: var(--text-headline-lg-mobile-size);
+    line-height: var(--text-headline-lg-mobile-height);
+  }
+
+  .font-headline-md {
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  .font-body-lg {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+/* ---- Mobile Typography Overrides (SM and below: 0–767px) ---- */
+@media (max-width: 767px) {
   .font-display-lg {
     font-size: var(--text-headline-lg-mobile-size);
     line-height: var(--text-headline-lg-mobile-height);
@@ -163,6 +206,13 @@ textarea {
   padding-bottom: var(--spacing-section-gap);
 }
 
+@media (max-width: 767px) {
+  .section-padding {
+    padding-top: var(--spacing-section-gap-mobile);
+    padding-bottom: var(--spacing-section-gap-mobile);
+  }
+}
+
 /* ---- Grid System ---- */
 .grid {
   display: grid;
@@ -178,7 +228,13 @@ textarea {
 }
 
 .grid-4 {
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 480px) {
+  .grid-4 {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media (min-width: 769px) {
@@ -252,15 +308,15 @@ textarea {
 }
 
 @media (min-width: 769px) {
-  .md\\:hidden {
+  .md\:hidden {
     display: none !important;
   }
 
-  .md\\:block {
+  .md\:block {
     display: block !important;
   }
 
-  .md\\:flex {
+  .md\:flex {
     display: flex !important;
   }
 }
@@ -371,4 +427,121 @@ textarea {
 
 .divider-secondary-container {
   background-color: var(--color-secondary-container);
+}
+
+/* ============================================================
+   ACCESSIBILITY & RESPONSIVE TOUCH TARGETS
+   ============================================================ */
+
+/* Ensure all interactive elements meet 44×44px minimum touch target */
+@media (pointer: coarse) {
+  .nav-links a,
+  .mobile-nav a,
+  .filter-btn,
+  .service-tab-btn,
+  .lightbox-close,
+  .hamburger,
+  .testimonial-dots .dot,
+  .gallery-item {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* 16px minimum font-size on inputs to prevent iOS zoom */
+input,
+select,
+textarea {
+  font-size: 16px;
+}
+
+/* ============================================================
+   REDUCED MOTION SUPPORT
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  .fade-up,
+  .section-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ============================================================
+   HOVER SCOPE — Only apply hover effects on devices that
+   support hover (prevents sticky hover on touch devices)
+   ============================================================ */
+
+@media (hover: hover) {
+  .service-card:hover,
+  .service-card:focus-within {
+    border-color: transparent;
+    box-shadow: var(--shadow-glow);
+    transform: translateY(-4px);
+  }
+
+  .info-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-glow-hover);
+  }
+
+  .gallery-item:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-glow-hover);
+  }
+
+  .gallery-item:hover img {
+    transform: scale(1.08);
+  }
+
+  .gallery-item:hover .gallery-caption {
+    border-bottom-color: var(--color-secondary);
+  }
+
+  .plan-card:hover {
+    transform: translateY(-6px);
+  }
+
+  .membership-card:hover {
+    transform: rotate(2deg);
+  }
+
+  .footer-column ul li a:hover {
+    transform: translateX(4px);
+  }
+
+  .footer-social a:hover {
+    background-color: var(--color-secondary-container);
+    color: var(--color-on-primary);
+  }
+}
+
+/* Active states for touch devices (replaces hover) */
+@media (hover: none) {
+  .service-card:active,
+  .info-card:active {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glow);
+  }
+
+  .gallery-item:active {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-glow-hover);
+  }
+
+  .plan-card:active {
+    transform: translateY(-3px);
+  }
 }

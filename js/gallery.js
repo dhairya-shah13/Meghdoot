@@ -120,11 +120,11 @@ document.addEventListener('DOMContentLoaded', function () {
       if (sliderHandle) sliderHandle.style.left = (pos * 100) + '%';
     }
 
-    if (sliderHandle) {
-      sliderHandle.addEventListener('mousedown', function () {
-        isResizing = true;
-      });
-    }
+    // Listen on the entire container so clicks anywhere start dragging
+    sliderContainer.addEventListener('mousedown', function (e) {
+      isResizing = true;
+      updateSlider(e);
+    });
 
     window.addEventListener('mouseup', function () {
       isResizing = false;
@@ -132,11 +132,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     window.addEventListener('mousemove', updateSlider);
 
-    if (sliderHandle) {
-      sliderHandle.addEventListener('touchstart', function () {
-        isResizing = true;
-      }, { passive: true });
-    }
+    // Touch support
+    sliderContainer.addEventListener('touchstart', function (e) {
+      isResizing = true;
+      updateSlider(e);
+    }, { passive: true });
 
     window.addEventListener('touchend', function () {
       isResizing = false;

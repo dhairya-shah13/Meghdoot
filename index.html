@@ -28,6 +28,104 @@
       opacity: 1;
       transform: translateY(0);
     }
+
+    /* ===== TESTIMONIAL CAROUSEL ===== */
+    .testimonial-carousel-new {
+      position: relative;
+      max-width: 720px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-stack-md);
+    }
+    .testimonial-carousel-new .testimonial-slide-wrapper {
+      flex: 1;
+      min-height: 260px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .testimonial-carousel-new .testimonial-card-new {
+      background-color: var(--color-surface);
+      padding: var(--spacing-stack-lg);
+      text-align: center;
+      border-radius: var(--radius-default);
+      width: 100%;
+      animation: fadeIn 0.4s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .testimonial-carousel-new .quote-icon {
+      font-size: 2.5rem;
+      color: var(--color-secondary);
+      margin-bottom: var(--spacing-stack-md);
+      display: block;
+    }
+    .testimonial-carousel-new .star-rating {
+      display: flex;
+      justify-content: center;
+      gap: 4px;
+      margin-bottom: var(--spacing-stack-md);
+    }
+    .testimonial-carousel-new .star-rating .star {
+      font-size: 22px;
+      color: #e0e3e5;
+    }
+    .testimonial-carousel-new .star-rating .star.filled {
+      color: #f5a623;
+    }
+    .testimonial-carousel-new blockquote {
+      font-size: var(--text-body-lg-size);
+      line-height: var(--text-body-lg-height);
+      font-style: italic;
+      color: var(--color-on-surface);
+      margin-bottom: var(--spacing-stack-lg);
+    }
+    .testimonial-carousel-new cite {
+      font-style: normal;
+    }
+    .testimonial-carousel-new cite h5 {
+      font-family: var(--font-heading);
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--color-primary);
+    }
+    .testimonial-carousel-new cite p {
+      font-size: 14px;
+      color: var(--color-on-surface-variant);
+    }
+    .carousel-arrow {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background-color: #ffffff;
+      border: 2px solid var(--color-outline-variant);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all var(--transition-base);
+      flex-shrink: 0;
+      color: var(--color-primary);
+    }
+    .carousel-arrow:hover {
+      background-color: var(--color-primary);
+      border-color: var(--color-primary);
+      color: var(--color-on-primary);
+    }
+    .carousel-arrow:active {
+      transform: scale(0.92);
+    }
+    .carousel-counter {
+      text-align: center;
+      margin-top: var(--spacing-stack-md);
+      font-family: var(--font-label);
+      font-size: 13px;
+      color: var(--color-on-surface-variant);
+      letter-spacing: 0.05em;
+    }
   </style>
 </head>
 <body>
@@ -43,10 +141,11 @@
         </div>
       </a>
       <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
         <a href="about.html">About Us</a>
         <a href="services.html">Services</a>
         <a href="annual-service-plan.html">Annual Service Plan</a>
-        <a href="insurance-claims.html">Insurance &amp; Claims</a>
+        <a href="insurance-claim.html">Insurance</a>
         <a href="gallery.html">Gallery</a>
         <a href="contact.html">Contact</a>
       </nav>
@@ -62,10 +161,11 @@
   <!-- Mobile Nav -->
   <div class="mobile-nav-overlay"></div>
   <nav class="mobile-nav" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
     <a href="about.html">About Us</a>
     <a href="services.html">Services</a>
     <a href="annual-service-plan.html">Annual Service Plan</a>
-    <a href="insurance-claims.html">Insurance &amp; Claims</a>
+    <a href="insurance-claim.html">Insurance Claim</a>
     <a href="gallery.html">Gallery</a>
     <a href="contact.html">Contact</a>
   </nav>
@@ -76,14 +176,14 @@
       <div class="hero-bg">
         <div class="hero-overlay"></div>
         <!-- Placeholder image - replace with actual workshop hero photography -->
-        <img src="assets/images/placeholder.svg" alt="Maruti Suzuki authorized service station workshop with professional technicians and modern diagnostic equipment" style="width:100%;height:100%;object-fit:cover;">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLySatpBx72TPGUhfSttMGpU4q9iHeX5eCCkYkYVSp4r9QVHzSXlz0MoW5rBFX1tCrdgsn7rLh8zhKOckHAR0LB70jAUai0ZEf6i7_F8DlltmyMqewfkKuBcaY7-QVYnWoyHi8vTdvJgUNIe6Chv30IAgtOCWip01O5Qd8nTKmgjxqjOcZQZpqZQlCmS_QzSJaxNb7RwHBPY1vORXP1rD0mIz-3tY6dK2S3VGAsQk4-_QSmxCxvpEZNA" alt="Modern Maruti Suzuki authorized service station workshop with professional technicians and modern diagnostic equipment" style="width:100%;height:100%;object-fit:cover;">
       </div>
       <div class="container" style="position:relative;z-index:10;width:100%;">
         <div class="home-hero-content" style="max-width:600px;">
           <div class="fade-up">
             <h1 class="font-display-lg text-on-primary" style="margin-bottom:var(--spacing-stack-md);">23 Years of<br>Trusted Car Care</h1>
             <p class="font-body-lg text-on-primary" style="opacity:0.9;margin-bottom:var(--spacing-stack-lg);max-width:520px;">
-              As an Authorized Maruti Suzuki Service Station since 2002, we combine decades of expertise with cutting-edge technology to keep your vehicle performing at its peak.
+              Maruti Suzuki Authorised Service Station.
             </p>
             <div class="flex flex-wrap" style="gap:var(--spacing-stack-md);">
               <a href="contact.html" class="btn btn-primary btn-lg">Book Your Service</a>
@@ -104,7 +204,6 @@
           </div>
           <div class="fade-up stat-card" style="transition-delay:100ms;">
             <div class="font-headline-md text-on-primary" style="font-size:var(--text-headline-md-size);">Authorized</div>
-            <div class="stat-label text-on-primary" style="opacity:0.6;font-size:12px;">Since 2002</div>
           </div>
           <div class="fade-up stat-card" style="transition-delay:200ms;">
             <div class="stat-number text-secondary-container stat-number" data-count="10000" data-suffix="+" style="font-family:var(--font-display);font-size:var(--text-headline-lg-size);font-weight:700;">10k+</div>
@@ -124,15 +223,14 @@
         <div class="grid grid-2" style="gap:64px;align-items:center;">
           <div class="about-story-image fade-up">
             <div class="accent-box"></div>
-            <!-- Placeholder image - replace with founder/owner portrait -->
-            <img src="assets/images/placeholder.svg" alt="Owner or head technician of Meghdoot Motors standing confidently in the service station" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--radius-default);box-shadow:0 20px 40px -10px rgba(0,0,0,0.2);position:relative;z-index:1;">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBX6p5PetRNjO4h_xYLphIGrOJ9VsiwOCUVppMsSN1vRRrU3_IZ8J-Tvnw7X9lct7g8hg_t-95o4L72kzGVTrSSFhAK2p8TeTDCWczFNEFBv9hVXjVyWzTe1bmp5C-xQQS0ujutMjBOGR_UQRsVTjehaFNJDiZ-lMFEEXeTh-Li33hHWbILDjOGrLQSsxGuHmF688yth2zoMX0dC_1qIvsL2FqWaxOujQHvQqXAPud-oq4EnLiHxvWx5Q" alt="Meghdoot Motors workshop with professional technician and service area" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--radius-default);box-shadow:0 20px 40px -10px rgba(0,0,0,0.2);position:relative;z-index:1;">
             <div class="accent-border"></div>
           </div>
           <div class="fade-up" style="transition-delay:200ms;">
             <span class="text-secondary font-label-bold" style="display:block;margin-bottom:var(--spacing-stack-md);">Established 2002</span>
-            <h2 class="font-headline-lg text-primary" style="margin-bottom:var(--spacing-stack-md);">A Legacy of Excellence in Automotive Care</h2>
+            <h2 class="font-headline-lg text-primary" style="margin-bottom:var(--spacing-stack-md);">A Legacy of Excellence in Automobile Care</h2>
             <p class="font-body-md text-on-surface-variant" style="margin-bottom:var(--spacing-stack-md);line-height:1.7;">
-              Meghdoot Motors began with a simple vision: to provide unparalleled service quality for Maruti Suzuki owners. Over the last two decades, we've grown from a small workshop to a premier authorized service destination, built on the pillars of transparency, genuine parts, and expert craftsmanship.
+              Meghdoot Motors began with a simple vision to provide exceptional service quality for Maruti Suzuki owners across Ahmedabad.
             </p>
             <a href="about.html" class="font-label-bold text-primary" style="display:inline-flex;align-items:center;gap:var(--spacing-stack-sm);text-decoration:none;">
               Read Our Full Story
@@ -155,13 +253,13 @@
           <div class="service-card fade-up">
             <span class="card-icon material-symbols-outlined">home_repair_service</span>
             <h3>Periodic Maintenance</h3>
-            <p>Comprehensive 60-point checks to keep your Maruti running like new.</p>
+            <p>Comprehensive multi-point checks to keep your Maruti running like new.</p>
             <a href="services.html" class="card-link">Details <span class="material-symbols-outlined" style="font-size:14px;">chevron_right</span></a>
           </div>
           <!-- Service Card 2 -->
           <div class="service-card fade-up" style="transition-delay:100ms;">
             <span class="card-icon material-symbols-outlined">car_repair</span>
-            <h3>Body &amp; Paint</h3>
+            <h3>Body Work and Paint Job</h3>
             <p>Expert denting and high-quality painting with factory-grade color matching.</p>
             <a href="services.html" class="card-link">Details <span class="material-symbols-outlined" style="font-size:14px;">chevron_right</span></a>
           </div>
@@ -182,15 +280,36 @@
           <!-- Service Card 5 -->
           <div class="service-card fade-up" style="transition-delay:400ms;">
             <span class="card-icon material-symbols-outlined">verified_user</span>
-            <h3>Insurance Claims</h3>
-            <p>Hassle-free cashless insurance claim processing with all major providers.</p>
-            <a href="insurance-claims.html" class="card-link">Details <span class="material-symbols-outlined" style="font-size:14px;">chevron_right</span></a>
+            <h3>Insurance</h3>
+            <p>Hassle-free cashless insurance claim processing, renewals &amp; new policies with all major providers.</p>
+            <a href="insurance-claim.html" class="card-link">Details <span class="material-symbols-outlined" style="font-size:14px;">chevron_right</span></a>
           </div>
           <!-- Service Card 6 -->
           <div class="service-card fade-up" style="transition-delay:500ms;">
             <span class="card-icon material-symbols-outlined">electric_car</span>
             <h3>Electrical Diagnostics</h3>
             <p>Advanced electronic testing and battery health assessments for all models.</p>
+            <a href="services.html" class="card-link">Details <span class="material-symbols-outlined" style="font-size:14px;">chevron_right</span></a>
+          </div>
+          <!-- Service Card 7 -->
+          <div class="service-card fade-up" style="transition-delay:600ms;">
+            <span class="card-icon material-symbols-outlined">eject</span>
+            <h3>Brake Services</h3>
+            <p>Complete brake inspection, pad replacement, and disc resurfacing for maximum safety.</p>
+            <a href="services.html" class="card-link">Details <span class="material-symbols-outlined" style="font-size:14px;">chevron_right</span></a>
+          </div>
+          <!-- Service Card 8 -->
+          <div class="service-card fade-up" style="transition-delay:700ms;">
+            <span class="card-icon material-symbols-outlined">swap_driving_apps</span>
+            <h3>Wheel Balancing</h3>
+            <p>Precision computerized wheel balancing to eliminate vibrations and ensure a smooth ride.</p>
+            <a href="services.html" class="card-link">Details <span class="material-symbols-outlined" style="font-size:14px;">chevron_right</span></a>
+          </div>
+          <!-- Service Card 9 -->
+          <div class="service-card fade-up" style="transition-delay:800ms;">
+            <span class="card-icon material-symbols-outlined">auto_fix_high</span>
+            <h3>Suspension Work</h3>
+            <p>Expert suspension system repair and replacement for improved handling and ride comfort.</p>
             <a href="services.html" class="card-link">Details <span class="material-symbols-outlined" style="font-size:14px;">chevron_right</span></a>
           </div>
         </div>
@@ -277,25 +396,26 @@
           <h2 class="font-headline-lg text-primary" style="margin-bottom:var(--spacing-stack-md);">What Our Clients Say</h2>
           <div class="divider"></div>
         </div>
-        <div class="testimonial-carousel">
-          <div class="testimonial-track" id="testimonialTrack">
-            <div class="testimonial-slide">
-              <div class="testimonial-card">
-                <span class="quote-icon material-symbols-outlined">format_quote</span>
-                <blockquote>"I've been bringing my Swift to Meghdoot Motors for 10 years. They are honest, fast, and the service quality is much better than other authorized stations I've tried. Highly recommended!"</blockquote>
-                <cite>
-                  <h5>Rahul Sharma</h5>
-                  <p>Maruti Swift Owner</p>
-                </cite>
-              </div>
+        <div class="testimonial-carousel-new" id="testimonialCarousel">
+          <button class="carousel-arrow" id="prevArrow" aria-label="Previous review">
+            <span class="material-symbols-outlined" style="font-size:20px;">chevron_left</span>
+          </button>
+          <div class="testimonial-slide-wrapper" id="slideWrapper">
+            <div class="testimonial-card-new" id="testimonialCard">
+              <span class="quote-icon material-symbols-outlined">format_quote</span>
+              <div class="star-rating" id="starRating"></div>
+              <blockquote id="reviewText"></blockquote>
+              <cite>
+                <h5 id="reviewerName"></h5>
+                <p id="reviewerDetail"></p>
+              </cite>
             </div>
           </div>
-          <div class="testimonial-dots">
-            <button class="dot active" aria-label="Slide 1"></button>
-            <button class="dot" aria-label="Slide 2"></button>
-            <button class="dot" aria-label="Slide 3"></button>
-          </div>
+          <button class="carousel-arrow" id="nextArrow" aria-label="Next review">
+            <span class="material-symbols-outlined" style="font-size:20px;">chevron_right</span>
+          </button>
         </div>
+        <div class="carousel-counter" id="carouselCounter"></div>
       </div>
     </section>
 
@@ -312,7 +432,7 @@
               <span class="material-symbols-outlined" style="font-size:20px;">event</span>
               Schedule Appointment
             </a>
-            <a href="tel:+919825012345" class="btn btn-ghost btn-lg" style="display:inline-flex;align-items:center;gap:var(--spacing-stack-sm);">
+            <a href="tel:+919998588227" class="btn btn-ghost btn-lg" style="display:inline-flex;align-items:center;gap:var(--spacing-stack-sm);">
               <span class="material-symbols-outlined" style="font-size:20px;">call</span>
               Call Us Now
             </a>
@@ -325,10 +445,9 @@
   <!-- ========== FOOTER ========== -->
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
+      <div class="footer-grid">          <div class="footer-brand">
           <div class="logo">Meghdoot Motors</div>
-          <p>Maruti Suzuki Authorized Service Station since 2002. Delivering automotive excellence with precision and trust.</p>
+          <p style="font-size:12px;color:var(--color-surface-variant);margin-bottom:var(--spacing-stack-md);letter-spacing:0.03em;">Maruti Authorized Service</p>
           <div class="footer-social">
             <a href="#" aria-label="Share"><span class="material-symbols-outlined" style="font-size:16px;">share</span></a>
             <a href="#" aria-label="Location"><span class="material-symbols-outlined" style="font-size:16px;">location_on</span></a>
@@ -348,7 +467,7 @@
           <ul>
             <li><a href="services.html">Periodic Service</a></li>
             <li><a href="services.html">Accidental Repair</a></li>
-            <li><a href="insurance-claims.html">Maruti Insurance</a></li>
+            <li><a href="insurance-claim.html">Maruti Insurance</a></li>
             <li><a href="services.html">Wheel Solutions</a></li>
           </ul>
         </div>
@@ -368,6 +487,131 @@
     </div>
   </footer>
 
+  <script>
+    /* ============================================================
+       TESTIMONIAL CAROUSEL — Infinite loop with arrow navigation
+       ============================================================ */
+    (function() {
+      var reviews = [
+        {
+          name: "Rahul Sharma",
+          detail: "Maruti Swift Owner",
+          rating: 5,
+          text: "I've been bringing my Swift to Meghdoot Motors for 10 years. They are honest, fast, and the service quality is much better than other authorized stations I've tried. Highly recommended!"
+        },
+        {
+          name: "Priya Patel",
+          detail: "Maruti Baleno Owner",
+          rating: 5,
+          text: "Excellent service! They diagnosed and fixed my AC issue in under 2 hours. The team was courteous and kept me updated throughout."
+        },
+        {
+          name: "Amit Singh",
+          detail: "Maruti Brezza Owner",
+          rating: 5,
+          text: "Honest mechanics who don't upsell unnecessary repairs. Refreshing experience compared to other service centers I've been to."
+        },
+        {
+          name: "Sneha Desai",
+          detail: "Maruti Dzire Owner",
+          rating: 5,
+          text: "The pick-up and drop service is an absolute lifesaver. Highly professional team who treat your car with the care it deserves."
+        },
+        {
+          name: "Vikram Joshi",
+          detail: "Maruti Ertiga Owner",
+          rating: 5,
+          text: "Genuine parts, transparent pricing, and timely delivery. Can't ask for more from an authorized service station."
+        },
+        {
+          name: "Ananya Mehta",
+          detail: "Maruti Swift Owner",
+          rating: 4,
+          text: "Good service overall. The work on my car was thorough and the pricing was fair. The waiting area could be a bit more comfortable though."
+        },
+        {
+          name: "Rajesh Kumar",
+          detail: "Maruti Baleno Owner",
+          rating: 4,
+          text: "Quality work on my car's body paint. Color matching was near perfect and the finish looks factory-grade. Would recommend."
+        },
+        {
+          name: "Deepak Verma",
+          detail: "Maruti Brezza Owner",
+          rating: 3,
+          text: "Service was okay. Took a bit longer than promised but the quality of work was satisfactory. They were responsive to calls."
+        },
+        {
+          name: "Kavita Sharma",
+          detail: "Maruti Dzire Owner",
+          rating: 3,
+          text: "Decent service for the price. Nothing exceptional but they got the job done. The car was returned clean which I appreciated."
+        },
+        {
+          name: "Suresh Iyer",
+          detail: "Maruti WagonR Owner",
+          rating: 3,
+          text: "Average experience overall. There was a small scratch on the door when I picked up the car, but the manager promptly fixed it when I pointed it out. Good follow-up."
+        }
+      ];
+
+      var currentIndex = 0;
+      var card = document.getElementById('testimonialCard');
+      var starRating = document.getElementById('starRating');
+      var reviewText = document.getElementById('reviewText');
+      var reviewerName = document.getElementById('reviewerName');
+      var reviewerDetail = document.getElementById('reviewerDetail');
+      var counter = document.getElementById('carouselCounter');
+      var prevBtn = document.getElementById('prevArrow');
+      var nextBtn = document.getElementById('nextArrow');
+
+      function renderReview(index) {
+        // Wrap around infinitely
+        var i = ((index % reviews.length) + reviews.length) % reviews.length;
+        var review = reviews[i];
+        currentIndex = i;
+
+        // Build stars
+        var starsHtml = '';
+        for (var s = 1; s <= 5; s++) {
+          starsHtml += '<span class="star' + (s <= review.rating ? ' filled' : '') + '">&#9733;</span>';
+        }
+        starRating.innerHTML = starsHtml;
+
+        reviewText.textContent = '"' + review.text + '"';
+        reviewerName.textContent = review.name;
+        reviewerDetail.textContent = review.detail;
+        counter.textContent = (i + 1) + ' / ' + reviews.length;
+
+        // Restart fade animation
+        card.style.animation = 'none';
+        card.offsetHeight; // trigger reflow
+        card.style.animation = 'fadeIn 0.4s ease';
+      }
+
+      function nextReview() {
+        renderReview(currentIndex + 1);
+      }
+
+      function prevReview() {
+        renderReview(currentIndex - 1);
+      }
+
+      if (prevBtn && nextBtn) {
+        prevBtn.addEventListener('click', prevReview);
+        nextBtn.addEventListener('click', nextReview);
+
+        // Keyboard support
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'ArrowLeft') prevReview();
+          if (e.key === 'ArrowRight') nextReview();
+        });
+      }
+
+      // Render initial review
+      renderReview(0);
+    })();
+  </script>
   <script src="js/main.js"></script>
   <script src="js/animations.js"></script>
   <script src="js/form.js"></script>
