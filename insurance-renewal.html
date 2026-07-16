@@ -275,24 +275,25 @@
               </div>
             </div>
             <div style="padding:var(--spacing-stack-lg);">
-              <form class="claim-form" id="renewalForm">
+              <form class="claim-form" id="renewalForm" onsubmit="return netlifyFormSubmit(event, this, 'renewal')">
+                <input type="text" name="_hp" style="position:absolute;left:-9999px;" tabindex="-1" autocomplete="off">
                 <div class="form-group" style="display:grid;grid-template-columns:1fr 1fr;gap:var(--spacing-stack-md);">
                   <div>
                     <label class="form-label">Full Name *</label>
-                    <input type="text" class="form-input" placeholder="John Doe" required>
+                    <input type="text" name="Full Name" class="form-input" placeholder="John Doe" required>
                   </div>
                   <div>
                     <label class="form-label">Phone Number *</label>
-                    <input type="tel" class="form-input" placeholder="+91 98765 43210" required>
+                    <input type="tel" name="Phone Number" class="form-input" placeholder="+91 98765 43210" required>
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="form-label">Vehicle Registration Number</label>
-                  <input type="text" class="form-input" placeholder="MH-12-XX-0000">
+                  <input type="text" name="Vehicle Registration Number" class="form-input" placeholder="MH-12-XX-0000">
                 </div>
                 <div class="form-group">
                   <label class="form-label">Current Insurance Provider</label>
-                  <select class="form-select">
+                  <select name="Current Insurance Provider" class="form-select">
                     <option>Select Provider</option>
                     <option>ICICI Lombard</option>
                     <option>HDFC Ergo</option>
@@ -312,10 +313,10 @@
                   </select>
                 </div>
                 <div class="form-group">
-                  <label class="form-label">Policy Expiry Date (if known)</label>
-                  <input type="date" class="form-input">
+                  <label class="form-label">Policy Expiry Date</label>
+                  <input type="date" name="Policy Expiry Date" class="form-input">
                 </div>
-                <button type="button" class="btn btn-primary btn-lg" style="width:100%;" onclick="submitRenewal(this)">Get Renewal Quote</button>
+                <button type="submit" class="btn btn-primary btn-lg" style="width:100%;">Get Renewal Quote</button>
               </form>
             </div>
           </div>
@@ -373,18 +374,54 @@
   <script src="js/main.js"></script>
   <script src="js/animations.js"></script>
   <script>
-    function submitRenewal(btn) {
+    function netlifyFormSubmit(e, formEl, formType) {
+      e.preventDefault();
+      var btn = formEl.querySelector('button[type="submit"]');
+      var originalHTML = btn.innerHTML;
       btn.innerHTML = '<span class="animate-spin" style="margin-right:8px;">⟳</span> Processing...';
       btn.disabled = true;
-      setTimeout(function() {
-        btn.innerHTML = '✓ Quote Request Sent!';
-        btn.style.backgroundColor = '#22c55e';
-        setTimeout(function() {
-          btn.innerHTML = 'Get Renewal Quote';
-          btn.style.backgroundColor = '';
+
+      var fields = {};
+      var elements = formEl.querySelectorAll('input, select, textarea');
+      elements.forEach(function(el) {
+        var name = el.getAttribute('name');
+        if (!name || el.type === 'submit') return;
+        if (el.tagName === 'SELECT') {
+          fields[name] = el.options[el.selectedIndex] ? el.options[el.selectedIndex].text : el.value;
+        } else {
+          fields[name] = el.value;
+        }
+      });
+
+      fetch('/.netlify/functions/notify-lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ formType: formType, fields: fields })
+      })
+      .then(function(res) { return res.json(); })
+      .then(function(data) {
+        if (data.success) {
+          btn.innerHTML = '\u2713 Sent!';
+          btn.style.backgroundColor = '#22c55e';
+          setTimeout(function() {
+            btn.innerHTML = originalHTML;
+            btn.style.backgroundColor = '';
+            btn.disabled = false;
+            formEl.reset();
+          }, 3000);
+        } else {
+          alert(data.message || 'Something went wrong. Please try again or call us.');
+          btn.innerHTML = originalHTML;
           btn.disabled = false;
-        }, 3000);
-      }, 1500);
+        }
+      })
+      .catch(function() {
+        alert('Network error. Please check your connection or call us.');
+        btn.innerHTML = originalHTML;
+        btn.disabled = false;
+      });
+
+      return false;
     }
   </script>
 </body>

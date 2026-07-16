@@ -173,22 +173,23 @@
               <p class="text-on-surface-variant">Fill out the form below and our service advisors will contact you shortly.</p>
             </div>
             <form id="contactForm">
+              <input type="text" name="_hp" style="position:absolute;left:-9999px;" tabindex="-1" autocomplete="off">
               <div class="form-group" style="display:grid;grid-template-columns:1fr 1fr;gap:var(--spacing-stack-md);">
                 <div>
                   <label class="form-label" for="fullName">Full Name</label>
-                  <input type="text" id="fullName" name="fullName" class="form-input" placeholder="John Doe" required>
+                  <input type="text" id="fullName" name="Full Name" class="form-input" placeholder="John Doe" required>
                   <div class="form-error"></div>
                 </div>
                 <div>
                   <label class="form-label" for="phone">Phone Number</label>
-                  <input type="tel" id="phone" name="phone" class="form-input" placeholder="+91 98765 43210" required>
+                  <input type="tel" id="phone" name="Phone Number" class="form-input" placeholder="+91 98765 43210" required>
                   <div class="form-error"></div>
                 </div>
               </div>
               <div class="form-group" style="display:grid;grid-template-columns:1fr 1fr;gap:var(--spacing-stack-md);">
                 <div>
                   <label class="form-label" for="carModel">Car Model</label>
-                  <select id="carModel" name="carModel" class="form-select">
+                  <select id="carModel" name="Car Model" class="form-select">
                     <option>Select Model</option>
                     <option>800</option>
                     <option>A-Star</option>
@@ -227,7 +228,7 @@
                 </div>
                 <div>
                   <label class="form-label" for="serviceType">Service Type</label>
-                  <select id="serviceType" name="serviceType" class="form-select">
+                  <select id="serviceType" name="Service Type" class="form-select">
                     <option>Routine Maintenance</option>
                     <option>Insurance</option>
                     <option>Body Work &amp; Paint</option>
@@ -237,9 +238,8 @@
                   <div class="form-error"></div>
                 </div>
               </div>
-              <div class="form-group">
-                <label class="form-label" for="message">Your Message</label>
-                <textarea id="message" name="message" class="form-textarea" placeholder="Describe your service requirements..." rows="4"></textarea>
+              <div class="form-group">                  <label class="form-label" for="message">Message</label>
+                <textarea id="message" name="Message" class="form-textarea" placeholder="Describe your service requirements..." rows="4"></textarea>
                 <div class="form-error"></div>
               </div>
               <button type="submit" class="btn btn-primary btn-lg" style="width:100%;display:flex;align-items:center;justify-content:center;gap:var(--spacing-stack-sm);">

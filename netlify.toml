@@ -1,0 +1,7 @@
+# Netlify config — Meghdoot Motors
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"

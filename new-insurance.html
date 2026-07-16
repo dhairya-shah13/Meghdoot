@@ -265,34 +265,34 @@
               </div>
             </div>
             <div style="padding:var(--spacing-stack-lg);">
-              <form class="claim-form" id="newInsuranceForm">
+              <form class="claim-form" id="newInsuranceForm" onsubmit="return netlifyFormSubmit(event, this, 'new-insurance')">
+                <input type="text" name="_hp" style="position:absolute;left:-9999px;" tabindex="-1" autocomplete="off">
                 <div class="form-group" style="display:grid;grid-template-columns:1fr 1fr;gap:var(--spacing-stack-md);">
                   <div>
                     <label class="form-label">Full Name *</label>
-                    <input type="text" class="form-input" placeholder="John Doe" required>
+                    <input type="text" name="Full Name" class="form-input" placeholder="John Doe" required>
                   </div>
                   <div>
                     <label class="form-label">Phone Number *</label>
-                    <input type="tel" class="form-input" placeholder="+91 98765 43210" required>
+                    <input type="tel" name="Phone Number" class="form-input" placeholder="+91 98765 43210" required>
                   </div>
                 </div>
-                <div class="form-group">
-                  <label class="form-label">Vehicle Registration Number (if available)</label>
-                  <input type="text" class="form-input" placeholder="MH-12-XX-0000">
+                <div class="form-group">                    <label class="form-label">Vehicle Registration Number (if available)</label>
+                  <input type="text" name="Vehicle Registration Number" class="form-input" placeholder="MH-12-XX-0000">
                 </div>
                 <div class="form-group">
                   <label class="form-label">Vehicle Model</label>
-                  <input type="text" class="form-input" placeholder="e.g., Maruti Suzuki Swift, Baleno, etc.">
+                  <input type="text" name="Vehicle Model" class="form-input" placeholder="e.g., Maruti Suzuki Swift, Baleno, etc.">
                 </div>
                 <div class="form-group">
                   <label class="form-label">Coverage Preferred</label>
-                  <select class="form-select">
+                  <select name="Coverage Preferred" class="form-select">
                     <option>Comprehensive Plan</option>
                     <option>Third-Party Only</option>
                     <option>Not Sure — Recommend</option>
                   </select>
                 </div>
-                <button type="button" class="btn btn-primary btn-lg" style="width:100%;" onclick="submitNewInsurance(this)">Get Free Quote</button>
+                <button type="submit" class="btn btn-primary btn-lg" style="width:100%;">Get Free Quote</button>
               </form>
             </div>
           </div>
@@ -350,18 +350,54 @@
   <script src="js/main.js"></script>
   <script src="js/animations.js"></script>
   <script>
-    function submitNewInsurance(btn) {
+    function netlifyFormSubmit(e, formEl, formType) {
+      e.preventDefault();
+      var btn = formEl.querySelector('button[type="submit"]');
+      var originalHTML = btn.innerHTML;
       btn.innerHTML = '<span class="animate-spin" style="margin-right:8px;">⟳</span> Processing...';
       btn.disabled = true;
-      setTimeout(function() {
-        btn.innerHTML = '✓ Quote Requested!';
-        btn.style.backgroundColor = '#22c55e';
-        setTimeout(function() {
-          btn.innerHTML = 'Get Free Quote';
-          btn.style.backgroundColor = '';
+
+      var fields = {};
+      var elements = formEl.querySelectorAll('input, select, textarea');
+      elements.forEach(function(el) {
+        var name = el.getAttribute('name');
+        if (!name || el.type === 'submit') return;
+        if (el.tagName === 'SELECT') {
+          fields[name] = el.options[el.selectedIndex] ? el.options[el.selectedIndex].text : el.value;
+        } else {
+          fields[name] = el.value;
+        }
+      });
+
+      fetch('/.netlify/functions/notify-lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ formType: formType, fields: fields })
+      })
+      .then(function(res) { return res.json(); })
+      .then(function(data) {
+        if (data.success) {
+          btn.innerHTML = '\u2713 Sent!';
+          btn.style.backgroundColor = '#22c55e';
+          setTimeout(function() {
+            btn.innerHTML = originalHTML;
+            btn.style.backgroundColor = '';
+            btn.disabled = false;
+            formEl.reset();
+          }, 3000);
+        } else {
+          alert(data.message || 'Something went wrong. Please try again or call us.');
+          btn.innerHTML = originalHTML;
           btn.disabled = false;
-        }, 3000);
-      }, 1500);
+        }
+      })
+      .catch(function() {
+        alert('Network error. Please check your connection or call us.');
+        btn.innerHTML = originalHTML;
+        btn.disabled = false;
+      });
+
+      return false;
     }
   </script>
 </body>

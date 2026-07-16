@@ -26,7 +26,7 @@ C:\Projects\Meghdoot\
 ├── services.html                       ← Services (filterable grid, process steps)
 ├── annual-service-plan.html            ← Annual Service Plan (membership card, comparison)
 ├── insurance-claim.html                ← Insurance HUB (overview, 3 service cards, partners, inquiry form)
-├── claim-intimation.html               ← [NEW] Claim Intimation (process steps, inquiry form, partners)
+├── claim-intimation.html               ← Claim Assistance (process steps, inquiry form, partners)
 ├── insurance-renewal.html              ← [NEW] Insurance Renewal (benefits, form, partners)
 ├── new-insurance.html                  ← [NEW] New Insurance (coverage options, form, partners)
 ├── gallery.html                        ← Gallery (before/after slider, filterable grid, lightbox)
@@ -35,8 +35,8 @@ C:\Projects\Meghdoot\
 ├── assets/
 │   └── images/
 │       ├── .gitkeep                    ← Placeholder for images folder
-│       ├── logo.png                    ← [PLACEHOLDER] Meghdoot Motors logo
-│       ├── mass-logo.png               ← [PLACEHOLDER] Maruti Suzuki authorized logo
+│       ├── FINAL_MM.png                ← Meghdoot Motors logo (replaced logo.png)
+│       ├── MASS_logo.png               ← Maruti Suzuki authorized logo (replaced mass-logo.png)
 │       └── placeholder.svg             ← [PLACEHOLDER] Generic SVG fallback for all images
 │
 ├── css/
@@ -48,8 +48,15 @@ C:\Projects\Meghdoot\
 ├── js/
 │   ├── main.js                         ← Header scroll, mobile nav toggle, active page, smooth scroll, ESC key
 │   ├── animations.js                   ← IntersectionObserver fade-ups, animated stat counters
-│   ├── form.js                         ← Contact form validation & simulated submission
+│   ├── form.js                         ← Contact form validation, display:none success state, real Netlify Function POST submission + honeypot
 │   └── gallery.js                      ← Filter tabs, lightbox, before/after slider, services page filter (dual)
+│
+├── netlify.toml                        ← Netlify config (functions directory, esbuild bundler)
+├── netlify/
+│   └── functions/
+│       ├── notify-lead.js              ← Netlify Function: receives form submissions, validates, forwards to Telegram
+│       └── utils/
+│           └── sendTelegramMessage.js  ← Shared Telegram Bot API helper
 │
 └── stitch_meghdoot_motors_digital_showroom/
     ├── home_meghdoot_motors/           ← [STITCHED] Tailwind CSS version
@@ -204,11 +211,13 @@ C:\Projects\Meghdoot\
 - Fade-up Reveal, Section Reveal, Animated Counters
 
 ### `form.js`
-- Validation (required, phone, email), real-time validation, simulated submission, insurance claim form handling (`.claim-form`), input focus effects
+- Validation (required, phone, email), real-time validation, real POST to `/.netlify/functions/notify-lead`, `collectFields()` helper, input focus effects
+- `submitToNetlify()` shared helper: show loading → fetch POST → handle success (form hides, success div shows) or error (alert)
 
 ### Inline JS (per-page)
-- **index.html**: New testimonial carousel with 10 reviews, arrow nav, star ratings, keyboard support
-- **new-insurance.html**: `submitNewInsurance()` function for the "Get Free Quote" form
+- **index.html**: Testimonial carousel with 10 reviews, arrow nav, star ratings, keyboard support
+- **services.html**: `openInquiry()` service-aware form + inline fetch POST to `/.netlify/functions/notify-lead` (formType: 'service')
+- **claim-intimation.html, insurance-renewal.html, new-insurance.html, insurance-claim.html**: Each has `netlifyFormSubmit(e, formEl, formType)` — collects fields, fetch POSTs to the Netlify Function, auto-resets after 3s on success
 
 ### `gallery.js`
 - Filter Tabs, Lightbox, Before/After Slider, Services Filter (dual — gallery items + service cards)
@@ -226,10 +235,10 @@ C:\Projects\Meghdoot\
 - ✅ "How Claims Work" process moved from main insurance page → `claim-intimation.html`
 - ✅ Added **8 new insurance providers**: Iffco Tokio, Zuno Gen., IndusInd(Reliance Gen.), Zurich Kotak, Liberty, Chola MS, Bharti, Shriram (total 14)
 - ✅ **Desktop nav** labels updated: "Insurance Claim" → "Insurance" across all pages
+- ✅ **Mobile nav** labels updated: "Insurance Claim" → "Insurance" across all pages
+- ✅ **Footer** labels updated: "Maruti Insurance" → "Insurance" on all pages
 - ✅ Contact form "Insurance Claim" option → "Insurance"
 - ✅ Home page service card "Insurance Claim" → "Insurance"
-- ⚠️ **Mobile nav** on all pages still shows "Insurance Claim" (needs update)
-- ⚠️ **Footer** on all pages still shows "Maruti Insurance" (needs update)
 
 #### Hero Text Readability
 - ✅ Applied Gallery-style hero text pattern (semi-transparent white gradient box + red left border + dark text) to all 4 insurance pages
@@ -239,6 +248,7 @@ C:\Projects\Meghdoot\
 - ✅ **Changed navbar from dark navy to white** with dark text
 - ✅ **Enhanced partner logo cards** with pop-out hover (scale, shadow, border color)
 - ✅ Equalized logo sizes: Meghdoot Motors logo and Maruti Suzuki MASS logo both 44px
+- ✅ Swapped `logo.png` → `FINAL_MM.png` and `mass-logo.png` → `MASS_logo.png` (all 10 HTML pages)
 - ✅ Increased navbar height by 4%: `--nav-height: 75px` (was 72px), scrolled: 60px (was 58px)
 
 #### Hero Background Fix
@@ -295,6 +305,11 @@ C:\Projects\Meghdoot\
 ##### Services Page — 5,000km → 10,000km
 - ✅ Changed "every 5,000km" → "every 10,000km" on services.html
 
+##### Services Page — Inquiry Form Full-Width Layout
+- ✅ Removed `max-width: 700px` constraint from the inquiry form container on services.html
+- ✅ Form now spans full viewport width (padded to match `.container` margins: 20px mobile / 64px desktop)
+- ✅ Outer wrapper handles viewport padding; card interior has only its standard interior padding — no conflicting width constraints
+
 ##### Claim Intimation → Claim Assistance
 - ✅ Renamed all visible labels from "Claim Intimation" to **"Claim Assistance"** (confirmed with client)
 - ✅ Updated on claim-intimation.html (title, meta description, hero heading)
@@ -306,12 +321,31 @@ C:\Projects\Meghdoot\
 - ✅ **Footer**: Changed "Maruti Insurance" → "Insurance" on index.html
 - ⚠️ Remaining footer entries on other pages were already correct
 
+#### Telegram Lead Notifications (Backend Integration)
+- ✅ Created **Netlify Function** (`netlify/functions/notify-lead.js`) with:
+  - Server-side validation (required fields, phone/email format)
+  - **Honeypot spam protection** (`_hp` hidden field) on all 6 forms
+  - Field-to-Telegram message builder (all fields included, ordered)
+  - Shared `sendTelegramMessage.js` utility calling the Telegram Bot API
+- ✅ Updated **all 6 forms** to POST to `/.netlify/functions/notify-lead` instead of simulating:
+  1. `contact.html` — `form.js` via `submitToNetlify()` (contact formType)
+  2. `services.html` — inline JS via form submit listener (service formType)
+  3. `insurance-claim.html` — inline `netlifyFormSubmit()` (insurance-hub formType)
+  4. `claim-intimation.html` — inline `netlifyFormSubmit()` (claim formType)
+  5. `insurance-renewal.html` — inline `netlifyFormSubmit()` (renewal formType)
+  6. `new-insurance.html` — inline `netlifyFormSubmit()` (new-insurance formType)
+- ✅ All forms added `name` attributes on all input/select/textarea fields
+- ✅ All 4 insurance forms changed from `onclick` button handlers → proper `onsubmit` form handlers
+- ✅ **Post-submit UX**: Inline success + auto-reset after 3 seconds (button turns green, resets for insurance forms; form hides + success div for contact/service forms)
+- ✅ **Error UX**: `alert()` with friendly message on failure
+- ✅ **Env vars** (set in Netlify dashboard, never in repo): `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`
+- ✅ `netlify.toml` config added (functions directory, esbuild bundler)
+- ⬜ Remaining: deploy & test end-to-end (submit a form, confirm Telegram message arrives)
+
 ### Still Open / Needs Client Input
-- ⬜ Before/after slider needs genuine matching photos (currently representative images)
 - ⬜ Before/after slider needs genuine matching photos (currently representative images)
 - ⬜ About page founder photos need real portraits of Niraj Chokshi & Rakesh Gajjar
 - ⬜ Street address text across all pages still references "Opp. YMCA Club" — verify if address has changed
-- ⬜ Form submission needs real backend integration
 - ⬜ Social media links are placeholder (`href="#"`)
 - ⬜ Privacy Policy & Terms of Service pages are placeholder
 - ⬜ Consider adding `robots.txt` and `sitemap.xml` for SEO

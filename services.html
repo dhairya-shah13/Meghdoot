@@ -295,23 +295,24 @@
             <span class="font-headline-md" style="margin-left:8px;" id="selected-service-name">Routine Maintenance</span>
           </div>
           <form id="serviceInquiryForm">
-            <input type="hidden" id="serviceNameInput" name="serviceName" value="Routine Maintenance">
+            <input type="text" name="_hp" style="position:absolute;left:-9999px;" tabindex="-1" autocomplete="off">
+            <input type="hidden" id="serviceNameInput" name="Service Name" value="Routine Maintenance">
             <div class="form-group" style="display:grid;grid-template-columns:1fr 1fr;gap:var(--spacing-stack-md);">
               <div>
                 <label class="form-label" for="inqName">Full Name *</label>
-                <input type="text" id="inqName" name="inqName" class="form-input" placeholder="John Doe" required>
+                <input type="text" id="inqName" name="Full Name" class="form-input" placeholder="John Doe" required>
                 <div class="form-error"></div>
               </div>
               <div>
                 <label class="form-label" for="inqPhone">Phone Number *</label>
-                <input type="tel" id="inqPhone" name="inqPhone" class="form-input" placeholder="+91 98765 43210" required>
+                <input type="tel" id="inqPhone" name="Phone Number" class="form-input" placeholder="+91 98765 43210" required>
                 <div class="form-error"></div>
               </div>
             </div>
             <div class="form-group" style="display:grid;grid-template-columns:1fr 1fr;gap:var(--spacing-stack-md);">
               <div>
                 <label class="form-label" for="inqModel">Car Model</label>
-                <select id="inqModel" name="inqModel" class="form-select">
+                <select id="inqModel" name="Car Model" class="form-select">
                   <option>Select Model</option>
                   <option>800</option>
                   <option>Alto</option>
@@ -335,7 +336,7 @@
               </div>
               <div>
                 <label class="form-label" for="inqService">Service Type</label>
-                <select id="inqService" name="inqService" class="form-select" onchange="updateServiceName(this.value)">
+                <select id="inqService" name="Service Type" class="form-select" onchange="updateServiceName(this.value)">
                   <option>Routine Maintenance</option>
                   <option>Accidental Repair</option>
                   <option>Body Work and Paint Job</option>
@@ -348,8 +349,8 @@
               </div>
             </div>
             <div class="form-group">
-              <label class="form-label" for="inqMessage">Service Details</label>
-              <textarea id="inqMessage" name="inqMessage" class="form-textarea" placeholder="Describe your service requirements or any specific concerns..." rows="3"></textarea>
+              <label class="form-label" for="inqMessage">Message</label>
+              <textarea id="inqMessage" name="Message" class="form-textarea" placeholder="Describe your service requirements or any specific concerns..." rows="3"></textarea>
               <div class="form-error"></div>
             </div>
             <div style="display:flex;gap:var(--spacing-stack-md);flex-wrap:wrap;">
@@ -508,15 +509,41 @@
         form.addEventListener('submit', function(e) {
           e.preventDefault();
           var btn = form.querySelector('button[type="submit"]');
-          var originalText = btn.innerHTML;
+          var fields = {};
+          var elements = form.querySelectorAll('input, select, textarea');
+          elements.forEach(function(el) {
+            var name = el.getAttribute('name');
+            if (!name || el.type === 'submit') return;
+            if (el.tagName === 'SELECT') {
+              fields[name] = el.options[el.selectedIndex] ? el.options[el.selectedIndex].text : el.value;
+            } else {
+              fields[name] = el.value;
+            }
+          });
+          var originalHTML = btn.innerHTML;
           btn.innerHTML = '<span class="animate-spin" style="margin-right:8px;">⟳</span> Sending...';
           btn.disabled = true;
-          setTimeout(function() {
-            form.style.display = 'none';
-            form.parentElement.querySelector('.form-success').style.display = 'block';
-            btn.innerHTML = originalText;
+          fetch('/.netlify/functions/notify-lead', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ formType: 'service', fields: fields })
+          })
+          .then(function(res) { return res.json(); })
+          .then(function(data) {
+            if (data.success) {
+              form.style.display = 'none';
+              form.parentElement.querySelector('.form-success').style.display = 'block';
+            } else {
+              alert(data.message || 'Something went wrong.');
+              btn.innerHTML = originalHTML;
+              btn.disabled = false;
+            }
+          })
+          .catch(function() {
+            alert('Network error. Please try again or call us.');
+            btn.innerHTML = originalHTML;
             btn.disabled = false;
-          }, 1500);
+          });
         });
       }
     });
