@@ -133,10 +133,7 @@
   height: 44px;
   width: auto;
   object-fit: contain;
-  background-color: #ffffff;
-  padding: 4px 10px;
-  border-radius: var(--radius-sm);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  transform: scale(1.04);
 }
 
 @media (min-width: 769px) {
@@ -145,7 +142,6 @@
   }
   .header-actions .mass-logo {
     height: 44px;
-    padding: 4px 12px;
   }
 }
 
@@ -195,22 +191,10 @@
 .site-logo {
   display: flex;
   align-items: center;
-  gap: 14px;
   text-decoration: none;
-  transition: transform var(--transition-fast);
-  background-color: #ffffff;
-  padding: 6px 14px;
-  border-radius: var(--radius-md);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
-@media (hover: hover) {
-  .site-logo:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-  }
-}
+
 
 .site-logo img {
   height: 44px;

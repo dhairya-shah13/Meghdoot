@@ -204,10 +204,14 @@ C:\Projects\Meghdoot\
 - Fade-up Reveal, Section Reveal, Animated Counters
 
 ### `form.js`
-- Validation (required, phone, email), real-time validation, simulated submission, insurance claim form handling, input focus effects
+- Validation (required, phone, email), real-time validation, simulated submission, insurance claim form handling (`.claim-form`), input focus effects
+
+### Inline JS (per-page)
+- **index.html**: New testimonial carousel with 10 reviews, arrow nav, star ratings, keyboard support
+- **new-insurance.html**: `submitNewInsurance()` function for the "Get Free Quote" form
 
 ### `gallery.js`
-- Filter Tabs, Lightbox, Before/After Slider, Services Filter
+- Filter Tabs, Lightbox, Before/After Slider, Services Filter (dual — gallery items + service cards)
 
 ---
 
@@ -221,10 +225,11 @@ C:\Projects\Meghdoot\
 - ✅ Each page has its own hero, benefits section, inquiry form, and partner logos
 - ✅ "How Claims Work" process moved from main insurance page → `claim-intimation.html`
 - ✅ Added **8 new insurance providers**: Iffco Tokio, Zuno Gen., IndusInd(Reliance Gen.), Zurich Kotak, Liberty, Chola MS, Bharti, Shriram (total 14)
-- ✅ All nav labels updated: "Insurance Claim" → "Insurance" across all pages
+- ✅ **Desktop nav** labels updated: "Insurance Claim" → "Insurance" across all pages
 - ✅ Contact form "Insurance Claim" option → "Insurance"
 - ✅ Home page service card "Insurance Claim" → "Insurance"
-- ✅ Footer "Maruti Insurance" → "Insurance"
+- ⚠️ **Mobile nav** on all pages still shows "Insurance Claim" (needs update)
+- ⚠️ **Footer** on all pages still shows "Maruti Insurance" (needs update)
 
 #### Hero Text Readability
 - ✅ Applied Gallery-style hero text pattern (semi-transparent white gradient box + red left border + dark text) to all 4 insurance pages
@@ -248,7 +253,61 @@ C:\Projects\Meghdoot\
 #### Form Updates
 - ✅ "Express Service (Same-Day Turnaround)" → "Inquiry" in service type dropdown
 
+#### Testimonial Carousel Overhaul (Homepage)
+- ✅ Completely rebuilt testimonials on `index.html` with interactive carousel
+- ✅ Added **arrow navigation** (prev/next) with hover-to-navy styling
+- ✅ Added **star ratings** (filled gold stars) for each review
+- ✅ Added **10 real customer reviews** with names, vehicle details, and ratings (3-5 stars)
+- ✅ Added **fade animation** between slides (`fadeIn` keyframe, 0.4s ease)
+- ✅ Added **keyboard support**: ArrowLeft/ArrowRight to navigate
+- ✅ Added **counter display** (e.g., "1 / 10")
+- ✅ Infinite loop wrap-around navigation
+- ✅ Old CSS (`.testimonial-carousel`, `.testimonial-track`, etc.) retained in components.css but unused
+
+#### Client Revision Round (July 16, 2026)
+
+##### About Page — Founding History
+- ✅ Corrected timeline: **1999** — workshop founded as **Mini Motors** (original name confirmed by client)
+- ✅ **22 Feb 2002** — after MASS authorization, rebranded to **Meghdoot Motors**
+- ✅ Updated hero copy, legacy text, timeline entries (1999 & 2002), and structured data to reflect two distinct milestones
+- ✅ Hero copy: "since 1999" → "from a trusted local workshop to a MASS"
+- ✅ Timeline 1999: "Meghdoot Motors established" → "Mini Motors established"
+- ✅ Timeline 2002: added rebranding detail
+- ✅ Legacy text explicitly names Mini Motors as original workshop name
+
+##### About Page — Founder Designations
+- ✅ Both Niraj Chokshi & Rakesh Gajjar: simplified from "Co-Founder & Director" / "Co-Founder & Technical Head" → **"Co-founder"** (equal, no hierarchy)
+- ✅ Updated image `alt` attributes accordingly
+
+##### Services Page — Service-Aware Inquiry Form
+- ✅ Added inline inquiry form on `services.html` with service-aware pre-population
+- ✅ "Book This" links on all 8 service cards now trigger `openInquiry(serviceName)` which scrolls to form and pre-fills service type
+- ✅ Service-specific helper text changes based on which service is selected
+- ✅ Dropdown allows changing service type, which updates the displayed info
+- ✅ Includes simulated form submission with success state
+
+##### Services Page — "Periodic Maintenance" → "Routine Maintenance"
+- ✅ Renamed across services.html (card heading, meta description)
+- ✅ Updated on index.html (service card)
+- ✅ Updated annual-service-plan.html (feature description text)
+- ✅ Contact form already had "Routine Maintenance" option — no change needed there
+
+##### Services Page — 5,000km → 10,000km
+- ✅ Changed "every 5,000km" → "every 10,000km" on services.html
+
+##### Claim Intimation → Claim Assistance
+- ✅ Renamed all visible labels from "Claim Intimation" to **"Claim Assistance"** (confirmed with client)
+- ✅ Updated on claim-intimation.html (title, meta description, hero heading)
+- ✅ Updated on insurance-claim.html (meta description, hero text, service card heading, form dropdown)
+- ✅ File URL kept stable (`claim-intimation.html`) to avoid broken links
+
+#### Cross-Cutting Fixes
+- ✅ **Mobile nav**: Changed "Insurance Claim" → "Insurance" on all pages (index.html, about.html, services.html, contact.html, annual-service-plan.html, gallery.html)
+- ✅ **Footer**: Changed "Maruti Insurance" → "Insurance" on index.html
+- ⚠️ Remaining footer entries on other pages were already correct
+
 ### Still Open / Needs Client Input
+- ⬜ Before/after slider needs genuine matching photos (currently representative images)
 - ⬜ Before/after slider needs genuine matching photos (currently representative images)
 - ⬜ About page founder photos need real portraits of Niraj Chokshi & Rakesh Gajjar
 - ⬜ Street address text across all pages still references "Opp. YMCA Club" — verify if address has changed
@@ -260,4 +319,4 @@ C:\Projects\Meghdoot\
 
 ---
 
-*Last updated: July 10, 2026*
+*Last updated: July 16, 2026*
