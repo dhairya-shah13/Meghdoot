@@ -485,10 +485,10 @@
 }
 
 .footer-brand .logo {
-  font-family: var(--font-heading);
+  font-family: 'Eurostile Extended Bold', sans-serif;
   font-size: var(--text-headline-md-size);
   font-weight: var(--text-headline-md-weight);
-  color: var(--color-on-primary);
+  color: #ffffff;
   margin-bottom: var(--spacing-stack-md);
 }
 
