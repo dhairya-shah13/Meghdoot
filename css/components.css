@@ -958,6 +958,10 @@
   text-transform: uppercase;
 }
 
+.mobile-only {
+  display: none;
+}
+
 /* Timeline mobile: stacked vertical layout below 768px */
 @media (max-width: 768px) {
   .timeline-line {
@@ -979,6 +983,12 @@
 
   .timeline-content-left {
     display: none;
+  }
+
+  .mobile-only {
+    display: block !important;
+    text-align: left;
+    margin-bottom: var(--spacing-stack-sm);
   }
 
   .timeline-dot {
